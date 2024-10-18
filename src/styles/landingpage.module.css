@@ -1,0 +1,112 @@
+.container {
+    overflow-x: hidden;
+    font-family: 'PepeFont', sans-serif;
+
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .navList {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navItem {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .menuIcon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    .nav {
+      display: block;
+    }
+    .menuIcon {
+      display: none;
+    }
+  }
+  
+  .sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    z-index: 999;
+  }
+  
+  .section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: 'PepeFont', sans-serif;
+
+  }
+  
+  .scrollTopIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #00beee;
+  }
+  
+  .musicPlayer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .musicControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .musicIcon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
