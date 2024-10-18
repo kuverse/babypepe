@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    color: white;
+    color: #156D30;
     padding: 10px 20px;
     z-index: 1000;
   }
@@ -59,7 +59,7 @@
     width: 70%;
     height: 100%;
     background-color: #444;
-    color: white;
+    color: #6CB947;
     padding: 20px;
     z-index: 999;
   }
@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #6CB947;
     text-align: center;
     font-family: 'PepeFont', sans-serif;
 
@@ -83,7 +83,7 @@
     right: 20px;
     font-size: 2rem;
     cursor: pointer;
-    color: #00beee;
+    color: #AEA83A;
   }
   
   .musicPlayer {
@@ -104,7 +104,7 @@
   }
   
   .footer {
-    background-color: #222;
+    background-color: #6CB947;
     color: white;
     text-align: center;
     padding: 10px 0;
