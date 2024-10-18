@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import theme from "@/components/theme";
 
 
 export const metadata: Metadata = {
@@ -15,13 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-      <ChakraProvider>
-
-        {children}
+    <html lang="en" className="page">
+      <body style={{backgroundColor: "var(--background, #CBCBD2)", minHeight:"100vh"}}>
+        <ChakraProvider theme={theme}>
+          {children}
         </ChakraProvider>
-
       </body>
     </html>
   );

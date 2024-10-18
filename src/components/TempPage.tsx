@@ -4,28 +4,42 @@ import { Box, Text, Image, Flex } from "@chakra-ui/react";
 
 const UnderConstruction: React.FC = () => {
   return (
+    <div
+    style={{
+      height: '100vh',
+      width: '100%',
+      margin: 0,
+      padding: 0,
+      backgroundColor: 'var(--background)',
+      color: 'var(--foreground)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontFamily: 'PepeFont, sans-serif',
+    }}
+  >
     <Flex
       height="100vh"
       justifyContent="center"
       alignItems="center"
       direction="column"
-      bg="gray.900"
     >
       <Box mb={6}>
         <Image
-          src="/images/pepep2.png" // Replace with your own image path
+          src="/images/pepegif.gif" // Replace with your own image path
           alt="Under Construction"
           width={300}
           height={300}
         />
       </Box>
-      <Text fontSize="3xl" fontWeight="bold" color="white" mb={2}>
-        Were working on it!
+      <Text fontSize="4xl" fontWeight="bold" color="white" mb={2}>
+        Chill with some good vibes.
       </Text>
-      <Text fontSize="lg" color="gray.400">
+      <Text fontSize="2xl" >
         Please check back later.
       </Text>
     </Flex>
+    </div>
   );
 };
 
