@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Box, Button, Input, Select, Heading, Image, Flex } from "@chakra-ui/react";
 import Draggable from "react-draggable";
 import Header from "@/components/Header";

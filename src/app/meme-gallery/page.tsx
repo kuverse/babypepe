@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Box, Grid, GridItem, Heading, Image, IconButton } from "@chakra-ui/react";
 import Header from "@/components/Header";
-import { FaDownload } from "react-icons/fa"; // Download icon from react-icons
+import { FaDownload } from "react-icons/fa";
 
 const initialMemes = [
   { src: "/images/IMG_4155.jpg", title: "Pepe 1" },
@@ -12,10 +12,7 @@ const initialMemes = [
   { src: "/images/cool-pepe.gif", title: "Pepe 4" },
   { src: "/images/pepegif.gif", title: "Pepe 5" },
   { src: "/images/pepe-bull.gif", title: "Pepe 6" },
-
 ];
-
-
 
 
 const MemeGallery: React.FC = () => {

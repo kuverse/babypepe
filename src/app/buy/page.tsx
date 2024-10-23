@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Box, Button, Flex, Heading, Input, Image, Text, MenuItem, Icon } from "@chakra-ui/react";
-import Header from "@/components/Header"; // Assuming you have this component
+import { Button, Flex, Heading, Image, Icon } from "@chakra-ui/react";
+import Header from "@/components/Header"; 
 import { createThirdwebClient } from "thirdweb";
 import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { ConnectButton, darkTheme, PayEmbed, useActiveWallet, useDisconnect } from "thirdweb/react";
@@ -78,8 +78,6 @@ const BuyWithCreditCard: React.FC = () => {
           padding={5}
           bgImage={"/images/background3.webp"}
         >
-
-     
 
           <Heading size="xl" color="white" mb={6} mt={100} fontFamily="'PepeFont', sans-serif" >
             Buy with Credit Card

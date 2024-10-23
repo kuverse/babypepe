@@ -327,7 +327,7 @@ const LandingPage: React.FC = () => {
 
       _hover={{ transform: "scale(1.1)", backgroundColor: "#4A9F33" }}
     >
-      Let's Go
+      Lets Go
     </Button>
   </Flex>
     </Section>
@@ -360,11 +360,11 @@ const LandingPage: React.FC = () => {
           justifyContent: 'center'
         }}
       >
-        <img
-          src="/logos/uniswap-white.png" // Replace with your actual white logo path
+        <Image
+          src="/logos/uniswap-white.png"
           alt="Uniswap Logo"
           style={{
-            width: "50px", // Adjust the size as needed
+            width: "50px", 
             height: "auto",
             marginRight: "8px" 
           }}
