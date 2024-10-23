@@ -29,25 +29,25 @@ const BubbleChart = () => {
       href: "https://etherscan.io/token/0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
       label: "Etherscan",
       logo: "/logos/etherscan.png",
-      position: { left: "80%", top: "60%" },
+      position: { left: "80%", top: "70%" },
     },
     {
       href: "https://www.coingecko.com/en/coins/baby-pepe-3",
       label: "Coin Gecko",
       logo: "/logos/CoinGecko_logo.png",
-      position: { left: "60%", top: "65%" },
+      position: { left: "60%", top: "30%" },
     },
     {
       href: "https://coinmarketcap.com/currencies/babypepe-coin/",
       label: "CMC",
       logo: "/logos/cmc.webp",
-      position: { left: "20%", top: "75%" },
+      position: { left: "20%", top: "35%" },
     },
     {
       href: "https://app.bubblemaps.io/eth/token/0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4",
       label: "Bubble Map",
       logo: "/logos/Bubblemaps.png",
-      position: { left: "50%", top: "80%" },
+      position: { left: "70%", top: "85%" },
     },
   ], []);
 
