@@ -166,7 +166,8 @@ const MusicPlayer: React.FC = () => {
 
       {isExpanded && (
         <>
-          <List mt={3} spacing={2} mx={3} maxHeight="120px" overflowY="auto" backgroundColor={"#156D30"}>
+          <List mt={3} spacing={2} mx={3} maxHeight="120px" overflowY="auto" backgroundColor={"#156D30"} border="2px solid white" borderRadius={"10px"} padding={"5px"}
+          >
             {songs.map((song, index) => (
               <ListItem
                 key={song.id}
