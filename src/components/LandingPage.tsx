@@ -128,7 +128,7 @@ const LandingPage: React.FC = () => {
          <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3, duration: 3 }}
+            transition={{ delay: 3, duration: 2 }}
             style={{ display: "flex", justifyContent: "center", width: "80%", margin: "0 auto" }} // Centering with auto margins
           >
             <Socials size={40} />

@@ -15,7 +15,7 @@ interface SectionProps {
 }
 
 const sectionTransition: Transition = {
-  duration: 1.2,
+  duration: 0.7,
   ease: [0.42, 0, 0.58, 1],
 };
 
