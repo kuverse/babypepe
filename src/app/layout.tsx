@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "@/components/theme";
+import { ThirdwebProvider } from "thirdweb/react";
 
 
 export const metadata: Metadata = {
@@ -17,8 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="page">
       <body style={{backgroundColor: "var(--background, #CBCBD2)", minHeight:"100vh"}}>
+        
         <ChakraProvider theme={theme}>
+          <ThirdwebProvider>
           {children}
+          </ThirdwebProvider>
         </ChakraProvider>
       </body>
     </html>

@@ -1,82 +1,22 @@
 "use client";
 
-import { Box, Text, Flex, Link, IconButton, HStack, useColorModeValue } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { Box, Text, Flex} from "@chakra-ui/react";
+import Socials from "./Socials";
 
 const Footer: React.FC = () => {
-  const bg = useColorModeValue("gray.800", "gray.900");
-  const color = useColorModeValue("whiteAlpha.900", "whiteAlpha.700");
-
   return (
-    <Box
-      bg={bg}
-      color={color}
-      py={6}
-      px={{ base: 4, md: 8 }}
-      width="100%"
-      position="fixed"
-      bottom={0}
-      left={0}
-      borderTop="2px solid"
-      borderColor={useColorModeValue("gray.700", "whiteAlpha.300")}
-    >
-      <Flex
-        alignItems="center"
-        justifyContent="space-between"
-        direction={{ base: "column", md: "row" }}
-        textAlign={{ base: "center", md: "left" }}
-      >
-        {/* Left Section */}
-        <HStack spacing={6} mb={{ base: 4, md: 0 }}>
-          <Link href="#" fontWeight="bold" _hover={{ color: "teal.300" }}>
-            Privacy Policy
-          </Link>
-          <Link href="#" fontWeight="bold" _hover={{ color: "teal.300" }}>
-            Terms of Service
-          </Link>
-        </HStack>
-
-        {/* Right Section: Social Icons */}
-        <HStack spacing={4}>
-          <IconButton
-            aria-label="Facebook"
-            icon={<FaFacebook />}
-            variant="ghost"
-            size="lg"
-            color="white"
-            _hover={{ bg: "teal.500" }}
-          />
-          <IconButton
-            aria-label="Twitter"
-            icon={<FaTwitter />}
-            variant="ghost"
-            size="lg"
-            color="white"
-            _hover={{ bg: "teal.500" }}
-          />
-          <IconButton
-            aria-label="Github"
-            icon={<FaGithub />}
-            variant="ghost"
-            size="lg"
-            color="white"
-            _hover={{ bg: "teal.500" }}
-          />
-          <IconButton
-            aria-label="Instagram"
-            icon={<FaInstagram />}
-            variant="ghost"
-            size="lg"
-            color="white"
-            _hover={{ bg: "teal.500" }}
-          />
-        </HStack>
+    <Box  as="footer"   bg="#156D30"  color="white"py={4} px={{ base: 4, md: 8 }} width="100%"  mt="auto" >
+      <Flex justify="space-between" align="center" flexDirection={{ base: "column", md: "row" }}>
+       
+       <Socials />
+        <Text fontSize={{ base: "2vw", md: "1.2vw" }}  mx={5} textAlign={{ base: "center", md: "center" }}  style={{ fontFamily: "'SecondaryFont', sans-serif" }}>
+        $babypepe has no association with Matt Furie or his creation Pepe the Frog. This token is simply paying homage to a meme we all love and recognize.
+        $BABYPEPE is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is run 100% by the community and is completely useless and for entertainment purposes only.        </Text>
+        
+        <Text fontSize="m" mt={4} textAlign={{ base: "center", md: "left" }} minWidth={"200px"}>
+          © 2024 Baby Pepe Community. All rights reserved.
+        </Text>
       </Flex>
-
-      {/* Disclaimer Text */}
-      <Text mt={4} fontSize="sm" textAlign="center" opacity={0.7}>
-        © 2024 Your Website. All rights reserved.
-      </Text>
     </Box>
   );
 };

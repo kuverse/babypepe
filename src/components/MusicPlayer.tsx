@@ -3,32 +3,29 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
   Box,
- 
+  Flex,
   IconButton,
   List,
   ListItem,
-  Flex,
   Text,
   Slider,
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
+  Image,
   useMediaQuery,
 } from "@chakra-ui/react";
-import {
-  FaPlay,
-  FaPause,
-  FaForward,
-  FaBackward,
-  FaVolumeUp,
-  FaVolumeMute,
-  FaMusic,
-} from "react-icons/fa";
+import { FaPlay, FaPause, FaForward, FaBackward, FaVolumeUp, FaVolumeMute, FaMusic } from "react-icons/fa";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const songs = [
-  { id: 1, title: "Song 1", src: "/music/song1.mp3" },
-  { id: 2, title: "Song 2", src: "/music/song2.mp3" },
-  { id: 3, title: "Song 3", src: "/music/song3.mp3" },
+  { id: 1, title: "The Original Baby", src: "/music/1.mp3" },
+  { id: 2, title: "Baby Pepe & Friends", src: "/music/2.mp3" },
+  { id: 6, title: "The Pepe DNA", src: "/music/6.mp3" },
+  { id: 3, title: "A Brand New Vibe", src: "/music/3.mp3" },
+  { id: 4, title: "Crypto Craze", src: "/music/4.mp3" },
+  { id: 5, title: "Theres a New King", src: "/music/5.mp3" },
+
 ];
 
 const MusicPlayer: React.FC = () => {
@@ -37,8 +34,9 @@ const MusicPlayer: React.FC = () => {
   const [volume, setVolume] = useState(50);
   const [isMuted, setIsMuted] = useState(false);
   const [isExpanded, setIsExpanded] = useState(true);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
@@ -48,128 +46,210 @@ const MusicPlayer: React.FC = () => {
   }, [volume]);
 
   useEffect(() => {
-    // Collapse the player on small screens by default
     setIsExpanded(!isSmallScreen);
   }, [isSmallScreen]);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    const updateCurrentTime = () => setCurrentTime(audio?.currentTime || 0);
+    const setAudioDuration = () => setDuration(audio?.duration || 0);
+
+    if (audio) {
+      audio.addEventListener("timeupdate", updateCurrentTime);
+      audio.addEventListener("loadedmetadata", setAudioDuration);
+      audio.load(); // Ensure the new song loads correctly
+      //audio.play(); // Start playing the new song
+      //setIsPlaying(true);
+    }
+
+    return () => {
+      if (audio) {
+        audio.removeEventListener("timeupdate", updateCurrentTime);
+        audio.removeEventListener("loadedmetadata", setAudioDuration);
+      }
+    };
+  }, [currentSongIndex]);
+
   const handlePlayPause = () => {
-    if (audioRef.current) {
+    const audio = audioRef.current;
+    if (audio) {
       if (isPlaying) {
-        audioRef.current.pause();
+        audio.pause();
       } else {
-        audioRef.current.play();
+        audio.play();
       }
       setIsPlaying(!isPlaying);
     }
   };
 
-  const handleNext = () => {
-    setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
-  };
 
+
+
+
+  
+
+  const handleNext = () => {
+    setCurrentSongIndex((prev) => (prev + 1) % songs.length); // Update the song index
+  };
+  
   const handlePrev = () => {
-    setCurrentSongIndex((prevIndex) =>
-      prevIndex === 0 ? songs.length - 1 : prevIndex - 1
+    setCurrentSongIndex((prev) => 
+      prev === 0 ? songs.length - 1 : prev - 1
     );
   };
 
+  const handlePlay = (index: number) => {
+    setCurrentSongIndex(index); // Set the song index
+  };
+
   const handleMute = () => {
+    const audio = audioRef.current;
+    if (audio) audio.muted = !isMuted;
     setIsMuted(!isMuted);
-    if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
+  };
+
+  const handleScrub = (value: number) => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.currentTime = value;
+      setCurrentTime(value);
     }
   };
 
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
   return (
+
+    
     <Box
       position="fixed"
-      bottom={0}
-      left={0}
-      p={3}
+      bottom={10}
+      left={10}
+      p={2}
       bg="#156D30"
       color="white"
-      borderRadius="10px 10px 0 0"
+      borderRadius="15px"
       boxShadow="lg"
-      maxWidth="300px"
+      maxWidth={isExpanded ? "420px" : "60px"}
+      transition="max-width 0.3s"
       zIndex={1000}
+      border="2px solid white"
     >
-      <Flex justifyContent="space-between" alignItems="center">
+      {isExpanded && (
+       <Image
+        src="/images/pepegif.gif"
+        alt="Music Animation"
+        position="absolute"
+        top="-75px"
+        left="10px"
+        width="200px"
+        height="170px"
+        zIndex={-5} 
+        pointerEvents="none"
+        style={{
+          filter: 'brightness(1.2) contrast(1.3)',
+        }}
+      />
+    )}
+
+      <Flex justifyContent="space-between" alignItems="center" onClick={() => setIsExpanded((prev) => !prev)} >
+
         <IconButton
-          icon={<FaMusic />}
+          icon={<FaMusic size={30} />}
           aria-label="Expand Player"
-          onClick={() => setIsExpanded(!isExpanded)}
           variant="ghost"
           color="white"
         />
-        <Text fontSize="lg" fontWeight="bold">
-          Walkman Player
-        </Text>
+         {isExpanded && (<ChevronDownIcon boxSize={10} zIndex={-6}/>)}
       </Flex>
+
+      <audio ref={audioRef} src={songs[currentSongIndex].src} onEnded={handleNext} />
 
       {isExpanded && (
         <>
-          <audio
-            ref={audioRef}
-            src={songs[currentSongIndex].src}
-            onEnded={handleNext}
-          />
-
-          <Text mt={2} fontSize="sm" color="#6CB947">
-            Now Playing: {songs[currentSongIndex].title}
-          </Text>
-
-          <List mt={3} spacing={2}>
+          <List mt={3} spacing={2} mx={3} maxHeight="120px" overflowY="auto" backgroundColor={"#156D30"}>
             {songs.map((song, index) => (
               <ListItem
                 key={song.id}
-                bg={index === currentSongIndex ? "#6CB947" : "gray.700"}
-                p={2}
+                bg={index === currentSongIndex ? "#6CB947" : "#CBCBD2"}
+                p={1}
                 borderRadius="md"
                 cursor="pointer"
-                onClick={() => setCurrentSongIndex(index)}
+                onClick={() => handlePlay(index)}
+                display="flex"  
+                alignItems="center" 
+                justifyContent="center"
+                textAlign="center"
+                fontFamily="'SecondaryFont', sans-serif"
+                fontSize="20px"
+                fontWeight={"bold"}
               >
                 {song.title}
               </ListItem>
             ))}
           </List>
 
-          <Flex mt={3} justifyContent="space-around">
-            <IconButton
-              icon={<FaBackward />}
-              aria-label="Previous Song"
-              onClick={handlePrev}
-            />
-            <IconButton
-              icon={isPlaying ? <FaPause /> : <FaPlay />}
-              aria-label="Play/Pause"
-              onClick={handlePlayPause}
-            />
-            <IconButton
-              icon={<FaForward />}
-              aria-label="Next Song"
-              onClick={handleNext}
-            />
-          </Flex>
 
           <Flex mt={3} alignItems="center">
+            <Text fontSize="sm" color="white" mx={2}>
+              {formatTime(currentTime)}
+            </Text>
+            <Slider value={currentTime} min={0} max={duration} onChange={handleScrub} width="70%">
+              <SliderTrack bg="gray.600">
+                <SliderFilledTrack bg="#6CB947" />
+              </SliderTrack>
+              <SliderThumb />
+            </Slider>
+            <Text fontSize="sm" color="white" mx={2}>
+              {formatTime(duration)}
+            </Text>
+          </Flex>
+
+
+
+          <Flex mt={2} justifyContent="space-around">
+            <IconButton mt={2} icon={<FaBackward />} aria-label="Previous Song" onClick={handlePrev} />
+            
+            <IconButton
+              icon={isPlaying ? <FaPause size={30} /> : <FaPlay size={30} />}
+              aria-label="Play/Pause"
+              onClick={handlePlayPause}
+              bg="#6CB947"
+              borderRadius="50%"
+              boxSize="60px"
+              color="white"
+              border="2px solid white"
+
+              _hover={{ bg: "#A5E07B" }}
+            />
+            <IconButton mt={2} icon={<FaForward />} aria-label="Next Song" onClick={handleNext} />
+          </Flex>
+
+          <Flex mt={3} alignItems="center" ml={"15px"}>
             <IconButton
               icon={isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
               aria-label="Mute/Unmute"
               onClick={handleMute}
-              mr={2}
+              bg="#transparent"
+
             />
-            <Slider
-              value={volume}
-              onChange={(val) => setVolume(val)}
-              max={100}
-              colorScheme="green"
-            >
+            <Slider value={volume} onChange={(val) => setVolume(val)} max={100} colorScheme="green" ml={"10px"} width={"60%"}>
               <SliderTrack bg="gray.600">
                 <SliderFilledTrack bg="#6CB947" />
               </SliderTrack>
               <SliderThumb />
             </Slider>
           </Flex>
+          {isExpanded && (
+          <Text fontWeight="bold" textAlign="center" flex={1} mx={15} fontSize={"25px"}>
+            Walkbaby Player
+          </Text>
+        )}
         </>
       )}
     </Box>

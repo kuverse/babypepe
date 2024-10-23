@@ -109,4 +109,45 @@
     text-align: center;
     padding: 10px 0;
   }
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px); /* Float up */
+    }
+    100% {
+      transform: translateY(0px); /* Return to original position */
+    }
+  }
+  .floatingImage {
+    position: "absolute";    
+    animation: float 3s ease-in-out infinite; /* Apply the floating animation */
+    z-index: 2;
+    pointer-events: none;
+    transform: "translate(-50%, -50%)";
+    left: "50%"; /* Disable pointer events if necessary */
+  }
+
+  .uniswapButton {
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 8px;
+    background-color: #DB623B;
+    color: white;
+    border: none;
+    position: "absolute";
+    cursor: pointer;
+    border-color:"2px solid white";
+    border: 4px solid white;
+    transform: "translate(-50%, -50%)";            
+    left: "50%";
+    margin-bottom: 400px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  }
+  
+  .uniswapButton:hover {
+    background-color: #A02E00; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
   

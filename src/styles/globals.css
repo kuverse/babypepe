@@ -5,10 +5,15 @@
   font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'SecondaryFont';
+  src: url('/fonts/Dokdo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
-  --background: #CBCBD2;
-  --foreground: #156D30;
+  --background: #156D30;
+  --foreground: #A02E00;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +31,8 @@ html, body {
   font-family: 'PepeFont', sans-serif;
   color: var(--foreground) !important;
   background-color: var(--background) !important;
+  scroll-behavior: smooth;
+
 }
 
 body {
