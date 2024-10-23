@@ -223,7 +223,7 @@ const LandingPage: React.FC = () => {
             borderRadius="15px"
             objectFit="contain"
             zIndex={3000}
-            mt={{ base: "-1080px", md: "-980px" }}            
+            mt={{ base: "-1200px", md: "-980px" }}            
           />
           
 
