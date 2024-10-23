@@ -162,15 +162,15 @@ const LandingPage: React.FC = () => {
 
       <Box
         position="absolute" // Change to absolute for better centering
-        top="40%"
+        top="80%"
         left="50%"
-        transform="translate(-50%, -90%)" // Center horizontally and vertically
+        transform="translate(-50%, -200%)" // Center horizontally and vertically
         zIndex={1000} // Ensure it's above other content
       >
         <motion.div
-          initial={{ opacity: 0, y: -150 }}
+          initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 5, duration: 3 }}
+          transition={{ delay: 2, duration: 3 }}
           style={{ display: "flex", justifyContent: "center", width: "100%" }} // Use width: 100% for full-width alignment
         >
           <Link
