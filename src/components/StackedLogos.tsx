@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useMemo, useEffect } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
@@ -18,65 +18,64 @@ const BubbleChart = () => {
   const [droppedLink, setDroppedLink] = useState<string | null>(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-  const nodeRef = useRef<HTMLDivElement>(null); // Create a ref for each draggable
 
   useEffect(() => {
     const updateViewport = () => {
-      setViewportWidth(window.innerWidth);
-      setViewportHeight(window.innerHeight);
+      if (typeof window !== "undefined") {
+        setViewportWidth(window.innerWidth);
+        setViewportHeight(window.innerHeight);
+      }
     };
+
     updateViewport();
     window.addEventListener("resize", updateViewport);
     return () => window.removeEventListener("resize", updateViewport);
   }, []);
 
-  const links: Link[] = useMemo(
-    () => [
-      {
-        href: "https://dextools.io",
-        label: "DexTools",
-        logo: "/logos/dextools.svg",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 150),
-      },
-      {
-        href: "https://dexscreener.com/ethereum/0x2c8f9bbae004854b9548f6c84720c70a8fceea23",
-        label: "DexScreener",
-        logo: "/logos/dexsxcreener.png",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 150),
-      },
-      {
-        href: "https://etherscan.io/token/0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-        label: "Etherscan",
-        logo: "/logos/etherscan.png",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 150),
-      },
-      {
-        href: "https://www.coingecko.com/en/coins/baby-pepe-3",
-        label: "Coin Gecko",
-        logo: "/logos/CoinGecko_logo.png",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 150),
-      },
-      {
-        href: "https://coinmarketcap.com/currencies/babypepe-coin/",
-        label: "CMC",
-        logo: "/logos/cmc.webp",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 200),
-      },
-      {
-        href: "https://app.bubblemaps.io/eth/token/0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4",
-        label: "Bubble Map",
-        logo: "/logos/Bubblemaps.png",
-        initialX: Math.random() * (viewportWidth - 100),
-        initialY: Math.random() * (viewportHeight - 200),
-      },
-    ],
-    [viewportWidth, viewportHeight]
-  );
+  const links: Link[] = useMemo(() => [
+    {
+      href: "https://dextools.io",
+      label: "DexTools",
+      logo: "/logos/dextools.svg",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 150),
+    },
+    {
+      href: "https://dexscreener.com/ethereum/0x2c8f9bbae004854b9548f6c84720c70a8fceea23",
+      label: "DexScreener",
+      logo: "/logos/dexsxcreener.png",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 150),
+    },
+    {
+      href: "https://etherscan.io/token/0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
+      label: "Etherscan",
+      logo: "/logos/etherscan.png",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 150),
+    },
+    {
+      href: "https://www.coingecko.com/en/coins/baby-pepe-3",
+      label: "Coin Gecko",
+      logo: "/logos/CoinGecko_logo.png",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 150),
+    },
+    {
+      href: "https://coinmarketcap.com/currencies/babypepe-coin/",
+      label: "CMC",
+      logo: "/logos/cmc.webp",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 200),
+    },
+    {
+      href: "https://app.bubblemaps.io/eth/token/0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4",
+      label: "Bubble Map",
+      logo: "/logos/Bubblemaps.png",
+      initialX: Math.random() * (viewportWidth - 100),
+      initialY: Math.random() * (viewportHeight - 200),
+    },
+  ], [viewportWidth, viewportHeight]);
 
   const handleDragStop = (
     e: DraggableEvent,
@@ -117,16 +116,17 @@ const BubbleChart = () => {
       borderRadius="10px"
     >
       {links.map((link, index) => {
+        const nodeRef = useRef<HTMLDivElement>(null); // Create a ref for each draggable
 
         return (
           <Draggable
             key={index}
             defaultPosition={{ x: link.initialX, y: link.initialY }}
             onStop={(e, data) => handleDragStop(e, data, link.href)}
-            nodeRef={nodeRef} // Pass the ref here
+            nodeRef={nodeRef}
           >
             <Box
-              ref={nodeRef} // Set the ref here
+              ref={nodeRef}
               position="absolute"
               width="80px"
               height="80px"
@@ -155,14 +155,13 @@ const BubbleChart = () => {
         ref={dumpsterRef}
         position="absolute"
         bottom="40px"
-        right={{ base: "0%", sm: "10%", md: "28%" }}
+        right={{ base: "0%", sm: "10%", md: "28%" }} // Responsive positioning
         width="160px"
         height="220px"
         borderRadius="10%"
         display="flex"
         justifyContent="center"
         alignItems="center"
-        //bg="gray.200" // Optional: Add a background for the dumpster
       />
     </Box>
   );
