@@ -18,6 +18,7 @@ const BubbleChart = () => {
   const [droppedLink, setDroppedLink] = useState<string | null>(null);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const nodeRef = useRef<HTMLDivElement>(null); // Create a ref for each draggable
 
   useEffect(() => {
     const updateViewport = () => {
@@ -116,7 +117,6 @@ const BubbleChart = () => {
       borderRadius="10px"
     >
       {links.map((link, index) => {
-        const nodeRef = useRef<HTMLDivElement>(null); // Create a ref for each draggable
 
         return (
           <Draggable
