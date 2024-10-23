@@ -16,11 +16,10 @@ interface Link {
 const BubbleChart = () => {
   const dumpsterRef = useRef<HTMLDivElement>(null);
   const [droppedLink, setDroppedLink] = useState<string | null>(null);
-  const [viewportWidth, setViewportWidth] = useState(800);
-  const [viewportHeight, setViewportHeight] = useState(600);
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    // Set viewport size on mount and update on resize
     const updateViewport = () => {
       setViewportWidth(window.innerWidth);
       setViewportHeight(window.innerHeight);
@@ -94,68 +93,76 @@ const BubbleChart = () => {
         logoRect.top >= dumpsterRect.top &&
         logoRect.bottom <= dumpsterRect.bottom
       ) {
-        setDroppedLink(link); // Open the link if dropped in the dumpster
+        setDroppedLink(link);
       }
     }
   };
 
-  if (droppedLink) {
-    window.open(droppedLink, "_blank", "noopener,noreferrer");
-    setDroppedLink(null);
-  }
+  useEffect(() => {
+    if (droppedLink) {
+      window.open(droppedLink, "_blank", "noopener,noreferrer");
+      setDroppedLink(null);
+    }
+  }, [droppedLink]);
 
   return (
     <Box
       id="bubble-chart"
       position="relative"
       width="100vw"
-      height="100vh"
+      height="110vh"
       overflow="hidden"
       mb={4}
       borderRadius="10px"
-      //backgroundColor="#f0f0f0"
     >
-      {links.map((link, index) => (
-        <Draggable
-          key={index}
-          defaultPosition={{ x: link.initialX, y: link.initialY }}
-          onStop={(e, data) => handleDragStop(e, data, link.href)}
-        >
-          <Box
-            position="absolute"
-            width="80px"
-            height="80px"
-            borderRadius="50%"
-            overflow="hidden"
-            bg="white"
-            boxShadow="1px 10px 11px #6CB947"
-            cursor="grab"
-            border="5px solid white"
+      {links.map((link, index) => {
+        const nodeRef = useRef<HTMLDivElement>(null); // Create a ref for each draggable
+
+        return (
+          <Draggable
+            key={index}
+            defaultPosition={{ x: link.initialX, y: link.initialY }}
+            onStop={(e, data) => handleDragStop(e, data, link.href)}
+            nodeRef={nodeRef} // Pass the ref here
           >
-            <Image
-              src={link.logo}
-              alt={link.label}
-              width={80}
-              height={80}
-              loading="lazy"
-              priority={false}
-              style={{ pointerEvents: "none", objectFit: "contain" }}
-            />
-          </Box>
-        </Draggable>
-      ))}
+            <Box
+              ref={nodeRef} // Set the ref here
+              position="absolute"
+              width="80px"
+              height="80px"
+              borderRadius="50%"
+              overflow="hidden"
+              bg="white"
+              boxShadow="1px 10px 11px #6CB947"
+              cursor="grab"
+              border="5px solid white"
+            >
+              <Image
+                src={link.logo}
+                alt={link.label}
+                width={80}
+                height={80}
+                loading="lazy"
+                priority={false}
+                style={{ pointerEvents: "none", objectFit: "contain" }}
+              />
+            </Box>
+          </Draggable>
+        );
+      })}
 
       <Box
         ref={dumpsterRef}
         position="absolute"
         bottom="40px"
-        right="275px"
+        right={{ base: "0%", sm: "10%", md: "28%" }}
         width="160px"
         height="220px"
         borderRadius="10%"
         display="flex"
         justifyContent="center"
         alignItems="center"
+        //bg="gray.200" // Optional: Add a background for the dumpster
       />
     </Box>
   );

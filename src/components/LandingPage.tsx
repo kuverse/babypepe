@@ -10,7 +10,7 @@ import Socials from "./Socials";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import styles from '../styles/landingpage.module.css'
-//import BubbleChart from "./StackedLogos";
+import BubbleChart from "./StackedLogos";
 import { FaTelegram } from "react-icons/fa";
 import TokenomicsSection from "./Tokenomics";
 import GameSection from "./GameSection";
@@ -149,36 +149,36 @@ const LandingPage: React.FC = () => {
       </Box>
 
       <Box
-        position="fixed"
-        top="50%"
+        position="absolute" // Change to absolute for better centering
+        top="40%"
         left="50%"
-        transform="translate(-50%, -240%)" // Center horizontally and vertically
+        transform="translate(-50%, -90%)" // Center horizontally and vertically
         zIndex={1000} // Ensure it's above other content
       >
-
         <motion.div
-          initial={{ opacity: 0, y: -150  }}
-          animate={{ opacity: 1, y: 0  }}
+          initial={{ opacity: 0, y: -150 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 5, duration: 3 }}
-          style={{ display: "flex", justifyContent: "center", width: "80%" }}
+          style={{ display: "flex", justifyContent: "center", width: "100%" }} // Use width: 100% for full-width alignment
         >
-        <Link
-          href="/#flappy2"
-          fontWeight="bold"
-          fontSize={{ base: "30px", md: "40px" }}
-          bg="#156D30"
-          color="white"
-          px={5}
-          py={2}
-          borderRadius="8px"
-          textAlign="center"
-          border="4px solid white"
-          _hover={{ bg: "#6CB947", transform: "scale(1.05)" }}
-        >
-          Arcade
-        </Link>
+          <Link
+            href="/#flappy2"
+            fontWeight="bold"
+            fontSize={{ base: "30px", md: "40px" }}
+            bg="#156D30"
+            color="white"
+            px={5}
+            py={2}
+            borderRadius="8px"
+            textAlign="center"
+            border="4px solid white"
+            _hover={{ bg: "#6CB947", transform: "scale(1.05)" }}
+          >
+            Arcade
+          </Link>
         </motion.div>
       </Box>
+
     </Section>
 
 
@@ -292,7 +292,7 @@ const LandingPage: React.FC = () => {
         height="200vh"
         padding="20px"
       >
-        {/*<BubbleChart />*/}
+        <BubbleChart />
       </Box>
     </Section>
 
@@ -342,7 +342,7 @@ const LandingPage: React.FC = () => {
 
     <Section
       id="how-to-buy"
-      title="How to Swap"
+      title="Swap Baby Pepe"
       subtitle="Available on Uniswap"
       thirdElement=""
       bgImage="/images/uniswap1.png"
