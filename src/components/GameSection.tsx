@@ -13,7 +13,7 @@ const GameSection: React.FC = () => {
     bgPosition="center"
     bgRepeat="no-repeat"
     width="100vw"
-    minHeight="150vh"
+    minHeight="160vh"
     display="flex"
     justifyContent="center"
     alignItems="center"

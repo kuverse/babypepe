@@ -10,7 +10,7 @@ import Socials from "./Socials";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import styles from '../styles/landingpage.module.css'
-//import BubbleChart from "./StackedLogos";
+import BubbleChart from "./StackedLogos";
 import { FaTelegram } from "react-icons/fa";
 import TokenomicsSection from "./Tokenomics";
 import GameSection from "./GameSection";
@@ -223,7 +223,7 @@ const LandingPage: React.FC = () => {
             borderRadius="15px"
             objectFit="contain"
             zIndex={3000}
-            mt={{ base: "-1180px", md: "-980px" }}            
+            mt={{ base: "-1080px", md: "-980px" }}            
           />
           
 
@@ -288,25 +288,7 @@ const LandingPage: React.FC = () => {
 
 
 
-    <Section
-      id="links"
-      title="Usefull Links"
-      subtitle="Drag & drop a link to the trash"
-      thirdElement="Links for the community"
-      bgImage="/images/pepe-trash.png"
-    >
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="flex-start"
-        width="100%"
-        height="200vh"
-        padding="20px"
-      >
-        {/*<BubbleChart />*/}
-      </Box>
-    </Section>
+
 
     <GameSection />
 
@@ -408,12 +390,31 @@ const LandingPage: React.FC = () => {
     </Section>
 
 
+    <Section
+      id="links"
+      title="More Links"
+      subtitle="Just dumped everywhere"
+      thirdElement=""
+      bgImage="/images/dumping.png"
+    >
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="flex-start"
+        width="100%"
+        height="200vh"
+        padding="20px"
+      >
+        <BubbleChart />
+      </Box>
+    </Section>
 
     <Section
       id="join-us"
       title="Join the Baby Pepe Cult"
       subtitle="Started from the bottom"
-      thirdElement=""
+      thirdElement="And we just getting started."
       bgImage="/images/pepe-background.webp"
     >
       <Flex
