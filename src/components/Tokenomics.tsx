@@ -58,7 +58,7 @@ const TokenomicsSection: React.FC = () => {
       <Heading
         as="h1"
         mb={2}
-        fontSize={{ base: "80px", md: "80px" }}
+        fontSize={{ base: "60px", md: "80px" }}
         textAlign="center"
         color="#6CB947"
         fontFamily="'PepeFont', sans-serif"
@@ -69,7 +69,7 @@ const TokenomicsSection: React.FC = () => {
 
       <Text
         mb={4}
-        fontSize={{ base: "38px", md: "44px" }}
+        fontSize={{ base: "35px", md: "44px" }}
         textAlign="center"
         color="#6CB947"
         fontWeight={"bold"}

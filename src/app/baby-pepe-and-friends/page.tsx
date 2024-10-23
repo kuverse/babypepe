@@ -14,42 +14,42 @@ const VideoGallery: React.FC = () => {
     {
       thumbnail: "/videos/1.png",
       title: "Episode 1: Breaking!",
-      embedUrl: "https://www.youtube.com/embed/RJozyBRMTb8",
+      embedUrl: "https://www.youtube-nocookie.com/embed/RJozyBRMTb8?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/2.png",
       title: "Episode 2: Hit the Road",
-      embedUrl: "https://www.youtube.com/embed/yRVM9_-vVSM",
+      embedUrl: "https://www.youtube-nocookie.com/embed/yRVM9_-vVSM?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/3.png",
       title: "Episode 3: The Chase",
-      embedUrl: "https://www.youtube.com/embed/5JJlgFrGKCA",
+      embedUrl: "https://www.youtube-nocookie.com/embed/5JJlgFrGKCA?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/4.png",
       title: "Episode 4: Beefy Intel",
-      embedUrl: "https://www.youtube.com/embed/pOmgky5QYKI",
+      embedUrl: "https://www.youtube-nocookie.com/embed/pOmgky5QYKI?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/5.png",
       title: "Episode 5: Blue Bird",
-      embedUrl: "https://www.youtube.com/embed/IswxDs9Rb2c",
+      embedUrl: "https://www.youtube-nocookie.com/embed/IswxDs9Rb2c?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/6.png",
       title: "Episode 6: Drop a Baby",
-      embedUrl: "https://www.youtube.com/embed/Zfl7oCxORg4",
+      embedUrl: "https://www.youtube-nocookie.com/embed/Zfl7oCxORg4?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/7.png",
       title: "Episode 7: To the Moon",
-      embedUrl: "https://www.youtube.com/embed/Mi6FXTCQLQE",
+      embedUrl: "https://www.youtube-nocookie.com/embed/Mi6FXTCQLQE?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
     {
       thumbnail: "/videos/8.png",
       title: "Episode 8: The Catch",
-      embedUrl: "https://www.youtube.com/embed/52GQXbIczBE",
+      embedUrl: "https://www.youtube-nocookie.com/embed/52GQXbIczBE?rel=0&showinfo=0&modestbranding=1&enablejsapi=1",
     },
   ];
 
@@ -93,21 +93,9 @@ const VideoGallery: React.FC = () => {
           </Text>
 
           {/* Video Thumbnails Row */}
-          <Box
-            display="flex"
-            justifyContent="center"
-            gap="20px"
-            flexWrap="wrap"
-            marginBottom="30px"
-          >
+          <Box display="flex" justifyContent="center" gap="20px" flexWrap="wrap" marginBottom="30px">
             {videos.map((video, index) => (
-              <Box
-                key={index}
-                onClick={() => handleVideoClick(video)}
-                cursor="pointer"
-                textAlign="center"
-                _hover={{ transform: "scale(1.4)" }}
-              >
+              <Box key={index} onClick={() => handleVideoClick(video)} cursor="pointer" textAlign="center" _hover={{ transform: "scale(1.4)" }}>
                 <Image
                   src={video.thumbnail}
                   alt={`Thumbnail for ${video.title}`}
@@ -126,42 +114,34 @@ const VideoGallery: React.FC = () => {
         </Box>
 
         {/* Bottom Section for Selected Video */}
-        <Box
-          flex="1"
-          backgroundColor="black"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          padding="20px"
-        >
+        <Box flex="1" backgroundColor="black" display="flex" flexDirection="column" justifyContent="center" alignItems="center" padding="20px" >
           {selectedVideo && (
             <>
               {/* Video Title */}
-              <Text
-                mt={10}
-                fontSize="2xl"
-                fontWeight="bold"
-                color="white"
-                marginBottom="10px"
-              >
+              <Text mt={10} fontSize="2xl" fontWeight="bold" color="white" marginBottom="10px">
                 {selectedVideo.title}
               </Text>
 
               {/* YouTube Embed Player */}
-              <iframe
-                width="800"
-                height="450"
-                src={selectedVideo.embedUrl}
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                style={{
-                  borderRadius: "10px",
-                  boxShadow: "0px 4px 8px rgba(255, 255, 255, 0.2)",
-                  marginBottom: "25px"
-                }}
-              ></iframe>
+              <Box position="relative" width="100%" height="0" paddingBottom="56.25%" mb={100}>{/* 16:9 Aspect Ratio */}
+                <iframe
+                  src={selectedVideo.embedUrl}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  onError={() => alert("An error occurred while loading the video.")}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "10px",
+                    boxShadow: "0px 4px 8px rgba(255, 255, 255, 0.2)",
+                    marginBottom: "25px",
+                  }}
+                ></iframe>
+              </Box>
             </>
           )}
         </Box>

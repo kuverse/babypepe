@@ -24,8 +24,7 @@ const songs = [
   { id: 6, title: "The Pepe DNA", src: "/music/6.mp3" },
   { id: 3, title: "A Brand New Vibe", src: "/music/3.mp3" },
   { id: 4, title: "Crypto Craze", src: "/music/4.mp3" },
-  { id: 5, title: "Theres a New King", src: "/music/5.mp3" },
-
+  { id: 5, title: "There's a New King", src: "/music/5.mp3" },
 ];
 
 const MusicPlayer: React.FC = () => {
@@ -59,8 +58,9 @@ const MusicPlayer: React.FC = () => {
       audio.addEventListener("timeupdate", updateCurrentTime);
       audio.addEventListener("loadedmetadata", setAudioDuration);
       audio.load(); // Ensure the new song loads correctly
-      //audio.play(); // Start playing the new song
-      //setIsPlaying(true);
+      if (isPlaying) {
+        audio.play(); // Start playing the new song if currently playing
+      }
     }
 
     return () => {
@@ -83,20 +83,12 @@ const MusicPlayer: React.FC = () => {
     }
   };
 
-
-
-
-
-  
-
   const handleNext = () => {
     setCurrentSongIndex((prev) => (prev + 1) % songs.length); // Update the song index
   };
-  
+
   const handlePrev = () => {
-    setCurrentSongIndex((prev) => 
-      prev === 0 ? songs.length - 1 : prev - 1
-    );
+    setCurrentSongIndex((prev) => (prev === 0 ? songs.length - 1 : prev - 1));
   };
 
   const handlePlay = (index: number) => {
@@ -124,8 +116,6 @@ const MusicPlayer: React.FC = () => {
   };
 
   return (
-
-    
     <Box
       position="fixed"
       bottom={10}
@@ -141,34 +131,38 @@ const MusicPlayer: React.FC = () => {
       border="2px solid white"
     >
       {isExpanded && (
-       <Image
-        src="/images/pepegif.gif"
-        alt="Music Animation"
-        position="absolute"
-        top="-75px"
-        left="10px"
-        width="200px"
-        height="170px"
-        zIndex={-5} 
-        pointerEvents="none"
-        style={{
-          filter: 'brightness(1.2) contrast(1.3)',
-        }}
-      />
-    )}
+        <Image
+          src="/images/pepegif.gif"
+          alt="Music Animation"
+          position="absolute"
+          top="-75px"
+          left="10px"
+          width="200px"
+          height="170px"
+          zIndex={-5}
+          pointerEvents="none"
+          style={{
+            filter: 'brightness(1.2) contrast(1.3)',
+          }}
+        />
+      )}
 
-      <Flex justifyContent="space-between" alignItems="center" onClick={() => setIsExpanded((prev) => !prev)} >
-
+      <Flex justifyContent="space-between" alignItems="center" onClick={() => setIsExpanded((prev) => !prev)}>
         <IconButton
           icon={<FaMusic size={30} />}
           aria-label="Expand Player"
           variant="ghost"
           color="white"
         />
-         {isExpanded && (<ChevronDownIcon boxSize={10} zIndex={-6}/>)}
+        {isExpanded && <ChevronDownIcon boxSize={10} zIndex={-6} />}
       </Flex>
 
-      <audio ref={audioRef} src={songs[currentSongIndex].src} onEnded={handleNext} />
+      <audio 
+        ref={audioRef} 
+        src={songs[currentSongIndex].src} 
+        onEnded={handleNext} 
+        preload="auto" // Ensure the next song is preloaded
+      />
 
       {isExpanded && (
         <>
@@ -181,8 +175,8 @@ const MusicPlayer: React.FC = () => {
                 borderRadius="md"
                 cursor="pointer"
                 onClick={() => handlePlay(index)}
-                display="flex"  
-                alignItems="center" 
+                display="flex"
+                alignItems="center"
                 justifyContent="center"
                 textAlign="center"
                 fontFamily="'SecondaryFont', sans-serif"
@@ -193,7 +187,6 @@ const MusicPlayer: React.FC = () => {
               </ListItem>
             ))}
           </List>
-
 
           <Flex mt={3} alignItems="center">
             <Text fontSize="sm" color="white" mx={2}>
@@ -210,11 +203,9 @@ const MusicPlayer: React.FC = () => {
             </Text>
           </Flex>
 
-
-
           <Flex mt={2} justifyContent="space-around">
             <IconButton mt={2} icon={<FaBackward />} aria-label="Previous Song" onClick={handlePrev} />
-            
+
             <IconButton
               icon={isPlaying ? <FaPause size={30} /> : <FaPlay size={30} />}
               aria-label="Play/Pause"
@@ -224,7 +215,6 @@ const MusicPlayer: React.FC = () => {
               boxSize="60px"
               color="white"
               border="2px solid white"
-
               _hover={{ bg: "#A5E07B" }}
             />
             <IconButton mt={2} icon={<FaForward />} aria-label="Next Song" onClick={handleNext} />
@@ -236,7 +226,6 @@ const MusicPlayer: React.FC = () => {
               aria-label="Mute/Unmute"
               onClick={handleMute}
               bg="#transparent"
-
             />
             <Slider value={volume} onChange={(val) => setVolume(val)} max={100} colorScheme="green" ml={"10px"} width={"60%"}>
               <SliderTrack bg="gray.600">
@@ -246,10 +235,10 @@ const MusicPlayer: React.FC = () => {
             </Slider>
           </Flex>
           {isExpanded && (
-          <Text fontWeight="bold" textAlign="center" flex={1} mx={15} fontSize={"25px"}>
-            Walkbaby Player
-          </Text>
-        )}
+            <Text fontWeight="bold" textAlign="center" flex={1} mx={15} fontSize={"25px"}>
+              Walkbaby Player
+            </Text>
+          )}
         </>
       )}
     </Box>

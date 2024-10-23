@@ -98,7 +98,7 @@ const Section: React.FC<SectionProps> = ({
         <motion.div variants={childVariants}>
           <Text
             mb={2}
-            fontSize={{ base: "45px", md: "48px" }}
+            fontSize={{ base: "35px", md: "48px" }}
             textAlign="center"
             fontFamily="'SecondaryFont', sans-serif"
             color="#6CB947"

@@ -24,6 +24,10 @@ const LandingPage: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
 
+
+
+
+
   useEffect(() => {
     if (window.location.hash) {
       window.history.replaceState(null, "", window.location.href.split("#")[0]);
@@ -205,7 +209,7 @@ const LandingPage: React.FC = () => {
               width={{ base: "900px", md: "70%" }}
               borderRadius="15px"
               objectFit="contain"
-              mt={"-980px"} // Add margin below the image for spacing
+              mt={"-1180px"} // Add margin below the image for spacing
             />
           
 
@@ -247,9 +251,10 @@ const LandingPage: React.FC = () => {
           <Link
             href="/baby-pepe-and-friends"
             fontWeight="bold"
-            fontSize={{ base: "28px", md: "40px" }}
+            fontSize={{ base: "22px", md: "40px" }}
             bg="#156D30"
             color="white"
+            width={"100%"}
             px={6}
             py={2}
             mt={{ base: "200px", md: "160px" }} // Avoid using large margins that push the button around
@@ -285,7 +290,7 @@ const LandingPage: React.FC = () => {
         height="200vh"
         padding="20px"
       >
-        <BubbleChart />
+        {/*<BubbleChart />*/}
       </Box>
     </Section>
 
@@ -334,12 +339,12 @@ const LandingPage: React.FC = () => {
 
 
     <Section
-  id="how-to-buy"
-  title="How to Swap"
-  subtitle="Available on Uniswap"
-  thirdElement=""
-  bgImage="/images/uniswap1.png"
->
+      id="how-to-buy"
+      title="How to Swap"
+      subtitle="Available on Uniswap"
+      thirdElement=""
+      bgImage="/images/uniswap1.png"
+    >
   <div
     style={{
       width: "100%",
@@ -369,7 +374,7 @@ const LandingPage: React.FC = () => {
             marginRight: "8px" 
           }}
         />
-        <span style={{marginTop: "8px"}}>Open Swap</span>
+        <span style={{marginTop: "8px"}}>Open</span>
       </button>
     ) : (
       <iframe
@@ -386,7 +391,7 @@ const LandingPage: React.FC = () => {
       ></iframe>
     )}
   </div>
-</Section>
+    </Section>
 
 
 
@@ -429,7 +434,7 @@ const LandingPage: React.FC = () => {
         >
           <Flex direction="row" alignItems="center">
             <FaTelegram size={30} style={{ marginRight: "10px" }} />
-            Join Telegram
+            Join
           </Flex>
         </button>
 
