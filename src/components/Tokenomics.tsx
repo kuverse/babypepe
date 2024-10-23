@@ -2,6 +2,7 @@ import { useAnimation, motion, Transition, Variants } from "framer-motion";
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { FaCheck } from "react-icons/fa"; // Import the checkmark icon
 
 const transition: Transition = {
   duration: 0.6,
@@ -42,7 +43,6 @@ const TokenomicsSection: React.FC = () => {
   return (
     <Box
       id="tokenomics"
-      backgroundImage="/images/pepe-stocks.png"
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -105,7 +105,7 @@ const TokenomicsSection: React.FC = () => {
               }}
             >
               <Text
-                fontSize={{ base: "20px", md: "25px" }}
+                fontSize={{ base: "25px", md: "30px" }}
                 color="white"
                 p={2}
                 borderRadius="8px"
@@ -114,10 +114,13 @@ const TokenomicsSection: React.FC = () => {
                 backgroundColor="#6CB947"
                 opacity={0.9}
                 border="2px solid white"
-                textAlign="center" 
+                textAlign="left" // Align text to the left for checkmark
+                display="flex" // Use flex to align the checkmark
+                alignItems="center"
                 fontFamily="'SecondaryFont', sans-serif"
-                // Center align text inside the bars
+
               >
+                <FaCheck style={{ marginRight: "8px", color: "white" }} /> {/* Checkmark icon */}
                 {text}
               </Text>
             </motion.div>

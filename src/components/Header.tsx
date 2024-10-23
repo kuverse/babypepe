@@ -62,7 +62,7 @@ const Header: React.FC = () => {
           <ChakraLink as={Link} href="/" marginRight={"20px"} fontWeight="bold" _hover={{ color: "#A02E00"  }}>
             Home
           </ChakraLink>
-          <ChakraLink as={Link} href="/#flappy2"  marginRight={"20px"} fontWeight="bold" _hover={{color: "#A02E00"   }}>
+          <ChakraLink as={Link} href="/flappy-baby-pepe"  marginRight={"20px"} fontWeight="bold" _hover={{color: "#A02E00"   }}>
             Arcade
           </ChakraLink>
           
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
           <ChakraLink as={Link} href="/" marginTop={"40px"} fontWeight="bold" _hover={{ color: "#A02E00"   }}>
             Home
           </ChakraLink>
-          <ChakraLink as={Link} href="/#flappy2" fontWeight="bold" _hover={{ color: "#A02E00"   }} my={"10px"}>
+          <ChakraLink as={Link} href="/flappy-baby-pepe" fontWeight="bold" _hover={{ color: "#A02E00"   }} my={"10px"}>
             Arcade
           </ChakraLink>
             <DropdownMenu

@@ -1,11 +1,14 @@
 "use client";
 
 import { Box, Image } from "@chakra-ui/react";
+import Header from "./Header";
 
 
 
 const GameSection: React.FC = () => {
   return (
+    <>
+    <Header/>
     <Box
     id="flappy2"
     bgImage="/images/background-game.png"
@@ -13,7 +16,7 @@ const GameSection: React.FC = () => {
     bgPosition="center"
     bgRepeat="no-repeat"
     width="100vw"
-    minHeight="160vh"
+    minHeight="190vh"
     display="flex"
     justifyContent="center"
     alignItems="center"
@@ -72,6 +75,7 @@ const GameSection: React.FC = () => {
       />
     </Box>
   </Box>
+  </>
   );
 };
 
