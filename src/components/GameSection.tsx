@@ -1,26 +1,8 @@
 "use client";
 
-import { Box, chakra, shouldForwardProp, Image } from "@chakra-ui/react";
-import { motion, isValidMotionProp, Variants } from "framer-motion";
+import { Box, Image } from "@chakra-ui/react";
 
-// Create a MotionBox using Chakra's chakra and Framer Motion's motion.div
-const MotionBox = chakra(motion.div, {
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
-});
 
-// Animation Variants
-const variants: Variants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "tween", // No need for Chakra-specific ResponsiveValue
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
-};
 
 const GameSection: React.FC = () => {
   return (

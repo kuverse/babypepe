@@ -10,7 +10,7 @@ import Socials from "./Socials";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import styles from '../styles/landingpage.module.css'
-import BubbleChart from "./StackedLogos";
+//import BubbleChart from "./StackedLogos";
 import { FaTelegram } from "react-icons/fa";
 import TokenomicsSection from "./Tokenomics";
 import GameSection from "./GameSection";
