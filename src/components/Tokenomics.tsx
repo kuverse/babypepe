@@ -59,7 +59,7 @@ const TokenomicsSection: React.FC = () => {
         as="h1"
         mb={2}
         width={"80%"}
-        fontSize={{ base: "60px", md: "80px" }}
+        fontSize={{ base: "55px", md: "70px" }}
         textAlign="center"
         color="#6CB947"
         fontFamily="'PepeFont', sans-serif"

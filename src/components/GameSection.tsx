@@ -20,10 +20,9 @@ const GameSection: React.FC = () => {
     position="relative"
     overflow="hidden"
   >
-    {/* Optional: Use regular Box if no animation needed */}
     <Box
-      height="800px" // Fixed height for the motion box
-      width="500px" // Fixed width for the motion box
+      height="800px"
+      width="500px" 
       position="relative"
       display="flex"
       justifyContent="center"
@@ -58,12 +57,13 @@ const GameSection: React.FC = () => {
 
       {/* Arcade Machine Image */}
       <Image
-        src="/images/arcademachine.png"
+        src="/images/game-machine.png"
         alt="Arcade Machine"
+        width="auto" // Allow the width to adjust automatically
+        height="1700px" // Set a fixed height
         maxWidth="600px" // Prevent resizing beyond this width
-        maxHeight="1200px" // Prevent resizing beyond this height
         position="absolute"
-        top="52%"
+        top="54%"
         left="50%"
         transform="translate(-50%, -50%)"
         zIndex={2}

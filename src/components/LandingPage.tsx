@@ -160,7 +160,7 @@ const LandingPage: React.FC = () => {
           initial={{ opacity: 0, y: -150  }}
           animate={{ opacity: 1, y: 0  }}
           transition={{ delay: 5, duration: 3 }}
-          style={{ display: "flex", justifyContent: "space-around", width: "80%" }}
+          style={{ display: "flex", justifyContent: "center", width: "80%" }}
         >
         <Link
           href="/#flappy2"
@@ -203,15 +203,16 @@ const LandingPage: React.FC = () => {
             minHeight="100vh" // Ensures the content scales with the section height
           >
           <Image
-              src="/images/friends-title.png"
-              className={styles.floatingImage}
-              alt="friends title"
-              width={{ base: "900px", md: "70%" }}
-              borderRadius="15px"
-              objectFit="contain"
-              zIndex={3000}
-              mt={{ base: "-1180px", md: "-980px" }}            
-              />
+            src="/images/friends-title.png"
+            className={styles.floatingImage}
+            alt="friends title"
+            width={{ base: "1200px", md: "90%" }} // Increase width on base and md
+            height={{ base: "auto", md: "auto" }} // Maintain aspect ratio
+            borderRadius="15px"
+            objectFit="contain"
+            zIndex={3000}
+            mt={{ base: "-1180px", md: "-980px" }}            
+          />
           
 
             <Image
