@@ -29,31 +29,43 @@ const LandingPage: React.FC = () => {
 
 
   useEffect(() => {
-    if (window.location.hash) {
-      window.history.replaceState(null, "", window.location.href.split("#")[0]);
+    if (typeof window !== "undefined") {
+      if (window.location.hash) {
+        window.history.replaceState(null, "", window.location.href.split("#")[0]);
+      }
     }
   }, []);
-  
+
+  // Handle scroll restoration
   useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
+    if (typeof window !== "undefined") {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0); // Ensure the page loads at the top
     }
-    window.scrollTo(0, 0); // Ensure the page loads at the top
   }, []);
-  
+
+  // Show/hide scroll-to-top button
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      if (typeof window !== "undefined") {
+        setShowScrollTop(window.scrollY > 300);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
+  // Scroll to top
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
-
 
   return (
     <>
@@ -430,15 +442,14 @@ const LandingPage: React.FC = () => {
           animate={{ opacity: 1, y: 0  }}
           transition={{ delay: 5, duration: 3 }}
         >  
-        <button
-          onClick={() => window.open('https://t.me/BabyPepeGo', '_blank')}
-          className={styles.uniswapButton}
-        >
+        <button className={styles.uniswapButton}>
+          <Link href="https://t.me/BabyPepeGo" target="_blank" rel="noopener noreferrer">
           <Flex direction="row" alignItems="center">
             <FaTelegram size={30} style={{ marginRight: "10px" }} />
             Join
           </Flex>
-        </button>
+          </Link>
+          </button>
 
           </motion.div>
         </Flex>

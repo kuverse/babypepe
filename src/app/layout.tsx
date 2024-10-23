@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="page">
       <head>
-        {/* Viewport meta tag for responsive design */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body style={{ backgroundColor: "var(--background, #CBCBD2)", minHeight: "100vh" }}>

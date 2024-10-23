@@ -69,7 +69,7 @@ const MusicPlayer: React.FC = () => {
         audio.removeEventListener("loadedmetadata", setAudioDuration);
       }
     };
-  }, [currentSongIndex]);
+  }, [currentSongIndex, isPlaying]);
 
   const handlePlayPause = () => {
     const audio = audioRef.current;
