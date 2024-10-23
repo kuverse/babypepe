@@ -58,6 +58,7 @@ const TokenomicsSection: React.FC = () => {
       <Heading
         as="h1"
         mb={2}
+        width={"80%"}
         fontSize={{ base: "60px", md: "80px" }}
         textAlign="center"
         color="#6CB947"

@@ -79,7 +79,7 @@ const GameSection: React.FC = () => {
         src="/images/arcademachine.png"
         alt="Arcade Machine"
         maxWidth="600px" // Prevent resizing beyond this width
-        maxHeight="1100px" // Prevent resizing beyond this height
+        maxHeight="1200px" // Prevent resizing beyond this height
         position="absolute"
         top="52%"
         left="50%"

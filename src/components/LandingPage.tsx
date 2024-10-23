@@ -209,8 +209,9 @@ const LandingPage: React.FC = () => {
               width={{ base: "900px", md: "70%" }}
               borderRadius="15px"
               objectFit="contain"
-              mt={"-1180px"} // Add margin below the image for spacing
-            />
+              zIndex={3000}
+              mt={{ base: "-1180px", md: "-980px" }}            
+              />
           
 
             <Image
@@ -255,7 +256,7 @@ const LandingPage: React.FC = () => {
             bg="#156D30"
             color="white"
             width={"100%"}
-            px={6}
+            px={8}
             py={2}
             mt={{ base: "200px", md: "160px" }} // Avoid using large margins that push the button around
             borderRadius="8px"
@@ -263,7 +264,7 @@ const LandingPage: React.FC = () => {
             border="4px solid white"
             _hover={{ bg: "#6CB947", transform: "scale(1.05)"}}
           >
-            Watch Show
+            Watch
           </Link>
           </motion.div>
           </Box>

@@ -10,7 +10,7 @@ interface SocialsProps {
 
 const Socials: React.FC<SocialsProps> = ({ size = 20 }) => {
   return (
-    <Flex justify="space-between" align="center" flexDirection={{ base: "column", md: "row" }}>
+    <Flex justify="space-between" align="center" flexDirection={{ base: "column", md: "row" }} padding={"5px"}>
       <HStack spacing={4} mt={{ base: 2, md: 0 }}>
         {/* Telegram */}
         <Link href="https://t.me/BabyPepeGo" isExternal>
