@@ -118,8 +118,8 @@ const LandingPage: React.FC = () => {
         zIndex={3000}
         onClick={scrollToTop}
         position="fixed"
-        bottom={9}
-        right={10}
+        bottom={1}
+        right={1}
         size="lg" // This controls the base size of the button
         bgGradient="linear(to-b, #6CB947 30%, #187235 100%)"
         _hover={{ bg: "#156D30" }}

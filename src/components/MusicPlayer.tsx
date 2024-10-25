@@ -118,14 +118,14 @@ const MusicPlayer: React.FC = () => {
   return (
     <Box
       position="fixed"
-      bottom={10}
-      left={10}
+      bottom={1}
+      left={1}
       p={2}
       bgGradient="linear(to-b, #6CB947 30%, #187235 100%)"
       //bg="#156D30"
       color="white"
       borderRadius="15px"
-      boxShadow="xl"
+      boxShadow="2xl"
       maxWidth={isExpanded ? "420px" : "60px"}
       transition="max-width 0.3s"
       zIndex={1000}
@@ -167,12 +167,12 @@ const MusicPlayer: React.FC = () => {
 
       {isExpanded && (
         <>
-          <List mt={3} spacing={2} mx={3} maxHeight="120px" overflowY="auto" backgroundColor={"#156D30"} border="2px solid white" borderRadius={"10px"} padding={"5px"}
+          <List mt={3} spacing={2} mx={3} maxHeight="120px" overflowY="auto" backgroundColor={"#fff"} border="2px solid white" borderRadius={"10px"} padding={"5px"}
           >
             {songs.map((song, index) => (
               <ListItem
                 key={song.id}
-                bg={index === currentSongIndex ? "#6CB947" : "#156D30"}
+                bg={index === currentSongIndex ? "#6CB947" : "#fff"}
                 p={1}
                 borderRadius="md"
                 cursor="pointer"
@@ -184,6 +184,9 @@ const MusicPlayer: React.FC = () => {
                 fontFamily="'SecondaryFont', sans-serif"
                 fontSize="20px"
                 fontWeight={"bold"}
+                _hover={{ transform: "scale(1.05)"}}
+
+                color={index === currentSongIndex ? "#fff" : "#6CB947"}
               >
                 {song.title}
               </ListItem>
@@ -206,20 +209,35 @@ const MusicPlayer: React.FC = () => {
           </Flex>
 
           <Flex mt={2} justifyContent="space-around">
-            <IconButton border="2px solid white" mt={2} icon={<FaBackward />} aria-label="Previous Song" onClick={handlePrev} />
+            <IconButton borderRadius={20} padding={3}
+            border="2px solid #6CB947" 
+            _hover={{ transform: "scale(1.15)", border: "2px solid #187235"}}
+            bg="#fff"
+
+            mt={3} icon={<FaBackward color="6CB947"/>} aria-label="Previous Song" 
+            onClick={handlePrev} 
+            
+            />
 
             <IconButton
-              icon={isPlaying ? <FaPause size={30} /> : <FaPlay size={30} />}
+              icon={isPlaying ? <FaPause size={30} color="6CB947"/> : <FaPlay size={30} color="6CB947"/>}
               aria-label="Play/Pause"
               onClick={handlePlayPause}
-              bg="#6CB947"
+              bg="#fff"
               borderRadius="50%"
               boxSize="60px"
-              color="white"
-              border="2px solid white"
-              _hover={{ bg: "#A5E07B" }}
+              color="#6CB947"
+              padding={4}
+              border="2px solid #6CB947"
+              _hover={{ transform: "scale(1.15)", border: "2px solid #187235"
+              }}
             />
-            <IconButton border="2px solid white" mt={2} icon={<FaForward />} aria-label="Next Song" onClick={handleNext} />
+            <IconButton borderRadius={20} padding={3} bg="#fff"
+             _hover={{ transform: "scale(1.15)", border: "2px solid #187235"}}
+
+            border="2px solid #6CB947" mt={3} 
+            icon={<FaForward color="6CB947"/>} aria-label="Next Song" 
+            onClick={handleNext} />
           </Flex>
 
           <Flex mt={3} alignItems="center" ml={"15px"}>

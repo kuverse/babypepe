@@ -62,11 +62,11 @@ const MarketCapVolume: React.FC = () => {
         <Flex
           className="ticker"
           whiteSpace="nowrap"
-          animation="scroll 15s linear infinite" // Adjusted duration for smoother scrolling
+          animation="scroll 18s linear infinite" // Adjusted duration for smoother scrolling
           fontFamily="'SecondaryFont', sans-serif"
         >
           {/* Duplicate the content for endless scroll effect */}
-          {[...Array(2)].map((_, i) => (
+          {[...Array(3)].map((_, i) => (
             <React.Fragment key={i}>
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/logos/fbe8b5cf8780a6a5f6ff3678e60ed349.avif" height={5} width={5} alt="Market Cap Logo" />
