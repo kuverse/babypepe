@@ -63,14 +63,17 @@ const JoinSection: React.FC = () => {
           >
             Be part of the community
           </Text>
+          <Flex justifyContent="center" alignItems="center" mb={10}>
 
           <Button
             as="a"
             href="https://t.me/BabyPepeGo"
             backgroundColor="#6CB947"
             color="white"
-            padding="30px 64px"
+            width="90%"
+            padding="30px 40px"
             borderRadius="8px"
+            justifyContent={"center"}
             fontSize="25px"
             cursor="pointer"
             transition="all 0.3s"
@@ -82,6 +85,7 @@ const JoinSection: React.FC = () => {
             <FaTelegram size={30} style={{ marginRight: "10px" }} />
             Join
           </Button>
+          </Flex>
         </Flex>
       </Flex>
     </Box>

@@ -120,7 +120,7 @@ const FriendsBox: React.FC = () => {
           fontSize={{ base: "30px", md: "40px" }}
           bg="#6CB947"
           color="white"
-          width="80%"
+          width="92%"
           maxW="400px" // Limit the maximum width
           height="auto" // Set height to auto
           display="flex"

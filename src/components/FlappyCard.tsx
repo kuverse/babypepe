@@ -76,7 +76,7 @@ const FlappySection: React.FC = () => {
             fontSize={{ base: "30px", md: "40px" }}
             bg="#6CB947"
             color="white"
-            width={"90%"}
+            width={"100%"}
             px={8}
             py={4}
             borderRadius="8px"
