@@ -57,7 +57,7 @@ const SwapBabyPepe: React.FC = () => {
     <Box
       id="how-to-buy"
       width="90%"
-      height="100vh" // Ensures a minimum height for the box
+      height="110vh" // Ensures a minimum height for the box
       display="flex"
       mb={2}
       flexDirection={"column"}
