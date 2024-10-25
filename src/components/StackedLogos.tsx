@@ -1,19 +1,21 @@
 "use client";
 
 import React, { useMemo } from "react";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
+import { FaTelegram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface Link {
   href: string;
   label: string;
-  logo: string;
+  logo: string | React.ReactNode; // Updated to allow both string and React nodes
 }
 
 const BubbleChart: React.FC = () => {
   const links: Link[] = useMemo(() => [
     {
-      href: "https://dextools.io",
+      href: "https://www.dextools.io/app/en/ether/pair-explorer/0x2c8f9bbae004854b9548f6c84720c70a8fceea23?t=1729782526258",
       label: "DexTools",
       logo: "/logos/dextools.svg",
     },
@@ -42,42 +44,40 @@ const BubbleChart: React.FC = () => {
       label: "Bubble Map",
       logo: "/logos/Bubblemaps.png",
     },
+    {
+      href: "https://t.me/BabyPepeGo",
+      label: "Telegram",
+      logo: <FaTelegram size={40} style={{ color: "#6CB947" }}/>,
+    },
+    {
+      href: "https://x.com/0x69babEPepe",
+      label: "X",
+      logo: <FaXTwitter size={40} style={{ color: "#022B0F" }}/>,
+    },
   ], []);
 
   return (
     <Box
       id="bubble-chart"
-      position="absolute" // Change to absolute positioning
-      top="20%" // Adjust this value to move it vertically
-      left="50%" // Center horizontally
-      transform="translateX(-50%)" // Center the component
-      width="80vw" // Use viewport width for responsiveness
-      maxWidth="1200px" // Set a max width for larger screens
-      zIndex={999} // Ensure it overlays above other content
+      position="absolute"
+      top="65%"
+      left="50%"
+      transform="translateX(-50%)"
+      width="80vw"
+      maxWidth="800px"
+      zIndex={43}
       display="flex"
-      flexDirection="column" // Stack title and icons vertically
+      flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      padding={4} // Add padding
-      //backgroundColor="rgba(255, 255, 255, 0.8)" // Optional: Add a background for better visibility
-      borderRadius="15px" // Optional: Round corners
+      padding={5}
+      borderRadius="15px"
     >
-      <Heading
-        as="h1"
-        mb={4}
-        fontSize={{ base: "30px", md: "40px" }}
-        textAlign="center"
-        color="#6CB947"
-        fontFamily="'PepeFont', sans-serif"
-      >
-        Logos
-      </Heading>
-
       <Flex
         flexWrap="wrap"
-        justifyContent="center" // Center logos
+        justifyContent="center"
         alignItems="center"
-        width="100%" // Full width
+        width="100%"
       >
         {links.map((link, index) => (
           <Box
@@ -86,27 +86,34 @@ const BubbleChart: React.FC = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            width="80px"
-            height="80px"
+            width="60px"
+            height="60px"
             borderRadius="50%"
             overflow="hidden"
             bg="white"
-            boxShadow="1px 10px 11px rgba(0, 0, 0, 0.1)"
+            boxShadow="2px 10px 11px rgba(0, 0, 0, 0.1)"
             display="flex"
             justifyContent="center"
             alignItems="center"
-            margin={2} // Add margin between icons
-            transition="transform 0.3s" // Add transition effect
-            _hover={{ transform: "scale(1.05)" }} // Scale on hover
+            border="2px solid white"
+            margin={2}
+            transition="transform 0.3s"
+            _hover={{ transform: "scale(1.15)" }}
           >
-            <Image
-              src={link.logo}
-              alt={link.label}
-              width={80}
-              height={80}
-              loading="lazy"
-              style={{ pointerEvents: "none", objectFit: "contain" }}
-            />
+            {typeof link.logo === 'string' ? (
+              <Image
+                src={link.logo}
+                alt={link.label}
+                width={80}
+                height={80}
+                loading="lazy"
+                style={{ pointerEvents: "none", objectFit: "contain" }}
+              />
+            ) : (
+              <Box as="span" fontSize="24px"> {/* Adjust icon size as needed */}
+                {link.logo}
+              </Box>
+            )}
           </Box>
         ))}
       </Flex>

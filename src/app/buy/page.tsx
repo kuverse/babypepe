@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Button, Flex, Heading, Image, Icon } from "@chakra-ui/react";
 import Header from "@/components/Header"; 
 import { createThirdwebClient } from "thirdweb";
@@ -9,7 +8,8 @@ import { ConnectButton, darkTheme, PayEmbed, useActiveWallet, useDisconnect } fr
 import { useActiveAccount } from "thirdweb/react";
 import { ethereum } from "thirdweb/chains";
 import { IoLogOut } from "react-icons/io5";
-import styles from '../../styles/landingpage.module.css'
+import { FaCreditCard } from "react-icons/fa";
+import styles from '../../styles/landingpage.module.css'; // Import CSS module
 
 
 const client = createThirdwebClient({
@@ -30,7 +30,6 @@ const wallets = [
 ];
 
 const BuyWithCreditCard: React.FC = () => {
-  const [showIframe, setShowIframe] = useState(false);
 
   const account = useActiveAccount();
   const wallet = useActiveWallet();
@@ -76,12 +75,17 @@ const BuyWithCreditCard: React.FC = () => {
           minHeight="100vh"
           bg="#156D30"
           padding={5}
-          bgImage={"/images/background3.webp"}
+          //bgImage={"/images/background3.webp"}
         >
 
-          <Heading size="xl" color="white" mb={6} mt={100} fontFamily="'PepeFont', sans-serif" >
+          <Flex color="white" direction={"row"} mt={100} >
+          <FaCreditCard size={30} />
+
+          <Heading size="xl" color="white" mb={6} ml={5} fontFamily="'PepeFont', sans-serif" >
+          
             Buy with Credit Card
           </Heading>
+          </Flex>
 
     {!account ? (
           <ConnectButton
@@ -92,6 +96,10 @@ const BuyWithCreditCard: React.FC = () => {
             connectModal={{ 
               size: "compact",
               titleIcon: "/images/pepeicon.png",
+            }}
+            connectButton={{
+              label: "Connect Wallet",
+              className: styles.thirdwebButton,
             }}
             
           />
@@ -156,35 +164,6 @@ const BuyWithCreditCard: React.FC = () => {
 
 
 
-    <Flex mt={10} direction={"column"}>
-
-      <Heading size="xl" color="white" mb={6} mt={100} fontFamily="'PepeFont', sans-serif" >
-        Swap with Uniswap
-      </Heading>
-      {!showIframe ? (
-          <button
-          onClick={() => setShowIframe(true)}
-          className={styles.uniswapButton}
-        >
-            Open Uniswap Swap
-          </button>
-        ) : (
-          <iframe
-            src="https://app.uniswap.org/#/swap?outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4&chain=mainnet"
-            width="320px"
-            height="530px"
-            style={{
-              border: "0",
-              borderRadius: "15px",
-              overflow: "hidden",
-              marginBottom: "20px"
-            }}
-            title="Uniswap Swap"
-          ></iframe>
-        )}
-
-
-      </Flex>
       </>
       
       )}

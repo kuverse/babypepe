@@ -151,3 +151,19 @@
     transform: scale(1.05); /* Slightly enlarge on hover */
   }
   
+ /* styles.module.css */
+.thirdwebButton {
+  border: 3px solid white !important; 
+  padding: 30px !important;       
+  border-radius: 8px !important;   
+  background-color: #6CB947 !important;
+  color: white !important;        
+  font-size: 26px !important;       
+  transition: background-color 0.3s !important;
+  font-family: SecondaryFont, sans-serif !important;
+}
+
+.thirdwebButton:hover {
+  background-color: #006821 !important; /* Dark green background on hover */
+  transform: scale(1.05) !important; /* Increase size on hover */
+}

@@ -8,7 +8,7 @@ interface SocialsProps {
   size?: number; 
 }
 
-const Socials: React.FC<SocialsProps> = ({ size = 20 }) => {
+const Socials: React.FC<SocialsProps> = ({ size = 40 }) => {
   return (
     <Flex justify="space-between" align="center" flexDirection={{ base: "column", md: "row" }} padding={"5px"}>
       <HStack spacing={4} mt={{ base: 2, md: 0 }}>

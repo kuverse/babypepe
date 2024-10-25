@@ -32,7 +32,7 @@ const MusicPlayer: React.FC = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [volume, setVolume] = useState(50);
   const [isMuted, setIsMuted] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -121,10 +121,11 @@ const MusicPlayer: React.FC = () => {
       bottom={10}
       left={10}
       p={2}
-      bg="#156D30"
+      bgGradient="linear(to-b, #6CB947 30%, #187235 100%)"
+      //bg="#156D30"
       color="white"
       borderRadius="15px"
-      boxShadow="lg"
+      boxShadow="xl"
       maxWidth={isExpanded ? "420px" : "60px"}
       transition="max-width 0.3s"
       zIndex={1000}
@@ -171,7 +172,7 @@ const MusicPlayer: React.FC = () => {
             {songs.map((song, index) => (
               <ListItem
                 key={song.id}
-                bg={index === currentSongIndex ? "#6CB947" : "#CBCBD2"}
+                bg={index === currentSongIndex ? "#6CB947" : "#156D30"}
                 p={1}
                 borderRadius="md"
                 cursor="pointer"
@@ -205,7 +206,7 @@ const MusicPlayer: React.FC = () => {
           </Flex>
 
           <Flex mt={2} justifyContent="space-around">
-            <IconButton mt={2} icon={<FaBackward />} aria-label="Previous Song" onClick={handlePrev} />
+            <IconButton border="2px solid white" mt={2} icon={<FaBackward />} aria-label="Previous Song" onClick={handlePrev} />
 
             <IconButton
               icon={isPlaying ? <FaPause size={30} /> : <FaPlay size={30} />}
@@ -218,7 +219,7 @@ const MusicPlayer: React.FC = () => {
               border="2px solid white"
               _hover={{ bg: "#A5E07B" }}
             />
-            <IconButton mt={2} icon={<FaForward />} aria-label="Next Song" onClick={handleNext} />
+            <IconButton border="2px solid white" mt={2} icon={<FaForward />} aria-label="Next Song" onClick={handleNext} />
           </Flex>
 
           <Flex mt={3} alignItems="center" ml={"15px"}>

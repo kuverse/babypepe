@@ -87,7 +87,7 @@ const Section: React.FC<SectionProps> = ({
             fontSize={{ base: "12vw", md: "7vw" }}
             textAlign="center"
             fontFamily="'PepeFont', sans-serif"
-            color="#6CB947"
+            color="#156D30"
             textShadow="2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white"
 
           >
@@ -101,7 +101,7 @@ const Section: React.FC<SectionProps> = ({
             fontSize={{ base: "35px", md: "48px" }}
             textAlign="center"
             fontFamily="'SecondaryFont', sans-serif"
-            color="#6CB947"
+            color="#156D30"
             padding="10px"
             borderRadius="10px"
             textShadow="2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white"

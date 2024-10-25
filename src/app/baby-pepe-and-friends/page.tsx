@@ -65,7 +65,7 @@ const VideoGallery: React.FC = () => {
         {/* Top Section with Background Image */}
         <Box
           flex="1"
-          backgroundImage="/images/background-image.png"
+          backgroundImage="/images/blue-sky-clouds-anime-style-600nw-2157978867.webp"
           backgroundSize="cover"
           backgroundPosition="center"
           display="flex"
