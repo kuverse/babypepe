@@ -38,6 +38,7 @@ const SwapBuyButtons: React.FC = () => {
             alt="Uniswap Logo"
             boxSize="40px"
             mt={-2}
+            ml={-2}
           />
           Swap
         </Button>
