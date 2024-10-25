@@ -58,7 +58,7 @@ const AboutBox: React.FC = () => {
       <Bubble>
         <Heading
           as="h2"
-          fontSize={{ base: "2vw", md: "2vw" }}
+          fontSize={{ base: "2.2vw", md: "2vw" }}
           color="#fff"
           marginBottom={1}
           fontFamily="'SecondaryFont', sans-serif"
