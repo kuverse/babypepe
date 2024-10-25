@@ -70,28 +70,28 @@ const MarketCapVolume: React.FC = () => {
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/logos/fbe8b5cf8780a6a5f6ff3678e60ed349.avif" height={5} width={5} alt="Market Cap Logo" />
                 <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
-                  Market Cap: ${parseFloat(marketCap).toFixed(2)}
+                Market Cap: ${parseFloat(marketCap).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/images/xcircle-logo.png" height={5} width={5} alt="Token Price Logo" />
                 <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
-                  Token Price: ${parseFloat(usdValue).toFixed(8)}
+                Token Price: ${parseFloat(usdValue).toLocaleString(undefined, { minimumFractionDigits: 8, maximumFractionDigits: 8 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/images/white-circle-logo.png" height={5} width={5} alt="Volume Logo" />
                 <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
-                  24hr Volume: ${parseFloat(volumeValue).toFixed(2)}
+                24hr Volume: ${parseFloat(volumeValue).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/images/ethLogo.png" height={5} width={8} alt="Ethereum Price Logo" />
                 <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
-                  Eth Price: ${parseFloat(ethPrice).toFixed(2)}
+                Eth Price: ${parseFloat(ethPrice).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>
             </React.Fragment>
