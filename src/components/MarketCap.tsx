@@ -51,8 +51,8 @@ const MarketCapVolume: React.FC = () => {
       alignItems="center"
       border="1px solid #fff" // White border for definition
       overflow="hidden" 
-      mb={20}
-      mt={10}
+      mb={10}
+      mt={5}
     >
       {loading ? (
         <Flex justifyContent="center" alignItems="center" height="100%">

@@ -56,8 +56,10 @@ const LandingPage: React.FC = () => {
       <Header />
 
       <TitleComponent />
-      <SwapBuyButtons />
       <MarketCapVolume />
+
+      <SwapBuyButtons />
+
       <AboutBox />
       <TokenomicsSection />
 {/*}

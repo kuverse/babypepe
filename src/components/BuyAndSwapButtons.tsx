@@ -14,7 +14,7 @@ const SwapBuyButtons: React.FC = () => {
       justify="center"
       align="center"
       width="100%"
-      my={12} // Margin top for spacing
+      mb={12} // Margin top for spacing
     >
       <Link href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" passHref>
         <Button
