@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <Flex justify="space-between" align="center" flexDirection={{ base: "column", md: "row" }}>
        
        <Socials />
-        <Text fontSize={{ base: "2.6vw", md: "1.2vw" }}  mx={5} mt={10} textAlign={{ base: "center", md: "center" }}  style={{ fontFamily: "'SecondaryFont', sans-serif" }}>
+        <Text fontSize={{ base: "2.8vw", md: "1.2vw" }}  mx={5} mt={10} textAlign={{ base: "center", md: "center" }}  style={{ fontFamily: "'SecondaryFont', sans-serif" }}>
         $babypepe has no association with Matt Furie or his creation Pepe the Frog. This token is simply paying homage to a meme we all love and recognize.
         $BABYPEPE is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is run 100% by the community and is completely useless and for entertainment purposes only.        </Text>
         
