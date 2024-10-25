@@ -57,7 +57,7 @@ const SwapBuyButtons: React.FC = () => {
           transition="background-color 0.3s, transform 0.3s, color 0.3s"
           _hover={{ backgroundColor: "#6CB947", color: "white", transform: "scale(1.05)" }}
         >
-          <FaCreditCard style={{ marginRight: "8px", marginTop:"0" }} /> 
+          <FaCreditCard style={{ marginRight: "8px", marginTop:"-4" }} /> 
           Buy
         </Button>
       </Link>
