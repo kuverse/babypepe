@@ -62,7 +62,7 @@ const MarketCapVolume: React.FC = () => {
         <Flex
           className="ticker"
           whiteSpace="nowrap"
-          animation="scroll 18s linear infinite" // Adjusted duration for smoother scrolling
+          animation="scroll 25s linear infinite" // Adjusted duration for smoother scrolling
           fontFamily="'SecondaryFont', sans-serif"
         >
           {/* Duplicate the content for endless scroll effect */}
