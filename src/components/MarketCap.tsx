@@ -61,7 +61,7 @@ const MarketCapVolume: React.FC = () => {
           className="ticker"
           width="100%" // Make the ticker take the full width
           whiteSpace="nowrap"
-          animation="scroll 18s linear infinite" // Increase duration for slower scrolling
+          animation="scroll 10s linear infinite" // Increase duration for slower scrolling
           fontFamily="'SecondaryFont', sans-serif"
         >
           {/* Original content with more instances */}
