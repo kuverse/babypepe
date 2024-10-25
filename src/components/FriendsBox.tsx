@@ -83,7 +83,7 @@ const FriendsBox: React.FC = () => {
         <Box
           as={motion.div}
           display="flex"
-          animation="scroll 30s linear infinite"
+          animation="scroll 20s linear infinite"
           position="absolute"
           whiteSpace="nowrap"
           zIndex={1}
