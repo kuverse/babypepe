@@ -98,7 +98,7 @@ const BubbleChart: React.FC = () => {
             variants={slideInVariants}
             initial="hidden"
             animate="visible"
-            style={{ margin: "2px" }} // Adjust margin as needed
+            style={{ margin: "6px" }} // Adjust margin as needed
           >
             <Box
               as="a"
