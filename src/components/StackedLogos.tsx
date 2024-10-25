@@ -5,6 +5,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion"; // Import motion
 
 interface Link {
   href: string;
@@ -47,14 +48,26 @@ const BubbleChart: React.FC = () => {
     {
       href: "https://t.me/BabyPepeGo",
       label: "Telegram",
-      logo: <FaTelegram size={40} style={{ color: "#6CB947" }}/>,
+      logo: <FaTelegram size={40} style={{ color: "#6CB947" }} />,
     },
     {
       href: "https://x.com/0x69babEPepe",
       label: "X",
-      logo: <FaXTwitter size={40} style={{ color: "#022B0F" }}/>,
+      logo: <FaXTwitter size={40} style={{ color: "#022B0F" }} />,
     },
   ], []);
+
+  const slideInVariants = {
+    hidden: { opacity: 0, x: -100 }, // Slide in from left
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <Box
@@ -80,41 +93,48 @@ const BubbleChart: React.FC = () => {
         width="100%"
       >
         {links.map((link, index) => (
-          <Box
+          <motion.div
             key={index}
-            as="a"
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            width="60px"
-            height="60px"
-            borderRadius="50%"
-            overflow="hidden"
-            bg="white"
-            boxShadow="2px 10px 11px rgba(0, 0, 0, 0.1)"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            border="2px solid white"
-            margin={2}
-            transition="transform 0.3s"
-            _hover={{ transform: "scale(1.15)" }}
+            variants={slideInVariants}
+            initial="hidden"
+            animate="visible"
+            style={{ margin: "2px" }} // Adjust margin as needed
           >
-            {typeof link.logo === 'string' ? (
-              <Image
-                src={link.logo}
-                alt={link.label}
-                width={80}
-                height={80}
-                loading="lazy"
-                style={{ pointerEvents: "none", objectFit: "contain" }}
-              />
-            ) : (
-              <Box as="span" fontSize="24px"> {/* Adjust icon size as needed */}
-                {link.logo}
-              </Box>
-            )}
-          </Box>
+            <Box
+              as="a"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              width="60px"
+              height="60px"
+              borderRadius="50%"
+              overflow="hidden"
+              bg="white"
+              boxShadow="2px 10px 11px rgba(0, 0, 0, 0.1)"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border="2px solid white"
+              transition="transform 0.3s"
+              _hover={{ transform: "scale(1.15)" }}
+            >
+              {typeof link.logo === 'string' ? (
+                <Image
+                  src={link.logo}
+                  alt={link.label}
+                  width={80}
+                  height={80}
+                
+                  loading="lazy"
+                  style={{ pointerEvents: "none", objectFit: "contain" }}
+                />
+              ) : (
+                <Box as="span" fontSize="24px" padding={2}> {/* Adjust icon size as needed */}
+                  {link.logo}
+                </Box>
+              )}
+            </Box>
+          </motion.div>
         ))}
       </Flex>
     </Box>
