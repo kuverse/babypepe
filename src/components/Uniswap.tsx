@@ -125,7 +125,7 @@ const SwapBabyPepe: React.FC = () => {
           height="510px"
           style={{
             border: "0",
-            borderRadius: "15px",
+            borderRadius: "10px",
             overflow: "hidden",
             marginTop: "3px",
             marginBottom: "5px"

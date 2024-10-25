@@ -39,7 +39,7 @@ const AboutBox: React.FC = () => {
       margin="0 auto" // Center the box in the middle of the page
       textAlign="center"
       border="2px solid white" // Matching border style
-      borderRadius="15px" // Rounded corners
+      borderRadius="10px" // Rounded corners
       boxShadow="lg" // Shadow for depth
     >
       <Bubble>

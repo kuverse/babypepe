@@ -13,7 +13,7 @@ const JoinSection: React.FC = () => {
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
-      borderRadius={15}
+      borderRadius={10}
       border="2px solid white"
       padding={5}
       boxShadow="lg"
