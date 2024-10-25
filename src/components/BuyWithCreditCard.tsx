@@ -77,7 +77,7 @@ const BuyWithCreditCard: React.FC = () => {
         padding={8}
         my={12}
         boxShadow="lg"
-        borderRadius={15}
+        borderRadius={10}
         border="2px solid white"
         backgroundImage="/images/background01.png"
         backgroundSize="cover"
@@ -214,7 +214,7 @@ const BuyWithCreditCard: React.FC = () => {
               src="/images/thirdweb-wordmark-fullwhite.svg"
               alt="thirdweb"
               width={{ base: "30%", md: "20%" }}
-              borderRadius="15px"
+              borderRadius="10px"
               objectFit="contain"
               zIndex={100}
               pointerEvents="none"

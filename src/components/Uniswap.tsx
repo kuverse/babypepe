@@ -66,7 +66,7 @@ const SwapBabyPepe: React.FC = () => {
       position="relative"
       overflow="hidden" // Prevents scrolling
       marginTop="5px"
-      borderRadius="15px"
+      borderRadius="10px"
       bg="#156D30" 
       border="2px solid white"
       bgImage={"/images/greenUniswap.png"}
@@ -111,7 +111,7 @@ const SwapBabyPepe: React.FC = () => {
           mb={5}
           width="300px"
           height="510px"
-          borderRadius="15px"
+          borderRadius="10px"
           cursor="pointer"
           onClick={handleShowIframe} // Show iframe on click
           transition="transform 0.3s"
