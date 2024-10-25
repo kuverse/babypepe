@@ -77,7 +77,7 @@ const JoinSection: React.FC = () => {
             fontSize="25px"
             cursor="pointer"
             transition="all 0.3s"
-            mb={10}
+            my={2}
             border="4px solid white"
             fontFamily="'SecondaryFont', sans-serif"
             _hover={{ transform: "scale(1.1)", backgroundColor: "#006821" }}

@@ -154,10 +154,10 @@
  /* styles.module.css */
 .thirdwebButton {
   border: 3px solid white !important; 
-  padding: 32px 45px !important;       
+  padding: 30px 80px !important;       
   border-radius: 8px !important;   
   background-color: #6CB947 !important;
-  color: white !important;        
+  color: white !important;   
   font-size: 26px !important;       
   transition: background-color 0.3s !important;
   font-family: SecondaryFont, sans-serif !important;

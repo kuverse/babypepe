@@ -149,7 +149,7 @@ const BuyWithCreditCard: React.FC = () => {
                   titleIcon: "/images/pepeicon.png",
                 }}
                 connectButton={{
-                  label: "Connect Wallet",
+                  label: "Connect",
                   className: styles.thirdwebButton,
                 }}
               />
