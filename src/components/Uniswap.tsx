@@ -57,7 +57,7 @@ const SwapBabyPepe: React.FC = () => {
     <Box
       id="how-to-buy"
       width="90%"
-      height="95vh" // Ensures a minimum height for the box
+      height="100vh" // Ensures a minimum height for the box
       display="flex"
       mb={2}
       flexDirection={"column"}
@@ -107,7 +107,8 @@ const SwapBabyPepe: React.FC = () => {
         <Image
           src="/images/uniswapOpen.png" // Replace with your image path
           alt="Open Uniswap Swap"
-          mt={5}
+          mt={3}
+          mb={5}
           width="300px"
           height="510px"
           borderRadius="15px"
@@ -126,7 +127,7 @@ const SwapBabyPepe: React.FC = () => {
             border: "0",
             borderRadius: "15px",
             overflow: "hidden",
-            marginTop: "5px",
+            marginTop: "3px",
             marginBottom: "5px"
           }}
           title="Uniswap Swap"
