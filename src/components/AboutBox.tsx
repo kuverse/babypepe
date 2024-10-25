@@ -98,7 +98,7 @@ const AboutBox: React.FC = () => {
           textAlign={"center"}
           justifyContent={"center"}
         >
-          All the whales will come to know that Baby Pepe is the ultimate cultural narrative. The <strong>0x69babe</strong> contract address guarantees authenticity. We are the original. It's in the DNA.
+          All the whales will come to know that Baby Pepe is the ultimate cultural narrative. The <strong>0x69babe</strong> contract address guarantees authenticity. We are the original. Its in the DNA.
         </Text>
         </Box>
       </Bubble>
