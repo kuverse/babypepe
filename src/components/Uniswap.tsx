@@ -57,7 +57,7 @@ const SwapBabyPepe: React.FC = () => {
     <Box
       id="how-to-buy"
       width="90%"
-      height="110vh" // Ensures a minimum height for the box
+      height="95vh" // Ensures a minimum height for the box
       display="flex"
       mb={2}
       flexDirection={"column"}
@@ -78,12 +78,13 @@ const SwapBabyPepe: React.FC = () => {
 
 
     <Bubble>
-        <Flex direction={"row"}>
+        <Flex direction={"column"}  justifyContent="center"
+      alignItems="center">
         <Image
           src="/logos/uniswap-white.png" // Replace with your image path
           alt="Open Uniswap Swap"
-          width="50px"
-          height="50px"
+          width="70px"
+          height="70px"
           mt={2}
         />
         <Heading
@@ -107,8 +108,8 @@ const SwapBabyPepe: React.FC = () => {
           src="/images/uniswapOpen.png" // Replace with your image path
           alt="Open Uniswap Swap"
           mt={5}
-          width="400px"
-          height="610px"
+          width="300px"
+          height="510px"
           borderRadius="15px"
           cursor="pointer"
           onClick={handleShowIframe} // Show iframe on click
@@ -119,13 +120,14 @@ const SwapBabyPepe: React.FC = () => {
         <iframe
           id="uniswap-iframe"
           src="https://app.uniswap.org/#/swap?outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4&chain=mainnet"
-          width="400px"
-          height="610px"
+          width="300px"
+          height="510px"
           style={{
             border: "0",
             borderRadius: "15px",
             overflow: "hidden",
-            marginTop: "5px"
+            marginTop: "5px",
+            marginBottom: "5px"
           }}
           title="Uniswap Swap"
         ></iframe>
