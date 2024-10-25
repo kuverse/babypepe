@@ -28,20 +28,22 @@ const TitleComponent: React.FC = () => {
         style={{
           position: "absolute",
           top: "40%",
-          left: "16%",
           transform: "translateX(-50%)",
           zIndex: 2,
           pointerEvents: "none",
           animation: "float 3s ease-in-out infinite",
         }}
       >
+        <Box display="flex" justifyContent="center" alignItems="center">
+ 
         <Image
           src="/images/mainLogoOutline.png"
           alt="logo main"
-          width={{ base: "80%", md: "80%" }}
+          width={{ base: "95%", md: "70%" }}
           borderRadius="15px"
-          objectFit="contain"
+         
         />
+      </Box>
       </motion.div>
 
         <BubbleChart />
