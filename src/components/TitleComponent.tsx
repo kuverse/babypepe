@@ -27,7 +27,7 @@ const TitleComponent: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         style={{
           position: "absolute",
-          top: "40%",
+          top: "35%",
           transform: "translateX(-50%)",
           zIndex: 2,
           pointerEvents: "none",
