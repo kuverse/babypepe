@@ -73,7 +73,7 @@ const TokenomicsSection: React.FC = () => {
        <Flex 
         position={"absolute"} 
         right={{ base: 2, md: "30%" }} // Use different positioning for base and md (medium) screens
-        top={{base: 425, md: 280}} 
+        top={{base: 380, md: 280}} 
         transform={{ base: "none", md: "translateX(80%)" }} // Center the image horizontally on larger screens
         zIndex={2} // Keep it above other elements
       >
