@@ -152,7 +152,7 @@ const TokenomicsSection: React.FC = () => {
                 }}
               >
                 <Text
-                  fontSize={{ base: "22px", md: "30px" }}
+                  fontSize={{ base: "20px", md: "30px" }}
                   color="white"
                   p={2}
                   borderRadius="15px"

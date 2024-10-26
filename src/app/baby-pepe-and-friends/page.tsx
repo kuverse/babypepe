@@ -105,7 +105,7 @@ const VideoGallery: React.FC = () => {
                   borderRadius="8px"
                   mb={2}
                 />
-                <Text fontWeight="bold" color="#fff">
+                <Text fontWeight="bold" color="#fff" fontFamily="'SecondaryFont', sans-serif" fontSize="14px">
                   {video.title}
                 </Text>
               </Box>

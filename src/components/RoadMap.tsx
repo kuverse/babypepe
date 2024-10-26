@@ -133,7 +133,7 @@ const RoadMapSection: React.FC = () => {
                 }}
               >
                 <Text
-                  fontSize={{ base: "30px", md: "30px" }}
+                  fontSize={{ base: "25px", md: "30px" }}
                   color="white"
                   p={2}
                   borderRadius="15px"

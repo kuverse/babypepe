@@ -90,7 +90,7 @@ const AboutBox: React.FC = () => {
             width="100%" // Full width for the Box
           >
         <Text
-          fontSize={{ base: "6vw", md: "3vw" }}
+          fontSize={{ base: "5vw", md: "3vw" }}
           color="#fff" // Darker text color for readability
           marginBottom={4}
           fontFamily="'SecondaryFont', sans-serif"
