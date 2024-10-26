@@ -181,8 +181,8 @@ const MusicPlayer: React.FC = () => {
                 alignItems="center"
                 justifyContent="center"
                 textAlign="center"
-                fontFamily="'SecondaryFont', sans-serif"
-                fontSize="20px"
+                fontFamily="'ThirdFont', sans-serif"
+                fontSize="10px"
                 fontWeight={"bold"}
                 _hover={{ transform: "scale(1.05)"}}
 

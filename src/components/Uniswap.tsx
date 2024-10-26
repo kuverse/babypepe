@@ -79,7 +79,7 @@ const SwapBabyPepe: React.FC = () => {
 
     <Bubble>
         <Flex direction={"column"}  justifyContent="center"
-      alignItems="center">
+      alignItems="center" width="100%" >
         <Image
           src="/logos/uniswap-white.png" // Replace with your image path
           alt="Open Uniswap Swap"
@@ -89,7 +89,7 @@ const SwapBabyPepe: React.FC = () => {
         />
         <Heading
           as="h1"
-          fontSize="4xl"
+          fontSize="3xl"
           color="#fff"
           marginTop={5}
           ml={2}
@@ -101,14 +101,18 @@ const SwapBabyPepe: React.FC = () => {
         </Flex>
       </Bubble>
 
-      
+      <Bubble>
+      <Flex justifyContent="center" alignItems="center" height="70vh">
 
       {!showIframe ? (
+      
         <Image
           src="/images/uniswapOpen.png" // Replace with your image path
           alt="Open Uniswap Swap"
           mt={3}
           mb={5}
+          justifyContent={"center"}
+          alignContent={"center"}
           width="300px"
           height="510px"
           borderRadius="10px"
@@ -117,7 +121,10 @@ const SwapBabyPepe: React.FC = () => {
           transition="transform 0.3s"
           _hover={{ transform: "scale(1.05)" }} // Scale effect on hover
         />
+       
       ) : (
+       
+
         <iframe
           id="uniswap-iframe"
           src="https://app.uniswap.org/#/swap?outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4&chain=mainnet"
@@ -132,7 +139,11 @@ const SwapBabyPepe: React.FC = () => {
           }}
           title="Uniswap Swap"
         ></iframe>
+       
+
       )}
+      </Flex>
+      </Bubble>
     </Box>
   );
 };

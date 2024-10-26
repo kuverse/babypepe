@@ -44,11 +44,11 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <Box bg="transparent" color="white" px={6} py={4} position="absolute" 
-    fontSize={25} top={0} width="100%" zIndex={1000}             
+    <Box bg="transparent" color="white" px={6} py={4} position="absolute" fontFamily="'ThirdFont', sans-serif"
+    fontSize={12} top={0} width="100%" zIndex={1000}             
     //textShadow="0.5px 0.5px 0 #022B0F, -0.5px 0.5px 0 #022B0F, 0.5px -0.5px 0 #022B0F, -0.5px -0.5px 0 #022B0F"
     >
-      <Flex align="center" justify="space-between" >
+      <Flex align="center" justify="space-between" fontFamily="'ThirdFont', sans-serif">
         <Heading size="xl" cursor="pointer">
           <Link href="/" passHref>
             <Flex direction={"row"} >
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
           display={{ base: "block", md: "none" }}
         />
 
-        <Flex display={{ base: "none", md: "flex" }} align="center" gap={4} padding={"5px"}>
+        <Flex display={{ base: "none", md: "flex" }} align="center" gap={4} padding={"5px"} >
           <ChakraLink as={Link} href="/" marginRight={"20px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
             Home
           </ChakraLink>
@@ -107,10 +107,10 @@ const Header: React.FC = () => {
       </Flex>
 
       <Slide direction="left" in={isOpen} style={{ zIndex: 9 }}>
-        <Box ref={menuRef} bg="#6CB947" w="55%" h="100vh" pos="fixed"
+        <Box ref={menuRef} bg="#6CB947" w="55%" h="100vh" pos="fixed" fontFamily="'ThirdFont', sans-serif"
                   border="2px solid white" // White border
  
-        fontSize={25} top="0" left="0" p={4} shadow="lg" zIndex={2000}>
+        fontSize={15} top="0" left="0" p={4} shadow="lg" zIndex={2000}>
           <VStack align="start" spacing={5} padding={"10px"}>
             <Link href="/" passHref>
             <Flex direction={"row"} >
@@ -118,17 +118,17 @@ const Header: React.FC = () => {
             <Text marginTop={2} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
             </Flex>
             </Link>
-            <ChakraLink as={Link} href="/" marginTop={"40px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
+            <ChakraLink fontFamily="'ThirdFont', sans-serif" as={Link} href="/" marginTop={"40px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
               Home
             </ChakraLink>
-            <ChakraLink as={Link} href="/flappy-baby-pepe" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
+            <ChakraLink fontFamily="'ThirdFont', sans-serif" as={Link} href="/flappy-baby-pepe" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
               Arcade
             </ChakraLink>
 
             <DropdownMenu
               title="Info"
               options={[
-                { label: "About", href: "/#about" },
+                { label: "About", href: "/#about",  },
                 { label: "Tokenomics", href: "/#tokenomics" },
                 { label: "Baby Pepe & Friends", href: "/#friends" },
                 { label: "How to Buy", href: "/#how-to-buy" },
