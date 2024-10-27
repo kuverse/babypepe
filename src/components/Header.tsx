@@ -80,7 +80,7 @@ const Header: React.FC = () => {
               { label: "Tokenomics", href: "/#tokenomics" },
               { label: "Baby Pepe & Friends", href: "/#friends" },
               { label: "How to Buy", href: "/#how-to-buy" },
-              { label: "Links", href: "/#links" },
+              { label: "Roadmap", href: "/#roadmap" },
               { label: "Join the Cult", href: "/#join-us" },
             ]}
           />
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
                 { label: "Tokenomics", href: "/#tokenomics" },
                 { label: "Baby Pepe & Friends", href: "/#friends" },
                 { label: "How to Buy", href: "/#how-to-buy" },
-                { label: "Links", href: "/#links" },
+                { label: "Roadmap", href: "/#roadmap" },
                 { label: "Join the Cult", href: "/#join-us" },
               ]}
             />

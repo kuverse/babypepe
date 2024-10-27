@@ -9,6 +9,7 @@ const JoinSection: React.FC = () => {
 
   return (
     <Box
+      id="join-us"
       backgroundImage="/images/background-image.png"
       backgroundSize="cover"
       backgroundPosition="center"
