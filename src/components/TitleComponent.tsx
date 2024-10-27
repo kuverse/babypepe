@@ -37,7 +37,7 @@ const TitleComponent: React.FC = () => {
         <Box display="flex" justifyContent="center" alignItems="center">
  
         <Image
-          src="/images/mainLogoOutline.png"
+          src="/images/Group 47.png"
           alt="logo main"
           width={{ base: "95%", md: "70%" }}
           borderRadius="15px"
