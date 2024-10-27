@@ -118,10 +118,10 @@ const Header: React.FC = () => {
             <Text marginTop={2} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
             </Flex>
             </Link>
-            <ChakraLink fontFamily="'ThirdFont', sans-serif" as={Link} href="/" marginTop={"40px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
+            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="/" marginTop={"40px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
               Home
             </ChakraLink>
-            <ChakraLink fontFamily="'ThirdFont', sans-serif" as={Link} href="/flappy-baby-pepe" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
+            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="/flappy-baby-pepe" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
               Arcade
             </ChakraLink>
 
