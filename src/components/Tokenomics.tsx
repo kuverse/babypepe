@@ -143,7 +143,7 @@ const TokenomicsSection: React.FC = () => {
                 justify="flex-start"
                 textAlign={"center"}
                 color="#fff"
-                fontSize={{ base: "lg", md: "xl" }}
+                fontSize={{ base: "m", md: "xl" }}
                 fontFamily="'SecondaryFont', sans-serif"
                 w="55%"
                 maxW="600px"
