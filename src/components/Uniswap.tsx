@@ -167,6 +167,7 @@ const SwapBabyPepe: React.FC = () => {
               height="510px"
               borderRadius="10px"
               cursor="pointer"
+              opacity={0.8}
               onClick={handleShowIframe}
               transition="transform 0.3s"
               _hover={{ transform: "scale(1.05)" }}
