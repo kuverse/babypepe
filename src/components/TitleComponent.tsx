@@ -23,7 +23,7 @@ const TitleComponent: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         style={{
           position: "absolute",
-          top: "20%",
+          top: "18%",
           width: "100%",
           transform: "translate(-50%, -50%)",
           zIndex: 2,
