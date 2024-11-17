@@ -32,7 +32,7 @@ const JoinSection: React.FC = () => {
         paddingTop={12} // Adjust height for proper placement
       >
         <Text
-          fontSize={{ base: "60px", md: "80px" }}
+          fontSize={{ base: "55px", md: "80px" }}
           fontWeight="bold"
           color="#fff"
           mb={1}
