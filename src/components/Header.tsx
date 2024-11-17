@@ -52,8 +52,8 @@ const Header: React.FC = () => {
         <Heading size="xl" cursor="pointer">
           <Link href="/" passHref>
             <Flex direction={"row"} >
-            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="baby-pepe-logo" borderRadius={"full"}/>
-            <Text marginTop={4} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={35}>Baby Pepe</Text>
+            <Image src="/logos/babyPepe.JPG" width={45} height={45} alt="baby-pepe-logo" borderRadius={"full"}/>
+            <Text marginTop={1} marginLeft={3} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
             </Flex>
           </Link>
         </Heading>
