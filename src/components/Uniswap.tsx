@@ -171,7 +171,7 @@ const SwapBabyPepe: React.FC = () => {
           {!showIframe ? (
             <Image
               src="/images/uniswapOpen.png"
-              alt="Open Uniswap Swap"
+              alt="Swap Baby Pepe"
               width="300px"
               height="510px"
               borderRadius="10px"

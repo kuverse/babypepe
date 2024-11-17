@@ -50,7 +50,7 @@ const FriendsBox: React.FC = () => {
       <Image
         src="/images/friends-title.png"
         className={styles.floatingImage}
-        alt="friends title"
+        alt="Baby Pepe and friends title"
         width={{ base: "60%", md: "50%" }} // Increase width on base and md
         height={{ base: "auto", md: "auto" }} // Maintain aspect ratio
         borderRadius="15px"
@@ -80,7 +80,7 @@ const FriendsBox: React.FC = () => {
             <Image
               key={index}
               src={src}
-              alt={`Episode ${index + 1}`}
+              alt={`Baby Pepe Episode ${index + 1}`}
               width="120px"
               height="auto"
               display="inline-block"

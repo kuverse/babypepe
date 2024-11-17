@@ -35,7 +35,7 @@ const FlappySection: React.FC = () => {
         >
           <Image
             src="/images/pepebottle2 136.png"
-            alt="Baby Bottle"
+            alt="Baby Pepe Bottle"
             width="100px" 
             height="auto"
             style={{ pointerEvents: "none" }} // Disable pointer events if not needed
@@ -48,7 +48,7 @@ const FlappySection: React.FC = () => {
         <Image
           className={styles.floatingImage}
           src="/images/flying-pepe.png"
-          alt="flappy pepe"
+          alt="flappy Babye pepe"
           width={{ base: "60%", md: "30%" }}
           borderRadius="15px"
           objectFit="contain"
@@ -107,7 +107,7 @@ const FlappySection: React.FC = () => {
         >
           <Image
             src="/images/cloud.png"
-            alt="cloud"
+            alt="baby pepe cloud"
             width="250px" 
             height="auto"
             style={{ pointerEvents: "none" }} // Disable pointer events if not needed

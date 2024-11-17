@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         <Heading size="xl" cursor="pointer">
           <Link href="/" passHref>
             <Flex direction={"row"} >
-            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="logo" borderRadius={"full"}/>
+            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="baby-pepe-logo" borderRadius={"full"}/>
             <Text marginTop={4} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={35}>Baby Pepe</Text>
             </Flex>
           </Link>
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
           <VStack align="start" spacing={5} padding={"10px"}>
             <Link href="/" passHref>
             <Flex direction={"row"} >
-            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="logo" borderRadius={"full"}/>
+            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="babyPepe" borderRadius={"full"}/>
             <Text marginTop={2} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
             </Flex>
             </Link>

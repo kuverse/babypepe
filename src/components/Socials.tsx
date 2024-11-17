@@ -41,7 +41,7 @@ const Socials: React.FC<SocialsProps> = ({ size = 40 }) => {
             icon={
               <Image
                 src="/logos/dexsxcreener.png"
-                alt="DexScreener"
+                alt="DexScreener for baby pepe"
                 width={`${size + 5}px`} // Apply size prop to custom image
                 height={`${size + 5}px`}
                 filter="invert(1)"
@@ -62,7 +62,7 @@ const Socials: React.FC<SocialsProps> = ({ size = 40 }) => {
             icon={
               <Image
                 src="/logos/dextools1.png"
-                alt="DexTools"
+                alt="DexTools for baby pepe"
                 boxSize={`${size - 1}px`} // Apply size prop to custom image
                 color="white"
               />

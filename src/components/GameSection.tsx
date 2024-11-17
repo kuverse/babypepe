@@ -61,7 +61,7 @@ const GameSection: React.FC = () => {
       {/* Arcade Machine Image */}
       <Image
         src="/images/game-machine.png"
-        alt="Arcade Machine"
+        alt="Baby Pepe Arcade Machine"
         width="auto" // Allow the width to adjust automatically
         height="1700px" // Set a fixed height
         maxWidth="600px" // Prevent resizing beyond this width

@@ -140,7 +140,7 @@ const AboutBox: React.FC = () => {
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
           >
-            Useful Links
+            Baby Pepes Useful Links
           </Heading>
         <BubbleChart />
 

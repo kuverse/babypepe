@@ -35,7 +35,7 @@ const SwapBuyButtons: React.FC = () => {
           Swap
           <Image
             src={"/logos/uniswap-white.png"} // Change src based on hover state
-            alt="Uniswap Logo"
+            alt="Swap Baby Pepe"
             boxSize="40px"
             mt={-2}
             mr={1}
