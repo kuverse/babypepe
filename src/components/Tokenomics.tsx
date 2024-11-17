@@ -48,7 +48,7 @@ const TokenomicsSection: React.FC = () => {
       minHeight="100vh"
       backgroundImage="url('/backgrounds/pepe_surfing.JPG')"
       backgroundSize="cover"
-      backgroundPosition="center"
+      backgroundPosition="calc(50% + 35%) center" // Shifts the image 10% to the left
       backgroundRepeat="no-repeat"
       display="flex"
       flexDirection="column"

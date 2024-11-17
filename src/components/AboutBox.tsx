@@ -48,7 +48,7 @@ const AboutBox: React.FC = () => {
       textAlign="center"
       backgroundImage="url('/backgrounds/pepe_skiing.JPG')"
       backgroundSize="cover"
-      backgroundPosition="center"
+      backgroundPosition="calc(50% + 35%) center" // Shifts the image 10% to the left
       backgroundRepeat="no-repeat"
       overflow="hidden"
     >
