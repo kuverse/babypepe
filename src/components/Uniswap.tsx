@@ -143,8 +143,12 @@ const SwapBabyPepe: React.FC = () => {
           ml={{ base: 0, md: "15%" }}
         >
           <HoverBubble
-            title="Create a Wallet + Get some $ETH"
-            description="Download a crypto wallet like MetaMask. Buy $ETH on an exchange and transfer it to your wallet."
+            title="Create a Wallet"
+            description="Download a crypto wallet like MetaMask."
+          />
+           <HoverBubble
+            title="Get some $ETH"
+            description="Buy $ETH from an exchange."
           />
           <HoverBubble
             title="Click Uniswap Embed"
