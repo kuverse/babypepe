@@ -29,7 +29,7 @@ const JoinSection: React.FC = () => {
         justifyContent="flex-start" 
         textAlign={"center"}
         height="70%"
-        paddingTop={20} // Adjust height for proper placement
+        paddingTop={12} // Adjust height for proper placement
       >
         <Text
           fontSize={{ base: "50px", md: "60px" }}
