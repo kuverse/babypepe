@@ -66,7 +66,7 @@ const JoinSection: React.FC = () => {
           cursor="pointer"
           transition="all 0.3s"
           border="4px solid white"
-          maxW={"500px"}
+          maxW={"300px"}
           fontFamily="'SecondaryFont', sans-serif"
           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
           _hover={{ transform: "scale(1.1)", backgroundColor: "#006821" }}
