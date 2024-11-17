@@ -201,6 +201,7 @@ const SwapBabyPepe: React.FC = () => {
           alignItems="flex-start"
           ml={{ base: "10%", md: "-10%" }}
           mr={"10px"}
+          mt={"20px"}
           mb={"15px"}
         >
           <HoverBubble
