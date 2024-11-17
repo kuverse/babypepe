@@ -57,7 +57,7 @@ const RoadMapSection: React.FC = () => {
     overflow="hidden" // Prevents scrolling
     bgImage="/backgrounds/pepe_hiking.JPG"
     backgroundSize="cover" // Use 'cover' to fill the entire container
-    backgroundPosition="calc(50% + 50%) center" // Shifts the image 10% to the left
+    backgroundPosition="calc(50% + 50%) calc(50% + 40%)"    
     backgroundRepeat="no-repeat"
     //boxShadow="lg" // Optional: Add some shadow for better visuals
   >
