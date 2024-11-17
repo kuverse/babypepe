@@ -53,6 +53,7 @@ const MarketCapVolume: React.FC = () => {
     overflow="hidden"
     mb={10}
     mt={5}
+    borderRadius={15}
   >
   
       {loading ? (

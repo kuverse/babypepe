@@ -30,7 +30,7 @@ const TitleComponent: React.FC = () => {
           textAlign: "center",
         }}
       >
-                <SwapBuyButtons />
+        <SwapBuyButtons />
 
         <Heading
           as="h1"
