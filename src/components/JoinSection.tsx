@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text, Button, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, Text, Button } from "@chakra-ui/react";
 import { FaTelegram } from "react-icons/fa";
 
 const JoinSection: React.FC = () => {
