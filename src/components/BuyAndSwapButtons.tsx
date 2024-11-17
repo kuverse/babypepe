@@ -29,7 +29,8 @@ const SwapBuyButtons: React.FC = () => {
           transition="background-color 0.3s, transform 0.3s"
           _hover={{ backgroundColor: "#4A9F33", transform: "scale(1.05)" }}
           mr={4} // Margin right for spacing between buttons
-      // Reset hover state
+          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
         >
          
           Swap
@@ -56,8 +57,8 @@ const SwapBuyButtons: React.FC = () => {
           justifyContent="center"
           transition="background-color 0.3s, transform 0.3s"
           _hover={{ backgroundColor: "#4A9F33", transform: "scale(1.05)" }}
-          mr={4} // Margin right for spacing between buttons
-        // Reset hover state
+          mr={4}
+          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
         >
           Chart
           <FaChartLine style={{ marginLeft: "8px", marginTop:"-4" }} /> 

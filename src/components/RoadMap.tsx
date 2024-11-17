@@ -101,6 +101,8 @@ const RoadMapSection: React.FC = () => {
           fontFamily="'SecondaryFont', sans-serif"
           //textShadow="2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white"
           zIndex={2} // Bring text above the overlay
+          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
         >
           Simple, but effective
         </Text>
@@ -141,6 +143,8 @@ const RoadMapSection: React.FC = () => {
                   display="flex"
                   alignItems="center"
                   fontFamily="'SecondaryFont', sans-serif"
+                  textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
                 >
                   <FaCheck style={{ marginRight: "18px", color: "white", marginLeft: "15px" }} />
                   {text}

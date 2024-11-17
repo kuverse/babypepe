@@ -71,28 +71,32 @@ const MarketCapVolume: React.FC = () => {
             <React.Fragment key={i}>
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/logos/fbe8b5cf8780a6a5f6ff3678e60ed349.avif" height={5} width={5} alt="Market Cap baby pepe" />
-                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+                >
                   Market Cap: ${parseFloat(marketCap).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
               <Image src="/logos/babyPepe.JPG" width={5} height={5} alt="baby pepe logo" borderRadius={"full"}/>
-              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+              >
                   Token Price: ${parseFloat(usdValue).toLocaleString(undefined, { minimumFractionDigits: 8, maximumFractionDigits: 8 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
               <Image src="/logos/babyPepe.JPG" width={5} height={5} alt="baby pepe logo" borderRadius={"full"}/>
-              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+              >
                   24hr Volume: ${parseFloat(volumeValue).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
                 <Image src="/images/ethLogo.png" height={5} width={8} alt="Ethereum Price Logo for baby pepe" />
-                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+                >
                   Eth Price: ${parseFloat(ethPrice).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>

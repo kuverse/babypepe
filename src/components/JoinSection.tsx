@@ -56,6 +56,8 @@ const JoinSection: React.FC = () => {
             mb={6}
             textAlign="center"
             fontFamily="'SecondaryFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             Join the community
           </Text>
@@ -76,6 +78,7 @@ const JoinSection: React.FC = () => {
             my={2}
             border="4px solid white"
             fontFamily="'SecondaryFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
             _hover={{ transform: "scale(1.1)", backgroundColor: "#006821" }}
           >
             <FaTelegram size={30} style={{ marginRight: "10px" }} />

@@ -75,6 +75,7 @@ const TokenomicsSection: React.FC = () => {
         textAlign="center"
         fontFamily="'PepeFont', sans-serif"
         zIndex={2}
+        textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
       >
        Tokenomics
       </Heading>
@@ -88,6 +89,9 @@ const TokenomicsSection: React.FC = () => {
         textAlign="center"
         fontFamily="'SecondaryFont', sans-serif"
         zIndex={2}
+
+        textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
       >
         No tax? Feels good man.
       </Text>
@@ -109,8 +113,8 @@ const TokenomicsSection: React.FC = () => {
             "Total Supply 420.69B",
             "0% Sell Tax",
             "0% Buy Tax",
-            "Liquidity pool roasted.",
-            "Contract Renounced.",
+            "Liquidity pool burnt",
+            "Contract Renounced",
             "Community Takeover",
           ].map((text, index) => (
             <motion.div
@@ -142,6 +146,8 @@ const TokenomicsSection: React.FC = () => {
                 fontFamily="'SecondaryFont', sans-serif"
                 w="100%"
                 maxW="600px"
+                textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
               >
                 <FaCheck style={{ marginRight: "12px" }} />
                 {text}

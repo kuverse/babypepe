@@ -133,7 +133,8 @@ const SwapBabyPepe: React.FC = () => {
             textAlign="center"
             fontFamily="'PepeFont', sans-serif"
             zIndex={2}
-            textShadow="0px 0px 10px rgba(0, 0, 0, 0.8)"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             How to Buy Baby Pepe
           </Heading>
@@ -207,14 +208,14 @@ const SwapBabyPepe: React.FC = () => {
           />
           <HoverBubble
             title="Get some $ETH"
-            description="Buy $ETH from an exchange."
+            description="Buy ETH from an exchange."
           />
           <HoverBubble
             title="Click Uniswap Embed"
             description="Use the Uniswap embed here and connect your wallet"
           />
           <HoverBubble
-            title="Swap $ETH for $BPEP"
+            title="Swap ETH for BABYPEPE"
             description="Click the swap button on Uniswap"
           />
         </Flex>

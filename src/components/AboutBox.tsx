@@ -60,6 +60,8 @@ const AboutBox: React.FC = () => {
             fontSize="4xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             About 0x69babe
           </Heading>
@@ -74,6 +76,8 @@ const AboutBox: React.FC = () => {
             fontSize="3xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             Contract Address
           </Heading>
@@ -82,6 +86,8 @@ const AboutBox: React.FC = () => {
             fontSize={{ base: "16px", md: "1.6vw" }}
             color="#fff"
             fontFamily="'SecondaryFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4
           </Heading>
@@ -103,6 +109,8 @@ const AboutBox: React.FC = () => {
               fontSize="3xl"
               color="#fff"
               fontFamily="'PepeFont', sans-serif"
+              textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
             >
               Make room for BabyPepe!
             </Heading>
@@ -111,6 +119,8 @@ const AboutBox: React.FC = () => {
               color="#fff"
               fontFamily="'SecondaryFont', sans-serif"
               textAlign="center"
+              textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
             >
               Babypepe, heir to the throne and son of  Pepe, represents the dawn of a new generation in the frog kingdom, and a passing of the baton, from one generation to the next.  Signafying the right of passage bestowed upon a son by his father, Babypepe strives to buidl and improve upon his dads legacy.
               Pepe, the king of memes and a viral sensation found all over the internet, has taken the world by storm, and capitaved the hearts of many.  If you missed Pepes parabolic run, Babypepe is an opportunity to be a part of something bigger than yourself, and have a hand in building a community that will surely go down in memecoin history.
@@ -126,6 +136,8 @@ const AboutBox: React.FC = () => {
               fontSize="3xl"
               color="#fff"
               fontFamily="'PepeFont', sans-serif"
+              textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
             >
               Like father, Like son
             </Heading>
@@ -134,6 +146,8 @@ const AboutBox: React.FC = () => {
               color="#fff"
               fontFamily="'SecondaryFont', sans-serif"
               textAlign="center"
+              textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
             >
               The Babypepe narrative is simple.  Son of pepe, whos CA starts with 0x69, Babypepe boasts a unique vanity contract address similiar to that of his father, starting with 0x69babe.  A CTO, by the people, for the people, was forged back in May of 2024, with no shortage of obstacles in its path.  A community of diamond handed, cult like chads, have defeated two cabal launches, dethroned a serial scammer crypto twitter influencer, and built an oarganic following of dedicated indvidiuals who are comittted to the growth and success of this adorable little frog.
               Come stop by our telegram, checkout the twitter, and see for yourself.  With a foundation of integrity, honesty, kindness, and compassion, everyone is valued and has a seat at the table in our community.
@@ -148,6 +162,8 @@ const AboutBox: React.FC = () => {
             fontSize="3xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
           >
             Baby Pepes Useful Links
           </Heading>
