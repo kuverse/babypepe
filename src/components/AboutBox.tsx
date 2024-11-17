@@ -53,7 +53,7 @@ const AboutBox: React.FC = () => {
       overflow="hidden"
     >
       {/* Title Bubble */}
-      <Box width="100%" maxWidth="1200px" mb={4}>
+      <Box width="70%" maxWidth="500px" mb={4}>
         <Bubble>
           <Heading
             as="h1"
@@ -69,7 +69,7 @@ const AboutBox: React.FC = () => {
       </Box>
 
       {/* Address Bubble */}
-      <Box width="100%" maxWidth="1200px" mb={4}>
+      <Box width="70%" maxWidth="500px" mb={4}>
         <Bubble>
           <Heading
             as="h1"

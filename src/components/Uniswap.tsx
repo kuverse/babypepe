@@ -62,9 +62,9 @@ const SwapBabyPepe: React.FC = () => {
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           border: "2px solid white",
           borderRadius: "15px",
-          padding: "16px",
-          marginBottom: "10px",
-          zIndex: "500",
+          padding: "18px",
+          marginBottom: "20px",
+          zIndex: "1",
           textAlign: "center",
           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
           position: "relative",
@@ -84,12 +84,12 @@ const SwapBabyPepe: React.FC = () => {
           </Heading>
           <Box
             position="absolute"
-            top="100%" // Show below the bubble
-            left="50%"
+            top="50%" // Show below the bubble
+            right="100%"
             transform="translateX(-50%)"
-            bg="rgba(0, 0, 0, 0.9)" // Darker background for readability
+            bg="rgba(0, 0, 0, 0.8)" // Darker background for readability
             color="#fff"
-            fontSize="sm"
+            fontSize="m"
             fontFamily="'SecondaryFont', sans-serif"
             borderRadius="10px"
             padding="10px"
@@ -97,7 +97,7 @@ const SwapBabyPepe: React.FC = () => {
             visibility="hidden"
             whiteSpace="normal" // Allow text wrapping
             textAlign="center"
-            zIndex={10} // Ensure hover text is above all elements
+            zIndex={10000} // Ensure hover text is above all elements
             transition="opacity 0.3s, visibility 0.3s"
             _groupHover={{ opacity: 1, visibility: "visible" }}
           >
@@ -124,7 +124,7 @@ const SwapBabyPepe: React.FC = () => {
       backgroundRepeat="no-repeat"
     >
       {/* Main Title */}
-      <Flex mt="10px" width="90%" justifyContent="center" alignItems="center">
+      <Flex mt="10px" width="70%" maxW="500px" justifyContent="center" alignItems="center">
         <Bubble>
           <Heading
             as="h1"
@@ -143,13 +143,13 @@ const SwapBabyPepe: React.FC = () => {
 
       {/* Content Section */}
       <Flex
-        width="100%"
-        maxWidth="1200px"
+        width="90%"
+        maxWidth="600px"
         justifyContent="space-between"
         alignItems="flex-start"
         flexWrap="wrap" // Enables stacking on smaller screens
-        gap={4}
-        mt={5}
+        gap={6}
+        mt={8}
       >
         {/* Left Column: Iframe */}
         <Flex
@@ -200,7 +200,7 @@ const SwapBabyPepe: React.FC = () => {
           alignItems="flex-start"
           ml={{ base: "10%", md: "-10%" }}
           mr={"10px"}
-          mb={"10px"}
+          mb={"15px"}
         >
           <HoverBubble
             title="Create a Wallet"
