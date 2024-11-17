@@ -53,7 +53,10 @@ const Header: React.FC = () => {
           <Link href="/" passHref>
             <Flex direction={"row"} >
             <Image src="/logos/babyPepe.JPG" width={45} height={45} alt="baby-pepe-logo" borderRadius={"full"}/>
-            <Text marginTop={1} marginLeft={3} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
+            <Text marginTop={1} marginLeft={3} fontFamily="'PepeFont', sans-serif" fontSize={30}
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+
+            >Baby Pepe</Text>
             </Flex>
           </Link>
         </Heading>
