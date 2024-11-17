@@ -32,7 +32,7 @@ const TitleComponent: React.FC = () => {
       >
         <Heading
           as="h1"
-          fontSize={{ base: "8vw", md: "12vw" }} // Responsive font size
+          fontSize={{ base: "14vw", md: "12vw" }} // Responsive font size
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
           textAlign="center"

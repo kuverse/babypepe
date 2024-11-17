@@ -19,7 +19,7 @@ const SwapBuyButtons: React.FC = () => {
       <Button
           backgroundColor="rgba(50, 50, 50, 0.6)" // Transparent dark gray
           textColor={"#fff"}
-          padding="25px 50px"
+          padding="25px 35px"
           borderRadius="20px"
           fontSize="25px"
           display="flex"
@@ -47,7 +47,7 @@ const SwapBuyButtons: React.FC = () => {
       <Button
           backgroundColor="rgba(50, 50, 50, 0.6)" // Transparent dark gray
           textColor={"#fff"}
-          padding="25px 50px"
+          padding="25px 35px"
           borderRadius="20px"
           fontSize="25px"
           display="flex"
