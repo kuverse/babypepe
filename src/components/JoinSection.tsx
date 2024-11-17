@@ -29,7 +29,7 @@ const JoinSection: React.FC = () => {
         justifyContent="flex-start" 
         textAlign={"center"}
         height="70%"
-        paddingTop={12} // Adjust height for proper placement
+        paddingTop={14} // Adjust height for proper placement
       >
         <Text
           fontSize={{ base: "55px", md: "80px" }}
@@ -51,7 +51,7 @@ const JoinSection: React.FC = () => {
         alignItems="center"
         width="100%"
         height="30%" // Allocate remaining height for the button
-        mt={10} // Add margin-top to create separation
+        mt={240} // Add margin-top to create separation
       >
         <Button
           as="a"
