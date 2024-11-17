@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const SwapBabyPepe: React.FC = () => {
   const [showIframe, setShowIframe] = useState(false);
@@ -18,83 +18,95 @@ const SwapBabyPepe: React.FC = () => {
     setShowIframe(true); // Show the iframe when the image is clicked
   };
 
-  const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      style={{
-        width: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
-        border: "2px solid white", // White border
-        borderRadius: "15px",
-        padding: "16px",
-        margin: "10px 0", // Consistent vertical spacing
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
-        overflow: "hidden", // Ensure content doesn't overflow
-      }}
-    >
-      {children}
-    </motion.div>
-  );
+  const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+        style={{
+          width: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
+          border: "2px solid white", // White border
+          borderRadius: "15px",
+          padding: "16px",
+          margin: "10px 0", // Consistent vertical spacing
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
+          overflow: "hidden", // Ensure content doesn't overflow
+        }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
 
   const HoverBubble: React.FC<{ title: string; description: string }> = ({
     title,
     description,
-  }) => (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      style={{
-        width: "90%",
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
-        border: "2px solid white",
-        borderRadius: "15px",
-        padding: "16px",
-        marginBottom: "10px",
-        zIndex: "500",
-        textAlign: "center",
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
-        position: "relative",
-        overflow: "visible", // Allow content to extend outside
-      }}
-    >
-      <Box position="relative" role="group">
-        <Heading
-          as="h1"
-          fontSize="xl"
-          color="#fff"
-          fontFamily="'SecondaryFont', sans-serif"
-          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
-          _hover={{ cursor: "pointer" }}
-        >
-          {title}
-        </Heading>
-        <Box
-          position="absolute"
-          top="100%" // Show below the bubble
-          left="50%"
-          transform="translateX(-50%)"
-          bg="rgba(0, 0, 0, 0.9)" // Darker background for readability
-          color="#fff"
-          fontSize="sm"
-          fontFamily="'SecondaryFont', sans-serif"
-          borderRadius="10px"
-          padding="10px"
-          opacity={0}
-          visibility="hidden"
-          whiteSpace="normal" // Allow text wrapping
-          textAlign="center"
-          zIndex={10} // Ensure hover text is above all elements
-          transition="opacity 0.3s, visibility 0.3s"
-          _groupHover={{ opacity: 1, visibility: "visible" }}
-        >
-          {description}
+  }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+        style={{
+          width: "90%",
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          border: "2px solid white",
+          borderRadius: "15px",
+          padding: "16px",
+          marginBottom: "10px",
+          zIndex: "500",
+          textAlign: "center",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
+          position: "relative",
+          overflow: "visible", // Allow content to extend outside
+        }}
+      >
+        <Box position="relative" role="group">
+          <Heading
+            as="h1"
+            fontSize="xl"
+            color="#fff"
+            fontFamily="'SecondaryFont', sans-serif"
+            textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+            _hover={{ cursor: "pointer" }}
+          >
+            {title}
+          </Heading>
+          <Box
+            position="absolute"
+            top="100%" // Show below the bubble
+            left="50%"
+            transform="translateX(-50%)"
+            bg="rgba(0, 0, 0, 0.9)" // Darker background for readability
+            color="#fff"
+            fontSize="sm"
+            fontFamily="'SecondaryFont', sans-serif"
+            borderRadius="10px"
+            padding="10px"
+            opacity={0}
+            visibility="hidden"
+            whiteSpace="normal" // Allow text wrapping
+            textAlign="center"
+            zIndex={10} // Ensure hover text is above all elements
+            transition="opacity 0.3s, visibility 0.3s"
+            _groupHover={{ opacity: 1, visibility: "visible" }}
+          >
+            {description}
+          </Box>
         </Box>
-      </Box>
-    </motion.div>
-  );
+      </motion.div>
+    );
+  };
 
   return (
     <Box
@@ -121,6 +133,7 @@ const SwapBabyPepe: React.FC = () => {
             textAlign="center"
             fontFamily="'PepeFont', sans-serif"
             zIndex={2}
+            textShadow="0px 0px 10px rgba(0, 0, 0, 0.8)"
           >
             How to Buy Baby Pepe
           </Heading>
@@ -183,7 +196,7 @@ const SwapBabyPepe: React.FC = () => {
           flex={{ base: "1 1 100%", md: "0.4" }}
           maxWidth={{ base: "100%", md: "35%" }}
           justifyContent="flex-start"
-          alignItems="flex-start" // Aligns bubbles to the left of the section
+          alignItems="flex-start"
           ml={{ base: "10%", md: "-10%" }}
           mr={"10px"}
           mb={"10px"}
