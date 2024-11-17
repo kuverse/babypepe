@@ -144,7 +144,7 @@ const TokenomicsSection: React.FC = () => {
                 color="#fff"
                 fontSize={{ base: "lg", md: "xl" }}
                 fontFamily="'SecondaryFont', sans-serif"
-                w="100%"
+                w="60%"
                 maxW="600px"
                 textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
