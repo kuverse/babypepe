@@ -207,7 +207,7 @@ const SwapBabyPepe: React.FC = () => {
             description="Download a crypto wallet like MetaMask."
           />
           <HoverBubble
-            title="Get some $ETH"
+            title="Get some ETH"
             description="Buy ETH from an exchange."
           />
           <HoverBubble

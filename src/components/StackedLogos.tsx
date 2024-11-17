@@ -79,14 +79,17 @@ const BubbleChart: React.FC = () => {
       width="90vw"
       maxWidth="500px"
       zIndex={43}
-      padding={5}
+      padding={2}
       borderRadius="15px"
     >
       <Flex
         flexWrap="wrap"
         justifyContent="center"
         alignItems="center"
-        gap={4} // Adds consistent spacing
+        textAlign={"center"}
+        gap={2}
+         position="relative" // Ensure positioning control
+        left="-5%"
       >
         {links.map((link, index) => (
           <motion.div
@@ -100,7 +103,7 @@ const BubbleChart: React.FC = () => {
               alignItems: "center",
               justifyContent: "center",
               width: "45%", // Ensure even width for icons in rows
-              maxWidth: "120px",
+              maxWidth: "100px",
               margin: "10px 5px", // Consistent spacing for all screen sizes
             }}
           >
