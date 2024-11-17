@@ -50,7 +50,7 @@ const RoadMapSection: React.FC = () => {
       width="100%"
       height="110vh" // Ensures a minimum height for the box
       display="flex"
-      mb={2}
+     
       flexDirection={"column"}
       justifyContent="center"
       alignItems="center"

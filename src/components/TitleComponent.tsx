@@ -31,7 +31,7 @@ const TitleComponent: React.FC = () => {
       >
         <Heading
           as="h1"
-          fontSize="14vw"
+          fontSize="12vw"
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
           textAlign="center"
