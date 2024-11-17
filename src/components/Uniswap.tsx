@@ -17,6 +17,7 @@ const SwapBabyPepe: React.FC = () => {
   const handleShowIframe = () => {
     setShowIframe(true); // Show the iframe when the image is clicked
   };
+
   const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
@@ -36,7 +37,11 @@ const SwapBabyPepe: React.FC = () => {
       {children}
     </motion.div>
   );
-  const HoverBubble: React.FC<{ title: string; description: string }> = ({ title, description }) => (
+
+  const HoverBubble: React.FC<{ title: string; description: string }> = ({
+    title,
+    description,
+  }) => (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -108,19 +113,19 @@ const SwapBabyPepe: React.FC = () => {
     >
       {/* Main Title */}
       <Flex mt="10px" width="90%" justifyContent="center" alignItems="center">
-      <Bubble>
-      <Heading
-        as="h1"
-        fontSize="4xl"
-        color="#fff"
-        textAlign="center"
-        fontFamily="'PepeFont', sans-serif"
-        zIndex={2}
-        textShadow="0px 0px 10px rgba(0, 0, 0, 0.8)"
-      >
-       How to Buy Baby Pepe
-      </Heading>
-      </Bubble>
+        <Bubble>
+          <Heading
+            as="h1"
+            fontSize="4xl"
+            color="#fff"
+            textAlign="center"
+            fontFamily="'PepeFont', sans-serif"
+            zIndex={2}
+            textShadow="0px 0px 10px rgba(0, 0, 0, 0.8)"
+          >
+            How to Buy Baby Pepe
+          </Heading>
+        </Bubble>
       </Flex>
 
       {/* Content Section */}
@@ -133,34 +138,7 @@ const SwapBabyPepe: React.FC = () => {
         gap={4}
         mt={5}
       >
-        {/* Left Column */}
-        <Flex
-          flexDirection="column"
-          flex={{ base: "1 1 100%", md: "0.4" }}
-          maxWidth={{ base: "100%", md: "35%" }}
-          justifyContent="center"
-          alignItems="center"
-          ml={{ base: 0, md: "15%" }}
-        >
-          <HoverBubble
-            title="Create a Wallet"
-            description="Download a crypto wallet like MetaMask."
-          />
-           <HoverBubble
-            title="Get some $ETH"
-            description="Buy $ETH from an exchange."
-          />
-          <HoverBubble
-            title="Click Uniswap Embed"
-            description="Use the Uniswap embed here and connect your wallet"
-          />
-          <HoverBubble
-            title="Swap $ETH for $BPEP"
-            description="Click the swap button on Uniswap"
-          />
-        </Flex>
-
-        
+        {/* Left Column: Iframe */}
         <Flex
           flex={{ base: "1 1 100%", md: "0.6" }}
           maxWidth={{ base: "100%", md: "65%" }}
@@ -198,6 +176,35 @@ const SwapBabyPepe: React.FC = () => {
               title="Uniswap Swap"
             ></iframe>
           )}
+        </Flex>
+
+        {/* Right Column: Bubbles */}
+        <Flex
+          flexDirection="column"
+          flex={{ base: "1 1 100%", md: "0.4" }}
+          maxWidth={{ base: "100%", md: "35%" }}
+          justifyContent="flex-start"
+          alignItems="flex-start" // Aligns bubbles to the left of the section
+          ml={{ base: "10%", md: "-10%" }}
+          mr={"10px"}
+          mb={"10px"}
+        >
+          <HoverBubble
+            title="Create a Wallet"
+            description="Download a crypto wallet like MetaMask."
+          />
+          <HoverBubble
+            title="Get some $ETH"
+            description="Buy $ETH from an exchange."
+          />
+          <HoverBubble
+            title="Click Uniswap Embed"
+            description="Use the Uniswap embed here and connect your wallet"
+          />
+          <HoverBubble
+            title="Swap $ETH for $BPEP"
+            description="Click the swap button on Uniswap"
+          />
         </Flex>
       </Flex>
     </Box>
