@@ -23,37 +23,41 @@ const TitleComponent: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         style={{
           position: "absolute",
-          top: "30%", // Center vertically
-          left: "20%", // Center horizontally
-          transform: "translate(-50%, -50%)", // Adjust for element dimensions
+          top: "30%",
+          width: "100%",
+          transform: "translate(-50%, -50%)",
           zIndex: 2,
+          textAlign: "center",
         }}
       >
         <Heading
           as="h1"
-          fontSize="12vw"
+          fontSize={{ base: "8vw", md: "12vw" }} // Responsive font size
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
           textAlign="center"
+          paddingX={4} // Padding to avoid edge cutoff
           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
         >
           Baby pepe
         </Heading>
       </motion.div>
 
+      {/* Buttons and MarketCapVolume */}
       <Flex
         position="absolute"
-        bottom="10px" // Adjust as needed
+        bottom="10px"
         left="50%"
         transform="translateX(-50%)"
         direction="column"
         alignItems="center"
+        width="90%" // Ensure buttons stay within screen width
+        maxWidth="500px" // Optional: Limit max width
+        gap={4} // Space between buttons
       >
-      <SwapBuyButtons />
-      <MarketCapVolume />
-
+        <SwapBuyButtons />
+        <MarketCapVolume />
       </Flex>
-
     </Box>
   );
 };
