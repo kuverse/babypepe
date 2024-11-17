@@ -120,7 +120,7 @@ const MusicPlayer: React.FC = () => {
       bottom={1}
       left={1}
       p={2}
-      bgGradient="linear(to-b, #6CB947 30%, #187235 100%)"
+      bgGradient="linear(to-b, #C0C0C0 30%, #A6A6A6 100%)"
       //bg="#156D30"
       color="white"
       borderRadius="15px"

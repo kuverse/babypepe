@@ -73,7 +73,7 @@ const LandingPage: React.FC = () => {
         bottom={1}
         right={1}
         size="lg" // This controls the base size of the button
-        bgGradient="linear(to-b, #6CB947 30%, #187235 100%)"
+        backgroundColor= "rgba(0, 0, 0, 0.6)"
         _hover={{ bg: "#156D30" }}
         borderRadius="15px"
         boxShadow="lg"
