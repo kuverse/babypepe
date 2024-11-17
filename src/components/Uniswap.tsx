@@ -149,7 +149,7 @@ const SwapBabyPepe: React.FC = () => {
         alignItems="flex-start"
         flexWrap="wrap" // Enables stacking on smaller screens
         gap={6}
-        mt={8}
+        mt={6}
       >
         {/* Left Column: Iframe */}
         <Flex
@@ -157,7 +157,7 @@ const SwapBabyPepe: React.FC = () => {
           maxWidth={{ base: "100%", md: "65%" }}
           justifyContent="center"
           alignItems="center"
-          mb={"5px"}
+          mb={"3px"}
         >
           {!showIframe ? (
             <Image
