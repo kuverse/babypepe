@@ -22,8 +22,8 @@ const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent darker background
         border: "2px solid white", // White border
         borderRadius: "15px",
-        padding: "16px",
-        margin: "10px 0", // Consistent vertical spacing
+        padding: "12px",
+        margin: "4px 0", // Consistent vertical spacing
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
         overflow: "hidden", // Ensure content doesn't overflow
       }}
@@ -155,7 +155,7 @@ const AboutBox: React.FC = () => {
           </Bubble>
         </Box>
       </Flex>
-      <Box width="100%" maxWidth="500px" mb={4}>
+      <Box width="100%" maxWidth="500px" mt={4}>
         <Bubble>
           <Heading
             as="h1"

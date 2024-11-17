@@ -104,7 +104,7 @@ const BubbleChart: React.FC = () => {
               justifyContent: "center",
               width: "45%", // Ensure even width for icons in rows
               maxWidth: "100px",
-              margin: "10px 5px", // Consistent spacing for all screen sizes
+              margin: "2px 2px", // Consistent spacing for all screen sizes
             }}
           >
             <Box
@@ -143,7 +143,7 @@ const BubbleChart: React.FC = () => {
             <Box
               as="span"
               fontSize="14px"
-              padding={2}
+              padding={1}
               color={"#fff"}
               textAlign="center"
               fontFamily="'SecondaryFont', sans-serif"
