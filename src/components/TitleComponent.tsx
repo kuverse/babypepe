@@ -32,12 +32,12 @@ const TitleComponent: React.FC = () => {
       >
         <Heading
           as="h1"
-          fontSize={{ base: "14vw", md: "12vw" }} // Responsive font size
+          fontSize={{ base: "15vw", md: "12vw" }} // Responsive font size
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
           textAlign="center"
           paddingX={4} // Padding to avoid edge cutoff
-          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
+          //textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
         >
           Baby pepe
         </Heading>
