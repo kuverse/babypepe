@@ -219,6 +219,10 @@ const SwapBabyPepe: React.FC = () => {
             title="Swap ETH for $BABYPEPE"
             description="Click the swap button on Uniswap"
           />
+           <HoverBubble
+            title="Chill and Vibe"
+            description="The future is bright"
+          />
         </Flex>
       </Flex>
     </Box>
