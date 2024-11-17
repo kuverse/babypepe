@@ -77,7 +77,7 @@ const BubbleChart: React.FC = () => {
       id="bubble-chart"
       margin="0 auto"
       width="90vw"
-      maxWidth="800px"
+      maxWidth="500px"
       zIndex={43}
       padding={5}
       borderRadius="15px"

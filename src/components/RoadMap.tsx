@@ -136,7 +136,7 @@ const RoadMapSection: React.FC = () => {
                   p={2}
                   borderRadius="15px"
                   width={"150%"}
-                  bg="rgba(0, 0, 0, 0.7)"
+                  bg="rgba(0, 0, 0, 0.5)"
                   opacity={0.9}
                   border="2px solid white"
                   textAlign="left"

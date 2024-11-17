@@ -66,7 +66,7 @@ const JoinSection: React.FC = () => {
           <Button
             as="a"
             href="https://t.me/BabyPepeGo"
-            backgroundColor="rgba(0, 0, 0, 0.6)"
+            backgroundColor="rgba(0, 0, 0, 0.5)"
             color="white"
             width="90%"
             padding="30px 40px"

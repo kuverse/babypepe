@@ -135,7 +135,7 @@ const TokenomicsSection: React.FC = () => {
               }}
             >
               <Flex
-                bg="rgba(0, 0, 0, 0.6)" // Semi-transparent bubble
+                bg="rgba(0, 0, 0, 0.5)" // Semi-transparent bubble
                 p={4}
                 borderRadius="15px"
                 border="2px solid white"

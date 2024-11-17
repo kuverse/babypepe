@@ -19,7 +19,7 @@ const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       transition={{ duration: 0.8 }}
       style={{
         width: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
+        backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent darker background
         border: "2px solid white", // White border
         borderRadius: "15px",
         padding: "16px",
@@ -155,7 +155,7 @@ const AboutBox: React.FC = () => {
           </Bubble>
         </Box>
       </Flex>
-      <Box width="100%" maxWidth="1200px" mb={4}>
+      <Box width="100%" maxWidth="500px" mb={4}>
         <Bubble>
           <Heading
             as="h1"

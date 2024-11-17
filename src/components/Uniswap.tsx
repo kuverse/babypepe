@@ -30,7 +30,7 @@ const SwapBabyPepe: React.FC = () => {
         transition={{ duration: 0.8 }}
         style={{
           width: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
+          backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent darker background
           border: "2px solid white", // White border
           borderRadius: "15px",
           padding: "16px",
@@ -59,7 +59,7 @@ const SwapBabyPepe: React.FC = () => {
         transition={{ duration: 0.8 }}
         style={{
           width: "90%",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
           border: "2px solid white",
           borderRadius: "15px",
           padding: "16px",
@@ -215,7 +215,7 @@ const SwapBabyPepe: React.FC = () => {
             description="Use the Uniswap embed here and connect your wallet"
           />
           <HoverBubble
-            title="Swap ETH for BABYPEPE"
+            title="Swap ETH for $BABYPEPE"
             description="Click the swap button on Uniswap"
           />
         </Flex>
