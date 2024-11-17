@@ -12,7 +12,6 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  Image,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaForward, FaBackward, FaVolumeUp, FaVolumeMute, FaMusic } from "react-icons/fa";
