@@ -43,7 +43,7 @@ const SwapBabyPepe: React.FC = () => {
       transition={{ duration: 0.8 }}
       style={{
         width: "90%",
-        backgroundColor: "rgba(0, 0, 0, 0.4)",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
         border: "2px solid white",
         borderRadius: "15px",
         padding: "16px",
