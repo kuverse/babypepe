@@ -44,29 +44,25 @@ const RoadMapSection: React.FC = () => {
 
   return (
     <>
-      <Box
-        id="roadmap"
-        position="relative" // Set to relative for proper positioning
-        backgroundSize="contain" // Change to fit the background correctly
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        width="90%"
-        height={"60%"}
-        backgroundColor="#006821"
-        minHeight="80vh"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        overflow="hidden"
-        p={10}
-        border="2px solid white"
-        borderRadius={10}
-        mb={1}
-        mt={10}
-        bgImage="/images/business-pepe.png"
-        boxShadow="lg" 
-      >
+
+    <Box
+      id="roadmap"
+      width="100%"
+      height="110vh" // Ensures a minimum height for the box
+      display="flex"
+      mb={2}
+      flexDirection={"column"}
+      justifyContent="center"
+      alignItems="center"
+      position="relative"
+      overflow="hidden" // Prevents scrolling
+      bgImage={"/backgrounds/pepe_hiking.JPG"}
+      backgroundSize="cover" // Use 'cover' to fill the entire container
+      backgroundPosition="center" // Center the image
+      backgroundRepeat="no-repeat"
+      //boxShadow="lg" // Optional: Add some shadow for better visuals
+    >
+     
        
 
 
@@ -85,7 +81,7 @@ const RoadMapSection: React.FC = () => {
           as="h1"
           my={4}
           width={"90%"}
-          fontSize="5xl"
+          fontSize="6xl"
           textAlign="center"
           color="#fff"
           fontFamily="'PepeFont', sans-serif"

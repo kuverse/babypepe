@@ -12,10 +12,7 @@ import SwapBabyPepe from "./Uniswap";
 import AboutBox from "./AboutBox";
 import FlappySection from "./FlappyCard";
 import TitleComponent from "./TitleComponent";
-import BuyWithCreditCard from "./BuyWithCreditCard";
 import JoinSection from "./JoinSection";
-import MarketCapVolume from "./MarketCap";
-import SwapBuyButtons from "./BuyAndSwapButtons";
 import RoadMapSection from "./RoadMap";
 
 const LandingPage: React.FC = () => {
@@ -50,72 +47,25 @@ const LandingPage: React.FC = () => {
       justify="center"
       position="relative"
       overflow="hidden"
-      bgGradient="linear(to-b, white 15%, #8AF855 20%, #8AF855 30%, #187235 100%)" // Gradient from white to green starting at 60%
-      transition="background-color 0.3s ease"
     >
       <Header />
 
       <TitleComponent />
-      <MarketCapVolume />
-
-      <SwapBuyButtons />
-
       <AboutBox />
       <TokenomicsSection />
-{/*}
-      <Section
-        id="join-us"
-        title="Join the Telegram"
-        subtitle="Started from the bottom"
-        thirdElement=""
-        bgImage="/images/background03.png"
-      >
-        <Flex
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          width="100%"
-          mt="2"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: -150 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 5, duration: 3 }}
-          >
-            <Button
-              as="a"
-              href="https://t.me/BabyPepeGo"
-              backgroundColor="#6CB947"
-              color="white"
-              padding="30px 75px"
-              borderRadius="8px"
-              fontSize="45px"
-              mt={-300}
-              cursor="pointer"
-              transition="all 0.3s"
-              border="4px solid white"
-              fontFamily="'SecondaryFont', sans-serif"
-              _hover={{ transform: "scale(1.1)", backgroundColor: "#4A9F33" }}
-            >
-              <FaTelegram size={30} style={{ marginRight: "10px" }} />
-              Join
-            </Button>
-          </motion.div>
-        </Flex>
-      </Section>
-*/}
-      <FlappySection />
-      <FriendsBox />
       <SwapBabyPepe />
       <RoadMapSection />
-      <BuyWithCreditCard />
+
+
+      <FlappySection />
+      <FriendsBox />
       <JoinSection />
       <Footer />
       <MusicPlayer />
 
       {showScrollTop && (
       <IconButton
-        icon={<ArrowUpIcon />}
+        icon={<ArrowUpIcon color={"#fff"}/>}
         aria-label="Scroll to Top"
         zIndex={3000}
         onClick={scrollToTop}
@@ -128,7 +78,7 @@ const LandingPage: React.FC = () => {
         borderRadius="15px"
         boxShadow="lg"
         border="2px solid white"
-        padding="30px 20px" // Add padding to increase button size
+        padding="20px 10px" // Add padding to increase button size
       />
     )}
 

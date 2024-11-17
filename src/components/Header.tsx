@@ -52,18 +52,22 @@ const Header: React.FC = () => {
         <Heading size="xl" cursor="pointer">
           <Link href="/" passHref>
             <Flex direction={"row"} >
-            <Image src="/images/white-circle-logo.png" width={70} height={70} alt="logo" />
+            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="logo" borderRadius={"full"}/>
             <Text marginTop={4} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={35}>Baby Pepe</Text>
             </Flex>
           </Link>
         </Heading>
 
         <IconButton
-          icon={isOpen ? <CloseIcon boxSize={8} /> : <HamburgerIcon boxSize={8} />}
+          icon={isOpen ? <CloseIcon boxSize={8} color="#fff" /> : <HamburgerIcon boxSize={8} color="#fff" />}
           aria-label="Toggle Menu"
           onClick={handleClick}
           display={{ base: "block", md: "none" }}
+          backgroundColor="transparent" // Transparent background
+          _hover={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} // Optional: Slight hover effect
+          _active={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }} // Optional: Active state effect
         />
+
 
         <Flex display={{ base: "none", md: "flex" }} align="center" gap={4} padding={"5px"} >
           <ChakraLink as={Link} href="/" marginRight={"20px"} fontWeight="bold" _hover={{ color: "#A02E00" }}>
@@ -97,13 +101,9 @@ const Header: React.FC = () => {
             ]}
           />
 
-          <DropdownMenu
-            title="Buy Now"
-            options={[
-              { label: "Buy with Credit Card", href: "/buy" },
-              { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" },
-            ]}
-          />
+            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
+              Buy Now
+            </ChakraLink>
         </Flex>
       </Flex>
 
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
           <VStack align="start" spacing={5} padding={"10px"}>
             <Link href="/" passHref>
             <Flex direction={"row"} >
-            <Image src="/images/white-circle-logo.png" width={70} height={70} alt="logo" />
+            <Image src="/logos/babyPepe.JPG" width={70} height={70} alt="logo" borderRadius={"full"}/>
             <Text marginTop={2} marginLeft={5} fontFamily="'PepeFont', sans-serif" fontSize={30}>Baby Pepe</Text>
             </Flex>
             </Link>
@@ -149,13 +149,11 @@ const Header: React.FC = () => {
               ]}
             />
 
-            <DropdownMenu
-              title="Buy Now"
-              options={[
-                { label: "Buy with Credit Card", href: "/buy" },
-                { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" },
-              ]}
-            />
+
+            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
+              Buy Now
+            </ChakraLink>
+           
           </VStack>
         </Box>
       </Slide>

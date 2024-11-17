@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text, Button, Image, useMediaQuery } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, useMediaQuery } from "@chakra-ui/react";
 import { FaTelegram } from "react-icons/fa";
 
 const JoinSection: React.FC = () => {
@@ -8,38 +8,31 @@ const JoinSection: React.FC = () => {
 
 
   return (
+    
     <Box
       id="join-us"
-      backgroundImage="/images/background-image.png"
-      backgroundSize="cover"
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
-      borderRadius={10}
-      border="2px solid white"
-      padding={5}
-      boxShadow="lg"
-      mb={20}
-      width="90%"
-      maxWidth="1200px"
-      mx="auto"
+      width="100%"
+      height="110vh" // Ensures a minimum height for the box
+      display="flex"
+      mb={2}
+      flexDirection={"column"}
+      justifyContent="center"
+      alignItems="center"
       position="relative"
+      overflow="hidden" // Prevents scrolling
+      bgImage={"/backgrounds/pepe_campfire.JPG"}
+      backgroundSize="cover" // Use 'cover' to fill the entire container
+      backgroundPosition="center" // Center the image
+      backgroundRepeat="no-repeat"
+      //boxShadow="lg" // Optional: Add some shadow for better visuals
     >
+
       <Flex
         direction={isSmallScreen ? "column" : "row"}
         align="center"
         justify="center"
       >
    
-          <Image
-            src="/images/magapepe.png"
-            alt="maga"
-            height="300px"
-            maxWidth="300px"
-            objectFit="contain"
-            filter="brightness(1.2) contrast(1.3)"
-            mb={isSmallScreen ? 4 : 0}
-            mr={isSmallScreen ? 0 : 5}
-          />
 
         <Flex
           direction="column"
@@ -47,29 +40,31 @@ const JoinSection: React.FC = () => {
           textAlign={isSmallScreen ? "center" : "left"}
         >
           <Text
-            fontSize={{ base: "50px", md: "40px" }}
+            fontSize={{ base: "50px", md: "60px" }}
             fontWeight="bold"
             color="#fff"
             mb={1}
+            textAlign="center"
             fontFamily="'PepeFont', sans-serif"
             textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
           >
-            Join the Cult
+            Everyone is Welcome
           </Text>
           <Text
             fontSize={{ base: "3xl", md: "30px" }}
             color="white"
             mb={6}
+            textAlign="center"
             fontFamily="'SecondaryFont', sans-serif"
           >
-            Be part of the community
+            Join the community
           </Text>
           <Flex justifyContent="center" alignItems="center" mb={10}>
 
           <Button
             as="a"
             href="https://t.me/BabyPepeGo"
-            backgroundColor="#6CB947"
+            backgroundColor="rgba(0, 0, 0, 0.6)"
             color="white"
             width="90%"
             padding="30px 40px"
@@ -84,7 +79,7 @@ const JoinSection: React.FC = () => {
             _hover={{ transform: "scale(1.1)", backgroundColor: "#006821" }}
           >
             <FaTelegram size={30} style={{ marginRight: "10px" }} />
-            Join
+            Join Us
           </Button>
           </Flex>
         </Flex>

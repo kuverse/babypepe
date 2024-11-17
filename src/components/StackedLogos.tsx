@@ -72,10 +72,8 @@ const BubbleChart: React.FC = () => {
   return (
     <Box
       id="bubble-chart"
-      position="absolute"
-      top="65%"
-      left="50%"
-      transform="translateX(-50%)"
+      position="relative" // Can also use "absolute" if needed
+      margin="0 auto" // Automatically centers the box horizontally
       width="80vw"
       maxWidth="800px"
       zIndex={43}
@@ -86,6 +84,7 @@ const BubbleChart: React.FC = () => {
       padding={5}
       borderRadius="15px"
     >
+
       <Flex
         flexWrap="wrap"
         justifyContent="center"
@@ -98,7 +97,13 @@ const BubbleChart: React.FC = () => {
             variants={slideInVariants}
             initial="hidden"
             animate="visible"
-            style={{ margin: "6px" }} // Adjust margin as needed
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center", // Center align all children
+              justifyContent: "center",
+              padding: "10px" // Center content vertically
+            }} // Adjust margin as needed
           >
             <Box
               as="a"
@@ -110,7 +115,7 @@ const BubbleChart: React.FC = () => {
               borderRadius="50%"
               overflow="hidden"
               bg="white"
-              boxShadow="2px 10px 11px rgba(0, 0, 0, 0.1)"
+              boxShadow="5px 10px 11px rgba(0, 0, 0, 0.1)"
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -124,7 +129,6 @@ const BubbleChart: React.FC = () => {
                   alt={link.label}
                   width={80}
                   height={80}
-                
                   loading="lazy"
                   style={{ pointerEvents: "none", objectFit: "contain" }}
                 />
@@ -133,6 +137,9 @@ const BubbleChart: React.FC = () => {
                   {link.logo}
                 </Box>
               )}
+            </Box>
+            <Box as="span" fontSize="14px" padding={2} color={"#fff"}  textAlign="center" fontFamily="'SecondaryFont', sans-serif"  > 
+                 {link.label}
             </Box>
           </motion.div>
         ))}

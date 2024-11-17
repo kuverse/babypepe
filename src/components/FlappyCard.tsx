@@ -49,7 +49,7 @@ const FlappySection: React.FC = () => {
           className={styles.floatingImage}
           src="/images/flying-pepe.png"
           alt="flappy pepe"
-          width={{ base: "80%", md: "40%" }}
+          width={{ base: "60%", md: "30%" }}
           borderRadius="15px"
           objectFit="contain"
         />
@@ -74,7 +74,7 @@ const FlappySection: React.FC = () => {
             href="/flappy-baby-pepe"
             fontWeight="bold"
             fontSize={{ base: "30px", md: "40px" }}
-            bg="#6CB947"
+            backgroundColor="rgba(0, 0, 0, 0.6)"
             color="white"
             width={"100%"}
             px={8}

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Heading, Image, Link } from "@chakra-ui/react";
+import { Box, Image, Link } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import styles from '../styles/landingpage.module.css';
 
@@ -41,7 +41,7 @@ const FriendsBox: React.FC = () => {
       mt={-5}
       minHeight="100vh" // Ensures the content scales with the height
       textAlign="center" // Center align text and children
-      backgroundImage="/images/background003.png" // Background image
+      backgroundImage="/videos/1.png" // Background image
       backgroundSize="cover" // Ensure it covers the box
       backgroundPosition="center" // Center the background image
       paddingY={8} // Padding for vertical spacing
@@ -59,19 +59,7 @@ const FriendsBox: React.FC = () => {
         marginBottom={2} // Space between title and scroller
       />
 
-      <Heading
-        as="h1"
-        mt={-20}
-        mb={10}
-        width={"80%"}
-        fontSize={{ base: "35px", md: "40px" }}
-        textAlign="center"
-        color="#156D30"
-        fontFamily="'SecondaryFont', sans-serif"
-        textShadow="2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white"
-      >
-        The Animated Series
-      </Heading>
+     
 
       {/* Scrolling Image Reel */}
       <Box
@@ -93,14 +81,14 @@ const FriendsBox: React.FC = () => {
               key={index}
               src={src}
               alt={`Episode ${index + 1}`}
-              width="120px" // Adjust width as needed
+              width="120px"
               height="auto"
               display="inline-block"
-              borderRadius={"15px"}
-
-              mx={2} // Margin between images
+              borderRadius={"15px"}      
+              border="3px solid white"   
+              mx={2} 
               objectFit="contain"
-              _hover={{ transform: "scale(1.1)", transition: "transform 0.3s" }}
+              _hover={{ transform: "scale(0.9)", transition: "transform 0.3s" }}
             />
           ))}
         </Box>
@@ -118,7 +106,7 @@ const FriendsBox: React.FC = () => {
           href="/baby-pepe-and-friends"
           fontWeight="bold"
           fontSize={{ base: "30px", md: "40px" }}
-          bg="#6CB947"
+          backgroundColor="rgba(0, 0, 0, 0.6)"
           color="white"
           width="92%"
           maxW="400px" // Limit the maximum width
@@ -138,19 +126,6 @@ const FriendsBox: React.FC = () => {
 
        
       </Box>
-
-
-  
-      <Image
-        src="/images/pepebottle.png"
-        alt="friends title"
-        width={{ base: "75%", md: "40%" }} // Increase width on base and md
-        height={{ base: "auto", md: "auto" }} // Maintain aspect ratio
-        borderRadius="15px"
-        zIndex={30}
-        marginTop={5}
-        filter="brightness(1.2) contrast(1.3)"
-      />
 
 
       {/* Keyframes for scrolling animation */}

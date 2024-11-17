@@ -131,26 +131,11 @@ const MusicPlayer: React.FC = () => {
       zIndex={1000}
       border="2px solid white"
     >
-      {isExpanded && (
-        <Image
-          src="/images/pepegif.gif"
-          alt="Music Animation"
-          position="absolute"
-          top="-75px"
-          left="10px"
-          width="200px"
-          height="170px"
-          zIndex={-5}
-          pointerEvents="none"
-          style={{
-            filter: 'brightness(1.2) contrast(1.3)',
-          }}
-        />
-      )}
+      
 
       <Flex justifyContent="space-between" alignItems="center" onClick={() => setIsExpanded((prev) => !prev)}>
         <IconButton
-          icon={<FaMusic size={30} />}
+          icon={<FaMusic size={20} color="#fff"/>}
           aria-label="Expand Player"
           variant="ghost"
           color="white"
@@ -242,7 +227,7 @@ const MusicPlayer: React.FC = () => {
 
           <Flex mt={3} alignItems="center" ml={"15px"}>
             <IconButton
-              icon={isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+              icon={isMuted ? <FaVolumeMute color="#fff"/> : <FaVolumeUp color="#fff"/>}
               aria-label="Mute/Unmute"
               onClick={handleMute}
               bg="#transparent"

@@ -6,12 +6,7 @@ import Header from "@/components/Header";
 import { FaDownload } from "react-icons/fa";
 
 const initialMemes = [
-  { src: "/images/IMG_4155.jpg", title: "Pepe 1" },
-  { src: "/images/pepep2.png", title: "Pepe 2" },
-  { src: "/images/business-pepe.png", title: "Pepe 3" },
-  { src: "/images/cool-pepe.gif", title: "Pepe 4" },
-  { src: "/images/pepegif.gif", title: "Pepe 5" },
-  { src: "/images/pepe-bull.gif", title: "Pepe 6" },
+  { src: "/logos/babyPepe_logoname.PNG", title: "Pepe logo" },
 ];
 
 
@@ -30,7 +25,6 @@ const MemeGallery: React.FC = () => {
       <Header />
       <Box
         p={8}
-        mt={100} // Add space between header and content
         display="flex"
         flexDirection="column"
         alignItems="center"
@@ -39,6 +33,7 @@ const MemeGallery: React.FC = () => {
       >
         <Heading
           size="2xl"
+          mt={"200px"}
           mb={8}
           color="white"
           fontFamily="'PepeFont', sans-serif"

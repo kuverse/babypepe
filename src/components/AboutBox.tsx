@@ -1,7 +1,8 @@
 "use client";
 
-import { Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import BubbleChart from "./StackedLogos";
 
 const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <motion.div
@@ -10,13 +11,13 @@ const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     transition={{ duration: 0.8 }}
     style={{
       width: "100%",
-      maxWidth: "700px", // Max width for each bubble
-      backgroundColor: "#006821", // Darker transparent background
+      backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
       border: "2px solid white", // White border
       borderRadius: "15px",
       padding: "16px",
-      margin: "10px", // Space between bubbles
-      boxShadow: "lg", // Optional shadow for depth
+      margin: "10px 0", // Consistent vertical spacing
+      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
+      overflow: "hidden", // Ensure content doesn't overflow
     }}
   >
     {children}
@@ -27,81 +28,124 @@ const AboutBox: React.FC = () => {
   return (
     <Box
       id="about"
-      width="90%"
-      maxWidth="1200px" // Limit max width for better layout
-      minHeight="50vh"
+      position="relative"
+      width="100%"
+      minHeight="100vh"
       display="flex"
       flexDirection="column"
-      justifyContent="center"
+      justifyContent="flex-start"
       alignItems="center"
-      backgroundColor="#6CB947" // Matching background color
-      padding={8}
-      margin="0 auto" // Center the box in the middle of the page
+      padding={4}
       textAlign="center"
-      border="2px solid white" // Matching border style
-      borderRadius="10px" // Rounded corners
-      boxShadow="lg" // Shadow for depth
+      backgroundImage="url('/backgrounds/pepe_skiing.JPG')"
+      backgroundSize="cover"
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      overflow="hidden"
     >
-      <Bubble>
-        <Heading
-          as="h1"
-          fontSize="4xl"
-          color="#fff"
-          marginTop={2}
-          fontFamily="'PepeFont', sans-serif"
-          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
-        >
-          About 0x69babe
-        </Heading>
-      </Bubble>
-
-      <Bubble>
-        <Heading
-          as="h2"
-          fontSize={{ base: "20px", md: "2.2vw" }}
-          color="#fff"
-          marginBottom={1}
-          fontFamily="'SecondaryFont', sans-serif"
-        >
-          0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4
-        </Heading>
-      </Bubble>
-
-      <Bubble>
-        <Box
-          display="flex"
-          justifyContent="center"
-          mb={2}
-        >
-          <Image
-            src="/images/cool-pepe.gif"
-            alt="cool pepe"
-            width={{ base: "60%", md: "40%" }} // Adjust size for responsiveness
-            borderRadius="15px"
-            objectFit="contain"
-            style={{
-              filter: 'brightness(1.2) contrast(1.3)',
-            }}
-          />
-        </Box>
-        <Box
-            display="flex" // Make the parent a flex container
-            justifyContent="center" // Center child elements horizontally
-            width="100%" // Full width for the Box
+      {/* Title Bubble */}
+      <Box width="100%" maxWidth="1200px" mb={4}>
+        <Bubble>
+          <Heading
+            as="h1"
+            fontSize="4xl"
+            color="#fff"
+            fontFamily="'PepeFont', sans-serif"
           >
-        <Text
-          fontSize={{ base: "5vw", md: "3vw" }}
-          color="#fff" // Darker text color for readability
-          marginBottom={4}
-          fontFamily="'SecondaryFont', sans-serif"
-          width="80%"
-          textAlign={"center"}
-          justifyContent={"center"}
-        >
-          All the whales will come to know that Baby Pepe is the ultimate cultural narrative. The <strong>0x69babe</strong> contract address guarantees authenticity. We are the original. Its in the DNA.
-        </Text>
+            About 0x69babe
+          </Heading>
+        </Bubble>
+      </Box>
+
+      {/* Address Bubble */}
+      <Box width="100%" maxWidth="1200px" mb={4}>
+        <Bubble>
+        <Heading
+            as="h1"
+            fontSize="3xl"
+            color="#fff"
+            fontFamily="'PepeFont', sans-serif"
+          >
+            Contract Address
+          </Heading>
+          <Heading
+            as="h2"
+            fontSize={{ base: "16px", md: "1.6vw" }}
+            color="#fff"
+            fontFamily="'SecondaryFont', sans-serif"
+          >
+            0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4
+          </Heading>
+        </Bubble>
+      </Box>
+
+      {/* Responsive Bubbles */}
+      <Flex
+        width="100%"
+        maxWidth="1200px"
+        justifyContent="space-between" // Space evenly for side-by-side layout
+        flexWrap="wrap" // Allows wrapping on smaller screens
+        gap={4}
+      >
+        <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
+          <Bubble>
+          <Heading
+            as="h1"
+            fontSize="3xl"
+            color="#fff"
+            fontFamily="'PepeFont', sans-serif"
+          >
+            Make room for BabyPepe!
+          </Heading>
+            <Text
+              fontSize={{ base: "2.5vh", md: "2vh" }}
+              color="#fff"
+              fontFamily="'SecondaryFont', sans-serif"
+              textAlign="center"
+            >
+              Babypepe, heir to the throne and son of  Pepe, represents the dawn of a new generation in the frog kingdom, and a passing of the baton, from one generation to the next.  Signafying the right of passage bestowed upon a son by his father, Babypepe strives to buidl and improve upon his dads legacy.
+              Pepe, the king of memes and a viral sensation found all over the internet, has taken the world by storm, and capitaved the hearts of many.  If you missed Pepes parabolic run, Babypepe is an opportunity to be a part of something bigger than yourself, and have a hand in building a community that will surely go down in memecoin history.
+              With Pepe being found in every cornerner of the globe, its only a matter of time before Babypepe makes his mark on the world!
+
+            </Text>
+          </Bubble>
         </Box>
-      </Bubble>
+        <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
+          <Bubble>
+          <Heading
+            as="h1"
+            fontSize="3xl"
+            color="#fff"
+            fontFamily="'PepeFont', sans-serif"
+          >
+            Like father, Like son
+          </Heading>
+            <Text
+              fontSize={{ base: "2.5vh", md: "2vh" }}
+              color="#fff"
+              fontFamily="'SecondaryFont', sans-serif"
+              textAlign="center"
+            >
+              The Babypepe narrative is simple.  Son of pepe, whos CA starts with 0x69, Babypepe boasts a unique vanity contract address similiar to that of his father, starting with 0x69babe.  A CTO, by the people, for the people, was forged back in May of 2024, with no shortage of obstacles in its path.  A community of diamond handed, cult like chads, have defeated two cabal launches, dethroned a serial scammer crypto twitter influencer, and built an oarganic following of dedicated indvidiuals who are comittted to the growth and success of this adorable little frog.
+              Come stop by our telegram, checkout the twitter, and see for yourself.  With a foundation of integrity, honesty, kindness, and compassion, everyone is valued and has a seat at the table in our community.
+            </Text>
+          </Bubble>
+        </Box>
+      </Flex>
+      <Box width="100%" maxWidth="1200px" mb={4}>
+        <Bubble>
+        <Heading
+            as="h1"
+            fontSize="3xl"
+            color="#fff"
+            fontFamily="'PepeFont', sans-serif"
+          >
+            Useful Links
+          </Heading>
+        <BubbleChart />
+
+        </Bubble>
+      </Box>
     </Box>
   );
 };

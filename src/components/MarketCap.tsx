@@ -41,19 +41,20 @@ const MarketCapVolume: React.FC = () => {
 
   return (
     <Box
-      p={5}
-      position={"relative"}
-      boxShadow="lg"
-      height={50}
-      backgroundColor="#6CB947" // Green background
-      width="100%" // Full width
-      display="flex"
-      alignItems="center"
-      border="1px solid #fff" // White border for definition
-      overflow="hidden" 
-      mb={10}
-      mt={5}
-    >
+    p={5}
+    position="relative"
+    boxShadow="lg"
+    height={50}
+    backgroundColor="rgba(50, 50, 50, 0.6)" // Transparent dark gray
+    width="100%" // Full width
+    display="flex"
+    alignItems="center"
+    border="1px solid #fff" // White border for definition
+    overflow="hidden"
+    mb={10}
+    mt={5}
+  >
+  
       {loading ? (
         <Flex justifyContent="center" alignItems="center" height="100%">
           <Spinner size="lg" color="white" /> {/* Set spinner color to white */}
@@ -76,15 +77,15 @@ const MarketCapVolume: React.FC = () => {
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
-                <Image src="/images/xcircle-logo.png" height={5} width={5} alt="Token Price Logo" />
-                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+              <Image src="/logos/babyPepe.JPG" width={5} height={5} alt="logo" borderRadius={"full"}/>
+              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
                   Token Price: ${parseFloat(usdValue).toLocaleString(undefined, { minimumFractionDigits: 8, maximumFractionDigits: 8 })}
                 </Text>
               </Flex>
 
               <Flex direction={"row"} alignItems="center" mx={5}>
-                <Image src="/images/white-circle-logo.png" height={5} width={5} alt="Volume Logo" />
-                <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
+              <Image src="/logos/babyPepe.JPG" width={5} height={5} alt="logo" borderRadius={"full"}/>
+              <Text fontSize="2xl" fontWeight="bold" color="white" mx={2}>
                   24hr Volume: ${parseFloat(volumeValue).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </Text>
               </Flex>

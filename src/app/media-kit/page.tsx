@@ -5,15 +5,7 @@ import { Box, Heading, Image, Text, VStack, Button, Grid, GridItem } from "@chak
 import { FaDownload } from "react-icons/fa";
 
 const logos = [
-  { src: "/images/pepeicon.png", name: "Circle Profile Green", download: "/images/pepeicon.png" },
-  { src: "/images/white-circle-logo.png", name: "Circle Profile White", download: "/images/white-circle-logo.png" },
-  { src: "/images/xcircle-logo.png", name: "Circle Profile Main", download: "/images/xcircle-logo.png" },
-  { src: "/images/xbanner-yellow.png", name: "Yellow Banner", download: "/images/xbanner-yellow.png" },
-  { src: "/images/xbanner-red.png", name: "Red Banner", download: "/images/xbanner-red.png" },
-  { src: "/images/banner.png", name: "Green Banner", download: "/images/banner.png" },
-  { src: "/images/banner-circle.png", name: "Green Circle Banner", download: "/images/banner-circle.png" },
-  { src: "/images/main-logo-green.png", name: "Main Logo Green", download: "/images/main-logo-green.png" },
-  { src: "/images/logo-main.png", name: "Main Logo White", download: "/images/logo-main.png" },
+  { src: "/logos/babyPepe_logoname.PNG", name: "Circle Profile Green", download: "/images/pepeicon.png" },
 ];
 
 const MediaKit: React.FC = () => {
