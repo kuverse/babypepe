@@ -121,7 +121,6 @@ const SwapBabyPepe: React.FC = () => {
             textAlign="center"
             fontFamily="'PepeFont', sans-serif"
             zIndex={2}
-            textShadow="0px 0px 10px rgba(0, 0, 0, 0.8)"
           >
             How to Buy Baby Pepe
           </Heading>

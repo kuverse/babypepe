@@ -2,27 +2,36 @@
 
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import BubbleChart from "./StackedLogos";
 
-const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <motion.div
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    style={{
-      width: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
-      border: "2px solid white", // White border
-      borderRadius: "15px",
-      padding: "16px",
-      margin: "10px 0", // Consistent vertical spacing
-      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
-      overflow: "hidden", // Ensure content doesn't overflow
-    }}
-  >
-    {children}
-  </motion.div>
-);
+// Bubble Component with Scroll Animation
+const Bubble: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Animates once when in view
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        width: "100%",
+        backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent darker background
+        border: "2px solid white", // White border
+        borderRadius: "15px",
+        padding: "16px",
+        margin: "10px 0", // Consistent vertical spacing
+        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)", // Optional shadow for depth
+        overflow: "hidden", // Ensure content doesn't overflow
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const AboutBox: React.FC = () => {
   return (
@@ -60,7 +69,7 @@ const AboutBox: React.FC = () => {
       {/* Address Bubble */}
       <Box width="100%" maxWidth="1200px" mb={4}>
         <Bubble>
-        <Heading
+          <Heading
             as="h1"
             fontSize="3xl"
             color="#fff"
@@ -89,52 +98,50 @@ const AboutBox: React.FC = () => {
       >
         <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
           <Bubble>
-          <Heading
-            as="h1"
-            fontSize="3xl"
-            color="#fff"
-            fontFamily="'PepeFont', sans-serif"
-          >
-            Make room for BabyPepe!
-          </Heading>
+            <Heading
+              as="h1"
+              fontSize="3xl"
+              color="#fff"
+              fontFamily="'PepeFont', sans-serif"
+            >
+              Make room for BabyPepe!
+            </Heading>
             <Text
               fontSize={{ base: "2.5vh", md: "2vh" }}
               color="#fff"
               fontFamily="'SecondaryFont', sans-serif"
               textAlign="center"
             >
-              Babypepe, heir to the throne and son of  Pepe, represents the dawn of a new generation in the frog kingdom, and a passing of the baton, from one generation to the next.  Signafying the right of passage bestowed upon a son by his father, Babypepe strives to buidl and improve upon his dads legacy.
-              Pepe, the king of memes and a viral sensation found all over the internet, has taken the world by storm, and capitaved the hearts of many.  If you missed Pepes parabolic run, Babypepe is an opportunity to be a part of something bigger than yourself, and have a hand in building a community that will surely go down in memecoin history.
-              With Pepe being found in every cornerner of the globe, its only a matter of time before Babypepe makes his mark on the world!
-
+              Babypepe, heir to the throne and son of Pepe, represents the dawn
+              of a new generation in the frog kingdom.
             </Text>
           </Bubble>
         </Box>
         <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
           <Bubble>
-          <Heading
-            as="h1"
-            fontSize="3xl"
-            color="#fff"
-            fontFamily="'PepeFont', sans-serif"
-          >
-            Like father, Like son
-          </Heading>
+            <Heading
+              as="h1"
+              fontSize="3xl"
+              color="#fff"
+              fontFamily="'PepeFont', sans-serif"
+            >
+              Like father, Like son
+            </Heading>
             <Text
               fontSize={{ base: "2.5vh", md: "2vh" }}
               color="#fff"
               fontFamily="'SecondaryFont', sans-serif"
               textAlign="center"
             >
-              The Babypepe narrative is simple.  Son of pepe, whos CA starts with 0x69, Babypepe boasts a unique vanity contract address similiar to that of his father, starting with 0x69babe.  A CTO, by the people, for the people, was forged back in May of 2024, with no shortage of obstacles in its path.  A community of diamond handed, cult like chads, have defeated two cabal launches, dethroned a serial scammer crypto twitter influencer, and built an oarganic following of dedicated indvidiuals who are comittted to the growth and success of this adorable little frog.
-              Come stop by our telegram, checkout the twitter, and see for yourself.  With a foundation of integrity, honesty, kindness, and compassion, everyone is valued and has a seat at the table in our community.
+              The Babypepe narrative is simple. A community of dedicated
+              individuals ensures the success of this adorable little frog.
             </Text>
           </Bubble>
         </Box>
       </Flex>
       <Box width="100%" maxWidth="1200px" mb={4}>
         <Bubble>
-        <Heading
+          <Heading
             as="h1"
             fontSize="3xl"
             color="#fff"
@@ -142,8 +149,7 @@ const AboutBox: React.FC = () => {
           >
             Baby Pepes Useful Links
           </Heading>
-        <BubbleChart />
-
+          <BubbleChart />
         </Bubble>
       </Box>
     </Box>
