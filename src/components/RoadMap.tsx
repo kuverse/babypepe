@@ -46,22 +46,22 @@ const RoadMapSection: React.FC = () => {
     <>
 
     <Box
-      id="roadmap"
-      width="100%"
-      height="110vh" // Ensures a minimum height for the box
-      display="flex"
-     
-      flexDirection={"column"}
-      justifyContent="center"
-      alignItems="center"
-      position="relative"
-      overflow="hidden" // Prevents scrolling
-      bgImage={"/backgrounds/pepe_hiking.JPG"}
-      backgroundSize="cover" // Use 'cover' to fill the entire container
-      backgroundPosition="center" // Center the image
-      backgroundRepeat="no-repeat"
-      //boxShadow="lg" // Optional: Add some shadow for better visuals
-    >
+    id="roadmap"
+    width="100%"
+    height="100vh" // Ensures a minimum height for the box
+    display="flex"
+    flexDirection="column"
+    justifyContent="center"
+    alignItems="center"
+    position="relative"
+    overflow="hidden" // Prevents scrolling
+    bgImage="/backgrounds/pepe_hiking.JPG"
+    backgroundSize="cover" // Use 'cover' to fill the entire container
+    backgroundPosition="calc(50% + 35%) center" // Shifts the image 10% to the left
+    backgroundRepeat="no-repeat"
+    //boxShadow="lg" // Optional: Add some shadow for better visuals
+  >
+  
      
        
 
