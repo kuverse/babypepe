@@ -7,10 +7,10 @@ import Footer from "./Footer";
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import TokenomicsSection from "./Tokenomics";
-import FriendsBox from "./FriendsBox";
+//import FriendsBox from "./FriendsBox";
 import SwapBabyPepe from "./Uniswap";
 import AboutBox from "./AboutBox";
-import FlappySection from "./FlappyCard";
+//import FlappySection from "./FlappyCard";
 import TitleComponent from "./TitleComponent";
 import JoinSection from "./JoinSection";
 import RoadMapSection from "./RoadMap";
@@ -56,9 +56,11 @@ const LandingPage: React.FC = () => {
       <SwapBabyPepe />
       <RoadMapSection />
 
-
+      {/*}
       <FlappySection />
       <FriendsBox />
+        */}
+
       <JoinSection />
       <Footer />
       <MusicPlayer />
