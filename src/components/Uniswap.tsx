@@ -119,7 +119,7 @@ const SwapBabyPepe: React.FC = () => {
       position="relative"
       overflow="hidden"
       bgImage="/backgrounds/pepe_pyramids.JPG"
-      backgroundPosition="calc(50% + 35%) center" // Shifts the image 10% to the left
+      backgroundPosition="calc(50% + 25%) center" // Shifts the image 10% to the left
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
     >
