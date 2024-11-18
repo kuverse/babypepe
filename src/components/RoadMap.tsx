@@ -67,7 +67,7 @@ const RoadMapSection: React.FC = () => {
     },
     {
       title: "Phase 4:",
-      points: ["100,000 Holders", "Make Dad Proud"],
+      points: ["100,000+ Holders", "Make Dad Proud"],
     },
   ];
 
@@ -103,7 +103,7 @@ const RoadMapSection: React.FC = () => {
           as="h2"
           my={4}
           width="90%"
-          fontSize="5xl" // Slightly smaller font size to fit within screen
+          fontSize="5xl"
           textAlign="center"
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
@@ -113,20 +113,7 @@ const RoadMapSection: React.FC = () => {
           Baby Pepe Road Map
         </Heading>
 
-{/*}
-        <Text
-          mb={4}
-          fontSize={{ base: "2xl", md: "24px" }} // Smaller text for the description
-          textAlign="center"
-          color="#fff"
-          fontWeight={"bold"}
-          fontFamily="'SecondaryFont', sans-serif"
-          zIndex={2} // Bring text above the overlay
-          textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
-        >
-          Simple, but effective
-        </Text>
-*/}
+
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -134,7 +121,7 @@ const RoadMapSection: React.FC = () => {
           animate={controls}
           style={{
             width: "90%", // Adjusted width for better fit
-            maxWidth: "900px", // Adjust max width for better fit
+            maxWidth: "500px", // Adjust max width for better fit
             zIndex: 2,
           }} // Limit text bars to 75% width
         >
@@ -167,7 +154,7 @@ const RoadMapSection: React.FC = () => {
                   fontWeight={"bold"}
                   borderRadius="15px"
                   width="100%" // Ensure bubble takes full width of container
-                  maxWidth="380px" // Limit bubble size
+                  maxWidth="280px" // Limit bubble size
                   bg="rgba(0, 0, 0, 0.5)"
                   opacity={0.9}
                   border="2px solid white"
@@ -180,12 +167,11 @@ const RoadMapSection: React.FC = () => {
                 >
                   {phase.title}
 
-                  {/* Points inside the same bubble */}
                   <VStack spacing={2} mt={4} alignItems="flex-start">
                     {phase.points.map((point, idx) => (
                       <Box key={idx} color="white" fontSize="16px" display="flex" alignItems="center">
                         {/* Display FaCheck for Phase 1 points */}
-                        {index === 0 ? (
+                        {index === 0 || point === "BabyPepe.com" ? (
                           <FaCheck style={{ marginRight: "8px", color: "#fff" }} />
                         ) : (
                           <Spinner size="sm" color="white" style={{ marginRight: "8px" }} />
