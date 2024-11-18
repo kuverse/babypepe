@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Box, Heading, Text, VStack, Spinner, Grid, GridItem } from "@chakra-ui/react";
+import { Box, Heading, VStack, Spinner, Grid } from "@chakra-ui/react";
 import { useAnimation, motion, Transition, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCheck } from "react-icons/fa"; // Import the checkmark icon
