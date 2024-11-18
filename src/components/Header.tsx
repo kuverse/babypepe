@@ -94,7 +94,7 @@ const Header: React.FC = () => {
           <DropdownMenu
             title="Community"
             options={[
-              { label: "Blog", href: "https://t.me/BabyPepeGo" },
+              { label: "Blog", href: "/baby-pepe-blog" },
               { label: "Meme Gallery", href: "/meme-gallery" },
               { label: "Media Kit", href: "/media-kit" },
               { label: "Meme Generator", href: "/meme-generator" },
@@ -141,7 +141,7 @@ const Header: React.FC = () => {
             <DropdownMenu
               title="Community"
               options={[
-                { label: "Blog", href: "https://t.me/BabyPepeGo" },
+                { label: "Blog", href: "/baby-pepe-blog" },
                 { label: "Meme Gallery", href: "/meme-gallery" },
                 { label: "Media Kit", href: "/media-kit" },
                 { label: "Meme Generator", href: "/meme-generator" },

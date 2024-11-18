@@ -29,18 +29,18 @@ const JoinSection: React.FC = () => {
         justifyContent="flex-start" 
         textAlign={"center"}
         height="70%"
-        paddingTop={14} // Adjust height for proper placement
+        paddingTop={2} // Adjust height for proper placement
       >
         <Text
           fontSize={{ base: "55px", md: "80px" }}
           fontWeight="bold"
           color="#fff"
-          mb={1}
+          mb={10}
           textAlign="center"
           fontFamily="'PepeFont', sans-serif"
           textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
-          mt={30} // Add margin-top to move higher
-        >
+          mt={{ base: 10, md: 20 }} // Smaller margin-top on mobile, larger on desktop
+          >
           Everyone is Welcome
         </Text>
       </Flex>

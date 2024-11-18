@@ -69,7 +69,7 @@ const TokenomicsSection: React.FC = () => {
 
       {/* Title */}
       <Heading
-        as="h1"
+        as="h2"
         fontSize="5xl"
         color="#fff"
         textAlign="center"
@@ -77,7 +77,7 @@ const TokenomicsSection: React.FC = () => {
         zIndex={2}
         textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
       >
-       Tokenomics
+       Baby Pepe Tokenomics
       </Heading>
 
       {/* Subtitle */}

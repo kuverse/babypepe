@@ -107,7 +107,7 @@ const BuyWithCreditCard: React.FC = () => {
 
 
           <Heading
-          as="h1"
+          as="h2"
           my={4}
           width={"99%"}
           fontSize="5xl"
@@ -201,7 +201,7 @@ const BuyWithCreditCard: React.FC = () => {
           {/* Powered by Section */}
           <Flex direction={"column"} alignItems={"center"} justifyContent={"center"} mt={4} p={2}>
             <Heading
-              as="h1"
+              as="h2"
               fontSize={{ base: "20px", md: "30px" }}
               textAlign="center"
               color="#fff"

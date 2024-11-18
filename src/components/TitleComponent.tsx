@@ -41,7 +41,7 @@ const TitleComponent: React.FC = () => {
           paddingX={4} // Padding to avoid edge cutoff
           textShadow="1px 1px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
         >
-          Baby pepe
+          Baby Pepe
         </Heading>
       </motion.div>
 

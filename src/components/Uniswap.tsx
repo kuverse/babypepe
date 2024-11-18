@@ -73,7 +73,7 @@ const SwapBabyPepe: React.FC = () => {
       >
         <Box position="relative" role="group">
           <Heading
-            as="h1"
+            as="h3"
             fontSize="xl"
             color="#fff"
             fontFamily="'SecondaryFont', sans-serif"
@@ -84,8 +84,8 @@ const SwapBabyPepe: React.FC = () => {
           </Heading>
           <Box
             position="absolute"
-            top="50%" // Show below the bubble
-            right="100%"
+            top="-10%" // Position the hover bubble directly above the under bubble
+            right="-60%"
             transform="translateX(-50%)"
             bg="rgba(0, 0, 0, 0.8)" // Darker background for readability
             color="#fff"
@@ -100,9 +100,14 @@ const SwapBabyPepe: React.FC = () => {
             zIndex={10000} // Ensure hover text is above all elements
             transition="opacity 0.3s, visibility 0.3s"
             _groupHover={{ opacity: 1, visibility: "visible" }}
+            width="200px" // Fixed width to allow for more words
+            minWidth="150px" // Minimum width to ensure text isn't cramped
+            maxWidth="300px" // Maximum width to prevent the bubble from becoming too wide
           >
             {description}
           </Box>
+
+
         </Box>
       </motion.div>
     );
@@ -127,7 +132,7 @@ const SwapBabyPepe: React.FC = () => {
       <Flex mt="10px" width="70%" maxW="500px" justifyContent="center" alignItems="center">
         <Bubble>
           <Heading
-            as="h1"
+            as="h2"
             fontSize="4xl"
             color="#fff"
             textAlign="center"

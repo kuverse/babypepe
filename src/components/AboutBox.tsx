@@ -56,14 +56,14 @@ const AboutBox: React.FC = () => {
       <Box width="70%" maxWidth="500px" mb={4}>
         <Bubble>
           <Heading
-            as="h1"
+            as="h2"
             fontSize="4xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
             textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
           >
-            About 0x69babe
+            About Baby Pepe
           </Heading>
         </Bubble>
       </Box>
@@ -72,7 +72,7 @@ const AboutBox: React.FC = () => {
       <Box width="70%" maxWidth="500px" mb={4}>
         <Bubble>
           <Heading
-            as="h1"
+            as="h2"
             fontSize="3xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
@@ -105,7 +105,7 @@ const AboutBox: React.FC = () => {
         <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
           <Bubble>
             <Heading
-              as="h1"
+              as="h2"
               fontSize="3xl"
               color="#fff"
               fontFamily="'PepeFont', sans-serif"
@@ -132,7 +132,7 @@ const AboutBox: React.FC = () => {
         <Box flex={{ base: "1 1 100%", md: "1" }} maxWidth={{ base: "100%", md: "48%" }}>
           <Bubble>
             <Heading
-              as="h1"
+              as="h2"
               fontSize="3xl"
               color="#fff"
               fontFamily="'PepeFont', sans-serif"
@@ -158,14 +158,14 @@ const AboutBox: React.FC = () => {
       <Box width="100%" maxWidth="500px" mt={4}>
         <Bubble>
           <Heading
-            as="h1"
+            as="h2"
             fontSize="3xl"
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
             textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
           >
-            Baby Pepes Useful Links
+            Baby Pepe&apos;s Useful Links
           </Heading>
           <BubbleChart />
         </Bubble>
