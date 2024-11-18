@@ -6,7 +6,20 @@ import Header from "@/components/Header";
 import { FaDownload } from "react-icons/fa";
 
 const initialMemes = [
-  { src: "/logos/babyPepe_logoname.PNG", title: "Pepe logo" },
+  { src: "/memes/beach_babypepe.JPG", title: "Beach Baby Pepe" },
+  { src: "/memes/big_babypepe.JPG", title: "Big Baby Pepe" },
+  { src: "/memes/boysclub_babypepe.JPG", title: "Boysclub Baby" },
+  { src: "/memes/crew_babypepe.JPG", title: "Baby Pepe & Crew" },
+  { src: "/memes/godzilla_babypepe.PNG", title: "Godzilla Baby" },
+  { src: "/memes/halloween_babypepe.JPG", title: "Chucky Baby Pepe" },
+  { src: "/memes/lionkin_babypepe.JPG", title: "A King is Born" },
+  { src: "/memes/mars_babypepe.JPG", title: "Martain Baby" },
+  { src: "/memes/sparta_babypepe.JPG", title: "Sparta Baby" },
+  { src: "/memes/starwars_babypepe.JPG", title: "Starwars Baby" },
+  { src: "/memes/surf_babypepe.JPG", title: "Surfing Baby Pepe" },
+  { src: "/memes/tech_babypepe.JPG", title: "Internet Baby Pepe" },
+  { src: "/memes/vote_babypepe.JPG", title: "Political Baby Pepe" },
+
 ];
 
 
@@ -33,7 +46,7 @@ const MemeGallery: React.FC = () => {
       >
         <Heading
           size="2xl"
-          mt={"200px"}
+          mt={"100px"}
           mb={8}
           color="white"
           fontFamily="'PepeFont', sans-serif"

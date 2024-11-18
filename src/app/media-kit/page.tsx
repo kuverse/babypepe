@@ -5,7 +5,9 @@ import { Box, Heading, Image, Text, VStack, Button, Grid, GridItem } from "@chak
 import { FaDownload } from "react-icons/fa";
 
 const logos = [
-  { src: "/logos/babyPepe_logoname.PNG", name: "Circle Profile Green", download: "/images/pepeicon.png" },
+  { src: "/logos/babyPepe_logoname.PNG", name: "Name Logo", download: "/images/pepeicon.png" },
+  { src: "/logos/babyPepe.JPG", name: "Main Icon", download: "/images/pepeicon.png" },
+
 ];
 
 const MediaKit: React.FC = () => {
@@ -22,8 +24,8 @@ const MediaKit: React.FC = () => {
         alignItems="center"
       >
         <Heading
-          mt={10}
-          as="h1"
+          mt={100}
+          as="h2"
           size={{ base: "xl", md: "2xl" }} // Responsive heading size
           textAlign="center"
           fontFamily="'PepeFont', sans-serif"
