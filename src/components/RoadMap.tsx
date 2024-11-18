@@ -120,14 +120,14 @@ const RoadMapSection: React.FC = () => {
           initial="hidden"
           animate={controls}
           style={{
-            width: "90%", // Adjusted width for better fit
+            width: "95%", // Adjusted width for better fit
             maxWidth: "500px", // Adjust max width for better fit
             zIndex: 2,
           }} // Limit text bars to 75% width
         >
           <Grid
             templateColumns="repeat(2, 1fr)" // 2 columns for a 2x2 grid layout
-            gap={6}
+            gap={3}
             justifyItems="center"
             mt={4}
             mb={4}
@@ -148,9 +148,9 @@ const RoadMapSection: React.FC = () => {
               >
                 {/* Bubble with title and points inside */}
                 <Box
-                  fontSize={{ base: "20px", md: "22px" }} // Adjusted font size for smaller bubbles
+                  fontSize={{ base: "18px", md: "22px" }} // Adjusted font size for smaller bubbles
                   color="white"
-                  p={4}
+                  p={2}
                   fontWeight={"bold"}
                   borderRadius="15px"
                   width="100%" // Ensure bubble takes full width of container
@@ -169,12 +169,14 @@ const RoadMapSection: React.FC = () => {
 
                   <VStack spacing={2} mt={4} alignItems="flex-start">
                     {phase.points.map((point, idx) => (
-                      <Box key={idx} color="white" fontSize="16px" display="flex" alignItems="center">
+                      <Box key={idx} color="white" 
+                      fontSize={{ base: "14px", md: "20px" }} // Adjusted font size for smaller bubbles
+                      display="flex" alignItems="center">
                         {/* Display FaCheck for Phase 1 points */}
                         {index === 0 || point === "BabyPepe.com" ? (
-                          <FaCheck style={{ marginRight: "8px", color: "#fff" }} />
+                          <FaCheck style={{ marginRight: "6px", color: "#fff" }} />
                         ) : (
-                          <Spinner size="sm" color="white" style={{ marginRight: "8px" }} />
+                          <Spinner size="sm" color="white" style={{ marginRight: "6px" }} />
                         )}
                         {point}
                       </Box>
