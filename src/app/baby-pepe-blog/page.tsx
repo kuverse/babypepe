@@ -60,7 +60,7 @@ const Blog: React.FC = () => {
                 height="250px"
                 objectFit="cover"
               />
-              <Heading as="h2" fontSize={"30px"} color="#A02E00" fontFamily="'PepeFont', sans-serif"  p={5}>
+              <Heading as="h1" fontSize={"30px"} color="#A02E00" fontFamily="'PepeFont', sans-serif"  p={5}>
                 What is Baby Pepe?
               </Heading>
 
