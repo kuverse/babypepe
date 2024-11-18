@@ -103,7 +103,7 @@ const RoadMapSection: React.FC = () => {
           as="h2"
           my={4}
           width="90%"
-          fontSize="4xl" // Slightly smaller font size to fit within screen
+          fontSize="5xl" // Slightly smaller font size to fit within screen
           textAlign="center"
           color="#fff"
           fontFamily="'PepeFont', sans-serif"
