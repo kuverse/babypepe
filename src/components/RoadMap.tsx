@@ -66,7 +66,7 @@ const RoadMapSection: React.FC = () => {
       points: ["#1 Baby Meta", "50,000+ Holders"],
     },
     {
-      title: "Phase 4: Future Growth",
+      title: "Phase 4:",
       points: ["100,000 Holders", "Make Dad Proud"],
     },
   ];
