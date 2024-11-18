@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import { Box, Heading, Image, Text, VStack, Grid, GridItem } from "@chakra-ui/react";
-import { useState } from "react";
 
 const Blog: React.FC = () => {
   return (
@@ -65,9 +64,9 @@ const Blog: React.FC = () => {
                 What is Baby Pepe?
               </Heading>
               <Text mt={6} color="gray.600" fontFamily="'SecondaryFont', sans-serif">
-                Baby Pepe ($BABYPEPE) is a community-driven memecoin born from the success of its "daddy" $PEPE.
-                Operating on the Ethereum blockchain with a unique "0x69babE" contract identifier, it serves as an extension of the Pepeverse ecosystem.
-                The crypto market has always been a space of cycles, narratives, and groundbreaking stories. Among the most intriguing narratives in recent times is the rise of Baby Pepe ($BABYPEPE). Following in the giant footsteps of its "daddy" $PEPE, Baby Pepe's journey is nothing short of legendary, filled with resilience, ambition, and an unwavering community spirit. With a bright future ahead, it is poised to be a key player in this bull cycle, just as $BABYDOGE mirrored $DOGE&apos;s success.
+                Baby Pepe ($BABYPEPE) is a community-driven memecoin born from the success of its &quot;daddy&quot; $PEPE.
+                Operating on the Ethereum blockchain with a unique &quot;0x69babE&quot; contract identifier, it serves as an extension of the Pepeverse ecosystem.
+                The crypto market has always been a space of cycles, narratives, and groundbreaking stories. Among the most intriguing narratives in recent times is the rise of Baby Pepe ($BABYPEPE). Following in the giant footsteps of its &quot;daddy&quot; $PEPE, Baby Pepe's journey is nothing short of legendary, filled with resilience, ambition, and an unwavering community spirit. With a bright future ahead, it is poised to be a key player in this bull cycle, just as $BABYDOGE mirrored $DOGE&apos;s success.
                 Here&apos;s the captivating story of Baby Pepe&apos;s journey, challenges, and the immense potential that lies ahead.
               </Text>
 
@@ -84,7 +83,7 @@ const Blog: React.FC = () => {
             <Text color="gray.600" fontFamily="'SecondaryFont', sans-serif">
 
             The journey of Baby Pepe has been far from smooth. Launched on May 24, it faced an early setback when its initial developer abandoned the project below a $1 million market cap. However, in true underdog fashion, a small group of dedicated community members took charge, revitalizing the project and driving it to a $10 million market cap. 
-            This resurgence established Baby Pepe as a frontrunner in the "baby" meta of the Pepeverse, inspired by the work of artist Matt Furie.
+            This resurgence established Baby Pepe as a frontrunner in the &quot;baby&quot; meta of the Pepeverse, inspired by the work of artist Matt Furie.
             Even amid a heavy market downturn, the Baby Pepe community demonstrated remarkable resilience. 
             The project faced off against a cabal-backed rival token, which ultimately failed. It weathered significant setbacks, such as influencer James Wynn scamming the team and dumping $70,000 worth of tokens on the chart. Yet, the CTO team and the community persevered, pushing the token back up from a low of $180,000 to its current range of $15-20 million. 
             Baby Pepe&apos;s story is a testament to the power of collective strength and vision in crypto.
@@ -93,7 +92,7 @@ const Blog: React.FC = () => {
             <Heading as="h2" size="lg" color="#A02E00" fontFamily="'PepeFont', sans-serif" textAlign="center" padding={5}>
 
             Baby Pepe&apos;s Unique DNA and Strong Community            </Heading>
-            Baby Pepe&apos;s unique selling points set it apart from the crowd. At its core, the token shares a smart contract "DNA" with $PEPE, underscored by the "0x69babE" identifier that signifies its place within the Pepeverse. This technical connection amplifies Baby Pepe&apos;s credibility and appeal. Additionally, the acquisition of the top-level domain babypepe.com signals the team&apos;s commitment to building a strong brand and a professional presence.
+            Baby Pepe&apos;s unique selling points set it apart from the crowd. At its core, the token shares a smart contract &quot;DNA&quot; with $PEPE, underscored by the "0x69babE" identifier that signifies its place within the Pepeverse. This technical connection amplifies Baby Pepe&apos;s credibility and appeal. Additionally, the acquisition of the top-level domain babypepe.com signals the team&apos;s commitment to building a strong brand and a professional presence.
             Beyond its technical aspects, Baby Pepe is defined by its strong, loyal community. Daily engagements on platforms like Telegram and X (formerly Twitter) are the lifeblood of the project, fostering a tight-knit group of supporters. Moreover, prominent venture capitalists and influencers regularly participate in X Spaces, discussing the project&apos;s potential and driving visibility.
             This community-driven approach is a key differentiator, positioning Baby Pepe as a leading contender among emerging memecoins.
 
@@ -115,7 +114,7 @@ const Blog: React.FC = () => {
                 The journey of Baby Pepe has been far from smooth. Launched on May 24, it faced an early setback when its initial developer abandoned the project below a $1 million market cap. However, in true underdog fashion, a small group of dedicated community members took charge, revitalizing the project and driving it to a $10 million market cap.
               </Text>
               <Text mt={4}>
-                This resurgence established Baby Pepe as a frontrunner in the "baby" meta of the Pepeverse, inspired by the work of artist Matt Furie.
+                This resurgence established Baby Pepe as a frontrunner in the &quot;baby&quot; meta of the Pepeverse, inspired by the work of artist Matt Furie.
                 Even amid a heavy market downturn, the Baby Pepe community demonstrated remarkable resilience.
               </Text>
               <Text mt={4}>
@@ -129,7 +128,7 @@ const Blog: React.FC = () => {
                 Baby Pepe&apos;s Unique DNA and Strong Community
               </Heading>
               <Text mt={4}>
-                Baby Pepe&apos;s unique selling points set it apart from the crowd. At its core, the token shares a smart contract "DNA" with $PEPE, underscored by the "0x69babE" identifier that signifies its place within the Pepeverse. This technical connection amplifies Baby Pepe&apos;s credibility and appeal. Additionally, the acquisition of the top-level domain babypepe.com signals the team&apos;s commitment to building a strong brand and a professional presence.
+                Baby Pepe&apos;s unique selling points set it apart from the crowd. At its core, the token shares a smart contract &quot;DNA&quot; with $PEPE, underscored by the "0x69babE" identifier that signifies its place within the Pepeverse. This technical connection amplifies Baby Pepe&apos;s credibility and appeal. Additionally, the acquisition of the top-level domain babypepe.com signals the team&apos;s commitment to building a strong brand and a professional presence.
               </Text>
               <Text mt={4}>
                 Beyond its technical aspects, Baby Pepe is defined by its strong, loyal community. Daily engagements on platforms like Telegram and X (formerly Twitter) are the lifeblood of the project, fostering a tight-knit group of supporters. Moreover, prominent venture capitalists and influencers regularly participate in X Spaces, discussing the project&apos;s potential and driving visibility.
@@ -172,7 +171,7 @@ const Blog: React.FC = () => {
                 Baby Pepe&apos;s Bright Future: Poised for Expansion and Growth
               </Heading>
               <Text mt={4}>
-                As the market enters a new bull cycle, Baby Pepe is uniquely positioned to capitalize on the momentum. With a perfect chart in its accumulation phase, a passionate community, and a well-coordinated leadership team, it embodies the potential to follow in the footsteps of its "daddy" $PEPE and carve out its own legacy.
+                As the market enters a new bull cycle, Baby Pepe is uniquely positioned to capitalize on the momentum. With a perfect chart in its accumulation phase, a passionate community, and a well-coordinated leadership team, it embodies the potential to follow in the footsteps of its &quot;daddy&quot; $PEPE and carve out its own legacy.
               </Text>
               <Text mt={4}>
                 The #2 holder, a $PEPE whale with over $5 million worth of $PEPE, has consistently shown faith in Baby Pepe by accumulating tokens without selling—a strong indicator of confidence in its future.
