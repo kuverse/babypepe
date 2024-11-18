@@ -165,7 +165,7 @@ const AboutBox: React.FC = () => {
             textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
           >
-            Baby Pepe's Useful Links
+            Baby Pepe&apos;s Useful Links
           </Heading>
           <BubbleChart />
         </Bubble>
