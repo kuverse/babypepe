@@ -163,7 +163,6 @@ const AboutBox: React.FC = () => {
             color="#fff"
             fontFamily="'PepeFont', sans-serif"
             textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
-
           >
             Baby Pepe&apos;s Useful Links
           </Heading>

@@ -46,7 +46,7 @@ const RoadMapSection: React.FC = () => {
     {
       title: "Phase 1:",
       points: [
-        "Just born ",
+        "Born ",
         "1000+ Holders ",
         "DEX listings ",
         "Begin to form Cult ",
