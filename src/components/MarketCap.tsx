@@ -40,21 +40,21 @@ const MarketCapVolume: React.FC = () => {
   }, []);
 
   return (
-    <Box
-    p={5}
-    position="relative"
-    boxShadow="lg"
-    height={50}
-    backgroundColor="rgba(50, 50, 50, 0.6)" // Transparent dark gray
-    width="100%" // Full width
-    display="flex"
-    alignItems="center"
-    border="1px solid #fff" // White border for definition
-    overflow="hidden"
-    mb={10}
-    mt={5}
-    borderRadius={15}
-  >
+        <Box
+        p={5}
+        position="relative"
+        boxShadow="lg"
+        height={50}
+        backgroundColor="rgba(50, 50, 50, 0.6)" // Transparent dark gray
+        width="100%" // Full width
+        display="flex"
+        alignItems="center"
+        border="1px solid #fff" // White border for definition
+        overflow="hidden"
+        mb={10}
+        mt={5}
+        borderRadius={15}
+      >
   
       {loading ? (
         <Flex justifyContent="center" alignItems="center" height="100%">

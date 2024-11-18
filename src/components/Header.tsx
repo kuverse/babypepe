@@ -49,7 +49,6 @@ const Header: React.FC = () => {
     //textShadow="0.5px 0.5px 0 #022B0F, -0.5px 0.5px 0 #022B0F, 0.5px -0.5px 0 #022B0F, -0.5px -0.5px 0 #022B0F"
     >
       <Flex align="center" justify="space-between" fontFamily="'ThirdFont', sans-serif">
-        <Heading size="xl" cursor="pointer">
           <Link href="/" passHref>
             <Flex direction={"row"} >
             <Image src="/logos/babyPepe.JPG" width={45} height={45} alt="baby-pepe-logo" borderRadius={"full"}/>
@@ -59,7 +58,6 @@ const Header: React.FC = () => {
             >Baby Pepe</Text>
             </Flex>
           </Link>
-        </Heading>
 
         <IconButton
           icon={isOpen ? <CloseIcon boxSize={8} color="#fff" /> : <HamburgerIcon boxSize={8} color="#fff" />}
