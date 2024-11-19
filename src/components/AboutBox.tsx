@@ -122,9 +122,9 @@ const AboutBox: React.FC = () => {
               textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
             >
-              Babypepe, heir to the throne and son of  Pepe, represents the dawn of a new generation in the frog kingdom, and a passing of the baton, from one generation to the next.  Signafying the right of passage bestowed upon a son by his father, Babypepe strives to buidl and improve upon his dads legacy.
-              Pepe, the king of memes and a viral sensation found all over the internet, has taken the world by storm, and capitaved the hearts of many.  If you missed Pepes parabolic run, Babypepe is an opportunity to be a part of something bigger than yourself, and have a hand in building a community that will surely go down in memecoin history.
-              With Pepe being found in every cornerner of the globe, its only a matter of time before Babypepe makes his mark on the world!
+              Babypepe, heir to the throne and son of  Pepe, represents the dawn of a new generation in the frog kingdom, and a passing of the baton, from one generation to the next.  Signifying the rite of passage bestowed upon a son by his father, Babypepe strives to build and improve upon his dad&apos;s legacy.
+              Pepe, the king of memes and a viral sensation found all over the internet, has taken the world by storm, and captivated the hearts of many.  If you missed Pepe&apos;s parabolic run, Babypepe is an opportunity to be a part of something bigger than yourself, and have a hand in building a community that will surely go down in memecoin history.
+              With Pepe being found in every corner of the globe, it&apos;s only a matter of time before Babypepe makes his mark on the world!
 
             </Text>
           </Bubble>

@@ -49,7 +49,7 @@ const RoadMapSection: React.FC = () => {
         "Born ",
         "1000+ Holders ",
         "DEX listings ",
-        "Begin to form Cult ",
+        "Form Cult ",
       ],
     },
     {
