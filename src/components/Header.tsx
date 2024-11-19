@@ -155,8 +155,8 @@ const Header: React.FC = () => {
     <DropdownMenu
             title="Buy Now"
             options={[
-              { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" },
-              { label: "Buy with Fiat", href: "https://flooz.xyz/0x69babepepe" },
+              { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4", target: "_blank", rel: "noopener noreferrer"  },
+              { label: "Buy with Fiat", href: "https://flooz.xyz/0x69babepepe", target: "_blank", rel: "noopener noreferrer"  },
             ]}
           />
            
@@ -170,6 +170,8 @@ const Header: React.FC = () => {
 interface MenuOption {
   label: string;
   href: string;
+  target?: string;
+  rel?: string;
 }
 
 interface DropdownMenuProps {
@@ -220,8 +222,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, options }) => {
                   borderRadius: "8px",
                 }}
               >
-                <Link href={option.href} passHref legacyBehavior>
-                  <a
+                <Link href={option.href} passHref
+                  
+                  target="_blank" 
+                  rel="noopener noreferrer" 
                     style={{
                       textDecoration: "none",
                       padding: "10px",
@@ -230,7 +234,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, options }) => {
                     onClick={() => setIsOpen(false)} // Close the menu when clicked
                   >
                     {option.label}
-                  </a>
+                 
                 </Link>
               </ListItem>
             ))}
