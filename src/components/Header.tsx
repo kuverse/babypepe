@@ -99,9 +99,14 @@ const Header: React.FC = () => {
             ]}
           />
 
-            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
-              Buy Now
-            </ChakraLink>
+          <DropdownMenu
+            title="Buy Now"
+            options={[
+              { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" },
+              { label: "Buy with Fiat", href: "https://flooz.xyz/0x69babepepe" },
+            ]}
+          />
+
         </Flex>
       </Flex>
 
@@ -147,9 +152,13 @@ const Header: React.FC = () => {
             />
 
 
-            <ChakraLink ml={2} fontFamily="'ThirdFont', sans-serif" as={Link} href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" fontWeight="bold" _hover={{ color: "#A02E00"}} my={"10px"}>
-              Buy Now
-            </ChakraLink>
+    <DropdownMenu
+            title="Buy Now"
+            options={[
+              { label: "Uniswap", href: "https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x69babE9811CC86dCfC3B8f9a14de6470Dd18EDA4" },
+              { label: "Buy with Fiat", href: "https://flooz.xyz/0x69babepepe" },
+            ]}
+          />
            
           </VStack>
         </Box>
