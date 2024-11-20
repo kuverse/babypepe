@@ -149,8 +149,8 @@ const AboutBox: React.FC = () => {
               textShadow="0.5px 0.5px 0 black, -0.5px 0.5px 0 black, 0.5px -0.5px 0 black, -0.5px -0.5px 0 black"
 
             >
-              The Babypepe narrative is simple.  Son of pepe, whos CA starts with 0x69, Babypepe boasts a unique vanity contract address similiar to that of his father, starting with 0x69babe.  A CTO, by the people, for the people, was forged back in May of 2024, with no shortage of obstacles in its path.  A community of diamond handed, cult like chads, have defeated two cabal launches, dethroned a serial scammer crypto twitter influencer, and built an oarganic following of dedicated indvidiuals who are comittted to the growth and success of this adorable little frog.
-              Come stop by our telegram, checkout the twitter, and see for yourself.  With a foundation of integrity, honesty, kindness, and compassion, everyone is valued and has a seat at the table in our community.
+              The Babypepe narrative is simple.  Son of Pepe, whose CA starts with 0x69, Babypepe boasts a unique vanity contract address similar to that of his father, starting with 0x69babe.  A CTO, by the people, for the people, was forged back in May of 2024, with no shortage of obstacles in its path.  A community of diamond-handed, cult-like chads, has defeated two cabal launches, dethroned a serial scammer crypto twitter influencer, and built an organic following of dedicated indviduals who are committed to the growth and success of this adorable little frog.
+              Come stop by our Telegram, check out the Twitter, and see for yourself.  With a foundation of integrity, honesty, kindness, and compassion, everyone is valued and has a seat at the table in our community.
             </Text>
           </Bubble>
         </Box>
