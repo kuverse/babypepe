@@ -84,6 +84,7 @@ const Header: React.FC = () => {
               { label: "How to Buy", href: "/#how-to-buy" },
               { label: "Roadmap", href: "/#roadmap" },
               { label: "Join the Cult", href: "/#join-us" },
+              { label: "White Paper", href: "/white-paper" },
             ]}
           />
 
@@ -137,6 +138,8 @@ const Header: React.FC = () => {
                 { label: "How to Buy", href: "/#how-to-buy" },
                 { label: "Roadmap", href: "/#roadmap" },
                 { label: "Join the Cult", href: "/#join-us" },
+                { label: "White Paper", href: "/white-paper" },
+
               ]}
             />
             <DropdownMenu
