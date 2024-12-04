@@ -6,7 +6,7 @@ import { ThirdwebProvider } from "thirdweb/react";
 
 
 export const metadata: Metadata = {
-  title: "Baby Pepe | Pepe's only baby boy",
+  title: "Baby Pepe | Pepe's Only Baby Boy",
   description: "A viral sensation.",
 };
 
