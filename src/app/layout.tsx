@@ -18,6 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="page">
 
+    <head>
+      <title>Baby Pepe | Pepes Only Baby Boy</title>
+    </head>
 
       
       <body>
