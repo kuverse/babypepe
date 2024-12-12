@@ -35,16 +35,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://babypepe.com/memes/meme1.png</image:loc>
-      <image:title>Meme 1 Title</image:title>
+      <image:loc>https://babypepe.com/memes/beach_babypepe.JPG</image:loc>
+      <image:title>Baby Pepe at the beach</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://babypepe.com/memes/meme2.png</image:loc>
-      <image:title>Meme 2 Title</image:title>
+      <image:loc>https://babypepe.com/memes/big_babypepe.JPG</image:loc>
+      <image:title>Big Baby Pepe</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://babypepe.com/memes/meme3.png</image:loc>
-      <image:title>Meme 3 Title</image:title>
+      <image:loc>https://babypepe.com/memes/boysclub_babypepe.JPG</image:loc>
+      <image:title>Boysclub</image:title>
+    </image:image>
+     <image:image>
+      <image:loc>https://babypepe.com/memes/crew_babypepe.JPG</image:loc>
+      <image:title>Baby Pepe Crew</image:title>
+    </image:image>
+     <image:image>
+      <image:loc>https://babypepe.com/memes/starwars_babypepe.JPG</image:loc>
+      <image:title>Starwars Baby Pepe</image:title>
     </image:image>
   </url>
   <url>
