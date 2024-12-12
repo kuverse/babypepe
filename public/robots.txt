@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://babypepe.com
+
+# Sitemaps
+Sitemap: https://babypepe.com/sitemap.xml
