@@ -173,7 +173,7 @@ const RoadMapSection: React.FC = () => {
                       fontSize={{ base: "14px", md: "20px" }} // Adjusted font size for smaller bubbles
                       display="flex" alignItems="center">
                         {/* Display FaCheck for Phase 1 points */}
-                        {index === 0 || point === "BabyPepe.com" ? (
+                        {index === 0 || point === "BabyPepe.com" || point === "CEX Listings" ? (
                           <FaCheck style={{ marginRight: "6px", color: "#fff" }} />
                         ) : (
                           <Spinner size="sm" color="white" style={{ marginRight: "6px" }} />
