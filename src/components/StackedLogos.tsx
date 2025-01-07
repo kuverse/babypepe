@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import Image from "next/image";
-import { FaTelegram } from "react-icons/fa";
+import { FaEnvelope, FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -55,6 +55,11 @@ const BubbleChart: React.FC = () => {
         href: "https://x.com/0x69babEPepe",
         label: "X",
         logo: <FaXTwitter size={40} style={{ color: "#022B0F" }} />,
+      },
+      {
+        href: "admin@babypepe.com",
+        label: "Email",
+        logo: <FaEnvelope size={40} style={{ color: "#022B0F" }} />,
       },
     ],
     []
