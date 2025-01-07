@@ -57,7 +57,7 @@ const BubbleChart: React.FC = () => {
         logo: <FaXTwitter size={40} style={{ color: "#022B0F" }} />,
       },
       {
-        href: "admin@babypepe.com",
+        href: "mailto:admin@babypepe.com",
         label: "Email",
         logo: <FaEnvelope size={40} style={{ color: "#022B0F" }} />,
       },
