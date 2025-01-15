@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         $BABYPEPE is a meme coin with no intrinsic value or expectation of financial return. The coin is run 100% by the community and is for entertainment purposes only.        </Text>
         
         <Text fontSize="xl" mt={8} textAlign={{ base: "center", md: "left" }} minWidth={"200px"}>
-          © 2024 Baby Pepe Community. All rights reserved.
+          © 2025 Baby Pepe Community. All rights reserved.
         </Text>
       </Flex>
     </Box>
